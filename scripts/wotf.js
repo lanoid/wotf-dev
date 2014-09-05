@@ -32,21 +32,22 @@ var wotf = {
 	},
 	// Get all the events that can be bound, bound (recallable if stuff changes)
 	events : function() {
+		console.log('bind!');
 		// Event bindings
-		$(wotf.evts).on('scroll:snap', wotf.snapHandler);
-		$(wotf.evts).on('tap:double', function() {
+		$(wotf.evts).off().on('scroll:snap', wotf.snapHandler);
+		$(wotf.evts).off().on('tap:double', function() {
 			// alert('!');
 		});
-		$(wotf.evts).on('dash:close', function() {
+		$(wotf.evts).off().on('dash:close', function() {
 			$('.dash-holder, .dash-handle').removeClass('open');
 		});
 
-		$(wotf.evts).on('channels:open', function() {
+		$(wotf.evts).off().on('channels:open', function() {
 			$('section.channels').addClass('open');
 			wotf.scroll($('section.channels').position().left,1000);
 		});
 
-		$(wotf.evts).on('dashboard:open', function(e,d) {
+		$(wotf.evts).off().on('dashboard:open', function(e,d) {
 			$('.dash-panel:not('+d+')').removeClass('open');
 			$('.dash-panel').filter(d).addClass('open');
 			if($('.dash-panel.movies').hasClass('open')){
@@ -56,67 +57,67 @@ var wotf = {
 			}
 		});
 
-		$(wotf.evts).on('vplanr:open', function() {
+		$(wotf.evts).off().on('vplanr:open', function() {
 			$('.dash-holder, .dash-handle').removeClass('open');
 			$('.dash-holder.vplanr').addClass('open');
 		});
 
-		$(wotf.evts).on('vplanr:close', function() {
+		$(wotf.evts).off().on('vplanr:close', function() {
 			$('.dash-holder.vplanr').removeClass('open');
 		});
 		
-		$(wotf.evts).on('panel:pause', function(e,timer) {
+		$(wotf.evts).off().on('panel:pause', function(e,timer) {
 			clearInterval(wotf[timer]);
 		});
 
-		$(wotf.evts).on('panel:play', function(e,$nav) {
+		$(wotf.evts).off().on('panel:play', function(e,$nav) {
 			wotf.autoPanel($($nav));
 		});
 
 		// Event Triggers
-		$('.dash-grid .movies').on('click', function(e) {
+		$('.dash-grid .movies').off().on('click', function(e) {
 			$(wotf.evts).trigger($(this).data('event'), $(this).data('target'));
 		});
 
-		$('.dash-panel .back').on('click', function(e) {
+		$('.dash-panel .back').off().on('click', function(e) {
 			$(wotf.evts).trigger($(this).data('event'), $(this).data('target'));
 		});
 
-		$('.favourite-channels .bbc-one').on('click', function() {
+		$('.favourite-channels .bbc-one').off().on('click', function() {
 			$(wotf.evts).trigger('dash:close');
 			$(wotf.evts).trigger('channels:open');
 		});
 
-		$('.icon-panel .vplanr, .first .add').on('click', function() {
+		$('.icon-panel .vplanr, .first .add').off().on('click', function() {
 			$(wotf.evts).trigger('vplanr:open');
 		});
 
-		$(wotf.evts).on('dash:open', function(e,d) {
+		$(wotf.evts).off().on('dash:open', function(e,d) {
 			$('.dash-holder'+d.holder+', .dash-handle').addClass('open');
 			$('.dash-panel:not('+d.panel+')').removeClass('open');
 			$('.dash-panel').filter(d.panel).addClass('open');
 		});
 
-		$('.vplanr .dash').on('click', function() {
+		$('.vplanr .dash').off().on('click', function() {
 			$(wotf.evts).trigger('vplanr:close');
 			$(wotf.evts).trigger('dash:open',{holder : $(this).data('holder'), panel : $(this).data('panel')});
 		});
 
 		// Fucntion Handlers
-		$('.logged-in nav .profile').on('click', wotf.handlePanel);
-		$('.expand').on('click', wotf.revealMessage);
-		$('.dash-handle').on('click', wotf.handlePanel);
-		$('.dash-handler').on('click', wotf.handlePanel);
-		$('.help-handle').on('click', wotf.handlePanel);
-		$('.help-handler').on('click', wotf.handlePanel);
-		$('.menu').on('click', wotf.handlePanel);
-		$('.movie .point').on('click', wotf.handlePanel);
+		$('.logged-in nav .profile').off().on('click', wotf.handlePanel);
+		$('.expand').off().on('click', wotf.revealMessage);
+		$('.dash-handle').off().on('click', wotf.handlePanel);
+		$('.dash-handler').off().on('click', wotf.handlePanel);
+		$('.help-handle').off().on('click', wotf.handlePanel);
+		$('.help-handler').off().on('click', wotf.handlePanel);
+		$('.menu').off().on('click', wotf.handlePanel);
+		$('.movie .point').off().on('click', wotf.handlePanel);
 		$('.logged-in .product-list .point').on('click', wotf.productReveal);
-		$('.product-list .view a').on('click', wotf.productReveal);
-		$('.connecting .point').on('click', wotf.revealOther);
-		$('.nokia-tablet .point').on('click', wotf.togglePanels);
-		$('.icon-panel .connectivity').on('click', wotf.twoClick);
-		$('video').on('click', wotf.videoHandler);
+		$('.product-list .view a').off().on('click', wotf.productReveal);
+		$('.connecting .point').off().on('click', wotf.revealOther);
+		$('.nokia-tablet .point').off().on('click', wotf.togglePanels);
+		$('.icon-panel .connectivity').off().on('click', wotf.twoClick);
+		$('video').off().on('click', wotf.videoHandler);
 
 		// Function Calls
 		wotf.dblClick($('section.home'));
@@ -125,19 +126,19 @@ var wotf = {
 		
 
 		// Small funciton bindings
-		$('.day.active').on('click', function() {
+		$('.day.active').off().on('click', function() {
 			$('.calendar .timeframe.month').toggleClass('open');
 			$('.calendar .timeframe.day').toggleClass('open');
 		});
 
-		$('.channel-selector .drag').on('click', function(e){
+		$('.channel-selector .drag').off().on('click', function(e){
 			var $handle = $(e.currentTarget),
 				$parent = $handle.parents('.channel-selector');
 
 			$parent.toggleClass('open');
 		});
 
-		$('section.channels .close').on('click', function() {
+		$('section.channels .close').off().on('click', function() {
 			$(this).parent().removeClass('open');
 		});
 
@@ -145,38 +146,39 @@ var wotf = {
 			$(this).toggleClass('on');
 		})
 
-		$('.add.wagamama').on('click', function() {
+		$('.add.wagamama').off().on('click', function() {
 			$('.calendar .confirm').addClass('open');
 			$('.calendar .confirm .close').on('click', function() {
 				$('.calendar .confirm').removeClass('open');
 			});
 		});
 
-		$('.logged-out .profile').on('click', function(e) {
+		$('.logged-out .profile').off().on('click', function(e) {
 			var $el = $(this),
 				$target = $($el.data('target'));
 			$target.toggleClass('open');
 		});
-		$('.fingerprint').on('click', function(e) {
+		$('.fingerprint').off().on('click', function(e) {
 			e.preventDefault();
 
 			$('.dash-holder, .dash-handle').removeClass('open');
 
 			$.get('partials/logged-in-header.html',function(data) {
 				$('body > header').replaceWith(data);
-				wotf.init();
+				wotf.events();
 			});
 
 			$.get('partials/logged-in-dash.html',function(data) {
 				$('.dash-frame').replaceWith(data);
-				wotf.init();
-				setTimeout(function(){wotf.init()},200);
+				wotf.events();
+				wotf.clock($('.clock'));
 			});
 
 			$.get('partials/logged-in-content.html',function(data) {
 				$('body').addClass('logged-in').removeClass('logged-out');
 				$('#content').replaceWith(data);
-				wotf.init();
+				wotf.events();
+				wotf.snap('.scroller','.col');
 			});
 		});
 	},
@@ -416,6 +418,7 @@ var wotf = {
 	},
 	// Slide and reveal a product panel
 	productReveal : function(e) {
+		console.log('reveal');
 		var $trigger = $(e.currentTarget),
 			url = $trigger.data('url'),
 			section = $trigger.parents('section'),
@@ -426,6 +429,7 @@ var wotf = {
 		} else if($product.length > 0){
 			$product.addClass('open');
 		} else {
+			console.log('get!');
 			$.get(url, function(data) {
 				section.after(data);
 
@@ -459,6 +463,7 @@ var wotf = {
 	},
 	// open a panel with the associated handle at the same time, allow other handlers to do the same
 	handlePanel : function(e) {
+		console.log($(e.currentTarget));
 		var $handle = $(e.currentTarget),
 			$panel = $($handle.data('target')),
 			$close = $($handle.data('close'));
