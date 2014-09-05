@@ -35,8 +35,15 @@
 			margin-top: 80px;
 
 			&:after {
-				//content: ''
-
+				background-image: url(#{$imageDir}icon_chevron_right_large_white.png);
+				background-size: contain;
+				background-repeat: no-repeat;
+				content: '';
+				display: inline-block;
+				height: .8em;
+				margin-left: 8px;
+				vertical-align: baseline;
+				width: 1em;
 			}
 		}
 	}

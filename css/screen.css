@@ -1459,14 +1459,20 @@ section.home {
         width: 100%; }
     /* line 112, ../sass/_help.scss */
     .help-frame .help-holder .close {
-      background-image: url(../visuals/images/icon_close.png);
-      background-position: center center;
-      background-repeat: no-repeat;
-      display: block;
-      height: 14px;
-      margin: 0 auto;
-      width: 20px; }
-      /* line 120, ../sass/_help.scss */
+      position: absolute;
+      top: 65px;
+      left: 40px; }
+      /* line 116, ../sass/_help.scss */
+      .help-frame .help-holder .close:before {
+        content: url(../visuals/images/icon_close.png);
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 100%;
+        display: block;
+        height: 14px;
+        margin: 0 auto;
+        padding: 4px 4px 9px;
+        width: 20px; }
+      /* line 127, ../sass/_help.scss */
       .help-frame .help-holder .close span {
         display: none; }
 
@@ -3438,6 +3444,17 @@ section.home {
       font-weight: 700;
       display: block;
       margin-top: 80px; }
+      /* line 37, ../sass/_partner.scss */
+      .partner .copy a:after {
+        background-image: url(../visuals/images/icon_chevron_right_large_white.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        content: '';
+        display: inline-block;
+        height: .8em;
+        margin-left: 8px;
+        vertical-align: baseline;
+        width: 1em; }
 
 /* line 1, ../sass/_music.scss */
 .music {
