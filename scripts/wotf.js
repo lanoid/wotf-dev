@@ -162,17 +162,17 @@ var wotf = {
 
 			$('.dash-holder, .dash-handle').removeClass('open');
 
-			$.get('/partials/logged-in-header.html',function(data) {
+			$.get('partials/logged-in-header.html',function(data) {
 				$('body > header').replaceWith(data);
 				wotf.init();
 			});
 
-			$.get('/partials/logged-in-dash.html',function(data) {
+			$.get('partials/logged-in-dash.html',function(data) {
 				$('.dash-frame').replaceWith(data);
 				wotf.init();
 			});
 
-			$.get('/partials/logged-in-content.html',function(data) {
+			$.get('partials/logged-in-content.html',function(data) {
 				$('body').addClass('logged-in').removeClass('logged-out');
 				$('#content').replaceWith(data);
 				wotf.init();
