@@ -1,0 +1,8 @@
+CACHE MANIFEST
+# v0.0.5
+
+CACHE:
+/visuals/videos/city_flyover.mp4
+
+NETWORK:
+*
