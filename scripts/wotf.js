@@ -170,6 +170,7 @@ var wotf = {
 			$.get('partials/logged-in-dash.html',function(data) {
 				$('.dash-frame').replaceWith(data);
 				wotf.init();
+				setTimeout(function(){wotf.init()},200);
 			});
 
 			$.get('partials/logged-in-content.html',function(data) {
