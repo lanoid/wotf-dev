@@ -1,0 +1,36 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@charset 'UTF-8';
+// compass import
+@import 'compass';
+@import 'compass/reset';
+// Base SCSS
+@import '../fonts/_vodafone_rg.scss';
+@import '_vars.scss';
+@import '_colours.scss';
+@import '_layout.scss';
+@import '_typography.scss';
+@import '_icons.scss';
+@import '_header.scss';
+@import '_footer.scss';
+// Panel SCSS
+@import '_home.scss';
+@import '_dash.scss';
+@import '_help.scss';
+@import '_products.scss';
+@import '_events.scss';
+@import '_promo.scss';
+@import '_movie.scss';
+@import '_connecting.scss';
+@import '_recommend.scss';
+@import '_feedback.scss';
+@import '_lifestyle.scss';
+@import '_vplanr.scss';
+@import '_product_detail.scss';
+@import '_partner.scss';
+@import '_music.scss';
+@import '_photos.scss';
+@import '_channels.scss';
+@import '_first.scss';

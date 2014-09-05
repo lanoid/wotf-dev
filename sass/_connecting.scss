@@ -1,0 +1,129 @@
+.logged-out {
+	.connecting {
+		background-image: url(#{$imageDir}hero_connected.jpg);
+		background-size: 100% 100%;
+		position: relative;
+		.copy {
+			background-color: $vodafoneRed;
+			color: $white;
+			display: inline-block;
+			padding: 1em;
+			position: absolute;
+			top: 45%;
+			width: 100%;
+			z-index: $z-index-medium;
+			h2 {
+				width: 60%;
+			}
+			// SCROLL THE THINGS!
+			// overflow-y: scroll;
+			// -webkit-overflow-scrolling: touch;
+			.point {
+				left: 80%;
+				position: absolute;
+				&.top {
+					top: -240%;
+				}
+				&.bottom {
+					top: 120%;
+				}
+			}
+		}
+		.message {
+			background: $vodafoneDarkGrey;
+			color: $white;
+			overflow: hidden;
+			position: absolute;
+			transition: height .5s ease-in-out;
+			width: 100%;
+			z-index: $z-index-low;
+			&.top {
+				background-image: url(#{$imageDir}icon_chevron_filled_red_up.png);
+				background-position: center 90%;
+				background-repeat: no-repeat;
+				bottom: 50%;
+				height: 0;
+				&.open {
+					height: 50%;
+				}
+				.content {
+					padding: 10%;
+				}
+			}
+			&.bottom {
+				background-image: url(#{$imageDir}icon_chevron_filled_red_down.png);
+				background-position: center 21%;
+				background-repeat: no-repeat;
+				height: 0;
+				top: 50%;
+				&.open {
+					height: 50%;
+				}
+				.content {
+					padding: 20% 10% 10% 10%;
+					h3 {
+						padding: 0;
+					}
+				}
+			}
+			.content {
+				h3 {
+					display: inline-block;
+					font-size: 2rem;
+					font-weight: 700;
+					padding: .5rem 0 0 0;
+					width: 70%;
+					vertical-align: top;
+				}
+				img {
+					display: inline-block;
+					max-width: 20%;
+				}
+				p {
+					font-size: 1rem;
+				}
+				.large-number {
+					font-size: 3rem;
+					font-weight: 700;
+					line-height: 1;
+				}
+				.links {
+					margin-top: 1.5rem;
+					position: absolute;
+					right: 0;
+					li {
+						text-align: right;
+						display: inline-block;
+						a {
+							background-color: $vodafoneDarkestGrey;
+							font-size: 1rem;
+							padding: .6rem .2rem .6rem .6rem;
+							&:after {
+								background-image: url(#{$imageDir}icon_right_pointing_chevron_white.png);
+								background-position: center center;
+								background-repeat: no-repeat;
+								content: '';
+								display: inline-block;
+								height: 1rem;
+								margin-right: 1rem;
+								width: 1rem;
+								vertical-align: middle;
+							}
+							&.devices {
+								background-color: $white;
+								color: $vodafoneDarkestGrey;
+								&:after {
+									background-image: url(#{$imageDir}icon_right_pointing_chevron_black.png);
+								}
+							}
+							strong {
+								font-size: 1rem;
+								font-weight: 700;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

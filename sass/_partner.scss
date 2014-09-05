@@ -1,0 +1,43 @@
+.partner {
+	background-image: url(../visuals/images/hero_arc_de_triomphe.jpg);
+	background-size: 100% 100%;
+	color: $white;
+	.partner-logo {
+		left: 5%;
+		top: 10%;
+		position: absolute;
+		p {
+			font-size: .6rem;
+			margin-bottom: 10px;
+			padding-left: 3px;
+		}
+	}
+	.copy {
+		padding-right: 1rem;
+		position: absolute;
+		right: 0;
+		text-align: right;
+		bottom: 10%;
+		right: 5%;
+
+		h1 {
+			font-size: 2.3rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+
+		a {
+			font-size: 1.2rem;
+			font-weight: 700;
+			display: block;
+			margin-top: 80px;
+
+			&:after {
+				//content: ''
+
+			}
+		}
+	}
+}

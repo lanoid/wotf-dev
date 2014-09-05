@@ -1,0 +1,106 @@
+body > header {
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	nav {
+		height: 35px;
+		position: absolute;
+		top: 0;
+		width: 100vw;
+		z-index: $z-index-medium;
+		background: $vodafoneMidGrey;
+		color: $white;
+		text-align: center;
+		width: 100vw;
+		font-size: 0;
+		z-index: $z-index-high;
+		.icon {
+			background-color: $vodafoneMidGrey;
+			background-position: center center;
+			background-repeat: no-repeat;
+			border-left: 1px solid $vodafoneDarkerGrey;
+			display: inline-block;
+			height: 35px;
+			position: relative;
+			width: 7vw;
+			vertical-align: top;
+			span {
+				display: none;
+			}
+			&.menu {
+				background-image: url(#{$imageDir}icon_menu_burger.png);
+
+			}
+			&.shopping {
+				background-image: url(#{$imageDir}icon_shopping.png);
+			}
+			&.help-handler {
+				background-image: url(#{$imageDir}icon_support.png);
+				border-right: 1px solid $vodafoneDarkerGrey;
+			}
+			&.dashboard {
+				border: none;
+				width: 46vw;
+			}
+			&.search {
+				background-image: url(#{$imageDir}icon_search.png);
+			}
+			&.trolley {
+				background-image: url(#{$imageDir}icon_trolley.png);
+			}
+			&.profile {
+				background-image: url(#{$imageDir}avatar_tiny.png);
+			}
+			&:last-child {
+				border-right: 1px solid $vodafoneDarkerGrey;
+			}
+			.error {
+				background-image: url(#{$imageDir}icon_exclamation_mark.png);
+				background-position: center center;
+				background-repeat: no-repeat;
+				display: block;
+				height: 1.8em;
+				position: absolute;
+				top: 4px;
+				right: 5px;
+				width: 5px;
+			}
+		}
+	}
+	.login {
+		background-color: $vodafoneDarkGrey;
+		font-size: 0;
+		-webkit-mask-image: url(#{$imageDir}mask_logged_out_tab.png);
+		-webkit-mask-size: 100% 100%;
+		padding: 1rem 1rem 2rem 1rem;
+		position: absolute;
+		right: 5vw;
+		top: -300px;
+		transition: top 0.4s ease-in-out;
+		width: 30vw;
+		z-index: $z-index-medium;
+		&.open {
+			top: 35px;
+		}
+		.avatar {
+			display: inline-block;
+			text-align: center;
+			width: 50%;
+			vertical-align: top;
+		}
+		.message {
+			color: $white;
+			display: inline-block;
+			width: 50%;
+			vertical-align: top;
+			.action {
+				line-height: 1;
+				font-size: 0.8rem;
+				a strong {
+					font-size: 0.8rem;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

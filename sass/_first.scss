@@ -1,0 +1,59 @@
+.first {
+	background-color: $vodafoneMediumDarkGrey;
+	color: $white;
+	header {
+		background-color: $vodafoneLighterGrey;
+		padding: 1rem;
+		position: relative;
+		text-align: center;
+		&:after {
+			bottom: -14px;
+			content: url(#{$imageDir}icon_down_chevron_grey.png);
+			margin-left: -16px;
+			position: absolute;
+			right: 50%;
+		}
+		h1 {
+			font-weight: 700;
+		}
+	}
+	.join {
+		font-size: 0;
+		padding: 1rem;
+		h3 {
+			font-size: 1.6rem;
+			font-weight: 700;
+			margin: 3rem 0 5rem 0;
+			text-align: center;
+		}
+		.image {
+			display: inline-block;
+			margin-bottom: 4rem;
+			text-align: center;
+			vertical-align: middle;
+			width: 50%;
+		}
+		ul {
+			display: inline-block;
+			list-style-type: disc;
+			margin-bottom: 4rem;
+			vertical-align: middle;
+			width: 50%;
+			li {
+				font-size: 1rem;
+			}
+		}
+		.add {
+			text-align: center;
+			a {
+				color: $white;
+				font-size: 1.2rem;
+				font-weight: bold;
+				&:before {
+					content: url(#{$imageDir}icon_chevron_left_medium.png);
+					padding-right: 10px;
+				}
+			}
+		}
+	}
+}

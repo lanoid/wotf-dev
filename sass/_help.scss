@@ -1,0 +1,125 @@
+.help-frame {
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	pointer-events: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100vw;
+	& * {
+		pointer-events: auto;
+	}
+	.help-handle {
+		background: none;
+		background-color: $vodafoneMidGrey;
+		background-image: url(#{$imageDir}icon_support.png);
+		background-position: center center;
+		background-repeat: no-repeat;
+		border: none;
+		color: $white;
+		height: 4%;
+		left: 0;
+		margin: 0 auto;
+		-webkit-mask-image: url(#{$imageDir}mask_help_handle.png);
+		-webkit-mask-size: 100% 100%;
+		pointer-events: auto;
+		position: absolute;
+		right: 0;
+		top: 96%;
+		-webkit-backface-visibility: hidden;
+		transition: -webkit-mask-image .5s ease-in-out;
+		width: 40vw;
+		z-index: $z-index-highest;
+		visibility: visible;
+		&.open {
+			visibility: hidden;
+			-webkit-mask-image: none;
+		}
+		span {
+			display: none;
+		}
+	}
+	.help-holder {
+		background: $vodafoneMediumLightGrey;
+		color: $white;
+		font-size: 0;
+		height: 100%;
+		padding-top: 6%;
+		position: fixed;
+		text-align: center;
+		bottom: -100%;
+		transition: all 1s ease-in-out;
+		width: 100vw;
+		z-index: $z-index-low;
+		&.open {
+			bottom: 0%;
+		}
+		nav {
+			margin: 0 auto;
+			display: block;
+			a {
+				background-position: center center;
+				background-repeat: no-repeat;
+				display: inline-block;
+				height: 40px;
+				margin-right: 4rem;
+				width: 60px;
+				&:last-child {
+					margin-right: 0;
+				}
+				span {
+					display: none;
+				}
+				&.message {
+					background-image: url(#{$imageDir}help_icon_message.png);
+				}
+				&.comment {
+					background-image: url(#{$imageDir}help_icon_comment.png);
+				}
+				&.call {
+					background-image: url(#{$imageDir}help_icon_telephone.png);
+				}
+				&.sound {
+					background-image: url(#{$imageDir}help_icon_sound.png);
+				}
+				&.faq {
+					background-image: url(#{$imageDir}help_icon_faq.png);
+				}
+				&.play {
+					background-image: url(#{$imageDir}help_icon_play.png);
+				}
+			}
+		}
+		h3 {
+			margin-top: 1%;
+		}
+		&.animation {
+			transition: top 0s ease-in-out;
+		}
+		.video {
+			-webkit-backface-visibility: hidden;
+			display: block;
+			height: 80%;
+			margin: 0 auto;
+			width: 90%;
+			vertical-align: top;
+			video {
+				height: 100%;
+				width: 100%;
+			}
+		}
+		.close {
+			background-image: url(#{$imageDir}icon_close.png);
+			background-position: center center;
+			background-repeat: no-repeat;
+			display: block;
+			height: 14px;
+			margin: 0 auto;
+			width: 20px;
+			span {
+				display: none;
+			}
+		}
+	}
+}

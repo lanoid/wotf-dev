@@ -1,0 +1,492 @@
+<div class="dash-frame">
+	<button class="dash-handle both" data-target=".icon-panel" data-close=".help-handle, .help-holder, .menu, .profile"><span class="icon"><span>Dashboard</span></span></button>
+	<aside class="dash-holder icon-panel">
+		<h2>My Vodafone <strong>Dashboard</strong></h2>
+		<div class="dash-panel initial open">
+			<ul class="dash-grid">
+				<li class="devices"><a><span>Devices</span></a></li>
+				<li class="connectivity" data-event="dashboard:open" data-target=".usage"><a><span>Connectivity</span></a></li>
+				<li class="health"><a><span>Health</span></a></li>
+				<li class="movies" data-event="dashboard:open" data-target=".movies"><a><span>Movies</span></a></li>
+				<li class="audio"><a><span>Audio</span></a></li>
+				<li class="wallet"><a><span>Wallet</span></a></li>
+
+				<li class="vplanr" data-target="vplanr"><a><span>Vplanr</span></a></li>
+				<li class="home"><a><span>Home</span></a></li>
+				<li class="car"><a><span>Car</span></a></li>
+				<li class="library"><a><span>Library</span></a></li>
+				<li class="gaming"><a><span>Gaming</span></a></li>
+				<li class="add"><a><span>Add</span></a></li>
+			</ul>
+		</div>
+		<div class="dash-panel movies">
+			<a class="back" data-event="dashboard:open" data-target=".initial"><span>Back</span></a>
+			<ul class="favourite-channels">
+				<li class="my-channels"><a><span>My Channels</span></a></li>
+				<li class="bbc-one"><a><span>BBC One</span></a></li>
+				<li class="bbc-two"><a><span>BBC Two</span></a></li>
+				<li class="bbc-three"><a><span>BBC Three</span></a></li>
+				<li class="bbc-four"><a><span>BBC Four</span></a></li>
+				<li class="bbc-news"><a><span>BBC News</span></a></li>
+				<li class="itv"><a><span>itv</span></a></li>
+				<li class="itv2"><a><span>itv 2</span></a></li>
+				<li class="add"><a><span>Add</span></a></li>
+				<li class="add"><a><span>Add</span></a></li>
+				<li class="add"><a><span>Add</span></a></li>
+				<li class="add"><a><span>Add</span></a></li>
+				<li class="add"><a><span>Add</span></a></li>
+			</ul>
+			<p>Tap to add</p>
+			<ul class="new-channels">
+				<li class="sky-sports-1"><a><span>Sky Sports 1</span></a></li>
+				<li class="sky-sports-2"><a><span>Sky Sports 2</span></a></li>
+				<li class="sky-sports-3"><a><span>Sky Sports 3</span></a></li>
+				<li class="sky-one short"><a><span>Sky One</span></a></li>
+
+				<li class="sky-one-mix"><a><span>Sky One Mix</span></a></li>
+				<li class="sky-movies-premier"><a><span>Sky Movies Premier</span></a></li>
+				<li class="sky-movies-cinema"><a><span>Sky Movies Cinema</span></a></li>
+				<li class="sky-box-office short"><a><span>Sky Box Office</span></a></li>
+
+				<li class="sky-news-active"><a><span>Sky News Active</span></a></li>
+				<li class="sky-gamestar"><a><span>Sky Gamestar</span></a></li>
+				<li class="sky-travel"><a><span>Sky Travel</span></a></li>
+				<li class="sky-fi short"><a><span>Sky Fi</span></a></li>
+			</ul>
+		</div>
+		<div class="dash-panel usage">
+			<a class="back" data-event="dashboard:open" data-target=".initial"><span>Back</span></a>
+			<img src="visuals/images/graph_account_usage.gif">
+		</div>
+	</aside>
+	<aside class="dash-holder vplanr blue">
+		<header>
+			<div class="customise">
+				<img class="dash" data-holder=".icon-panel" data-panel=".initial" src="visuals/images/icon_dashboard_meter_white.png">
+				<!-- <h4>Customise</h4> -->
+			</div>
+			<div class="title">
+				<div class="icon">
+					<img src="visuals/images/icon_vplanr_small_white.png" width="60px">
+				</div>
+				<div class="heading">
+					<h1>Emma’s V-Planr</h1>
+					<p>Tuesday 12th August</p>
+				</div>
+			</div>
+			<div class="time">
+				<div class="clock">
+					<div class="analogue">
+						<div class="face">
+							<div class="big-hand"></div>
+							<div class="medium-hand"></div>
+						</div>
+					</div>
+					<div class="digital">
+						<p><span class="hours">00</span>.<span class="minutes">00</span><span class="period"></span></p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<aside class="tools">
+			<ul>
+				<li class="email">
+					<a href="#"><span>Email</span><span class="unread">3</span></a>
+				</li>
+				<li class="send">
+					<a href="#"><span>Send</span></a>
+				</li>
+				<li class="compose">
+					<a href="#"><span>Compose</span></a>
+				</li>
+				<li class="favourite">
+					<a href="#"><span>Favourite</span></a>
+				</li>
+				<li class="trash">
+					<a href="#"><span>Trash</span></a>
+				</li>
+			</ul>
+		</aside>
+		<section class="calendar">
+			<div class="timeframe month open">
+				<h2>My <strong>Events</strong> <span class="skinny">July/August</span></h2>
+				<button class="paging left"><span>Left</span></button>
+				<button class="paging right"><span>Right</span></button>
+				<div class="confirm">
+					<img class="logo" src="visuals/images/logo_wagamama_large.png">
+					<div class="copy">
+						<h3>Booking confirmed</h3>
+						<p class="booking">9.00pm for 4</p>
+						<p class="added">Added to V-Planr</p>
+					</div>
+					<a class="close">x</a>
+				</div>
+				<ul>
+					<li class="day event active">
+						<h4>12/07</h4>
+						<a class="add">+</a>
+						<img class="logo" src="visuals/images/logo_bumps_and_babies.png">
+					</li>
+					<li class="add">
+						<a class="add">+</a>
+						<img class="logo" src="visuals/images/logo_ocado.png">
+					</li>
+					<li class="add">
+						<a class="add">+</a>
+						<img class="logo" src="visuals/images/logo_zumba_fitness.png">
+					</li>
+					<li class="add wagamama">
+						<a class="add">+</a>
+						<img class="logo" src="visuals/images/logo_wagamama.png">
+					</li>
+					<li class="day">
+						<h4>13/07</h4>
+						<p class="no-events">No events added</p>
+					</li>
+					<li class="day">
+						<h4>14/07</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="day blank">
+						<div class="two-row two-col anniversary">
+							<h4>15/07</h4>
+							<a class="add">+</a>
+							<h3>Sophie and Mark’s anniversary</h3>
+							<p>Party in the park - 2pm til late</p>
+							<p><strong>Families attending:</strong></p>
+							<p>Fiona’s, Naomi’s, Pauls’s, Clare’s, Julie’s</p>
+						</div>
+					</li>
+					<li class="blank">
+					</li>
+					<li class="day">
+						<h4>16/07</h4>
+						<a class="add">+</a>
+						<img class="logo" src="visuals/images/logo_latitude.png">
+					</li>
+					<li class="day">
+						<h4>17/07</h4>
+						<p class="no-events">No events added</p>
+					</li>
+					<li class="day">
+						<h4>20/07</h4>
+						<p class="no-events">No events added</p>
+					</li>
+					<li class="blank">
+					</li>
+					<li class="blank">
+					</li>
+					<li class="day">
+						<div class="two-row instagram">
+							<h4>21/07</h4>
+							<a class="add">+</a>
+							<p><strong>Amanda</strong> left a comment on your instagram photo</p>
+							<p>2 hours ago</p>
+						</div>
+					</li>
+					<li class="day">
+						<h4>22/07</h4>
+						<p class="no-events">No events added</p>
+					</li>
+					<li class="day">
+						<h4>23/07</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="day">
+						<h4>24/07</h4>
+						<img class="logo" src="visuals/images/logo_ocado.png">
+					</li>
+					<li class="day fb">
+						<p>New facebook event</p>
+						<a>click to view</a>
+					</li>
+					<li class="blank">
+					</li>
+					<li class="hour">
+						<h4>25/07</h4>
+						<a class="add">+</a>
+					</li>
+				</ul>
+			</div>
+			<div class="timeframe day">
+				<h2>My <strong>Events</strong> <span class="skinny">July 12</span></h2>
+				<button class="paging left"><span>Left</span></button>
+				<button class="paging right"><span>Right</span></button>
+				<ul>
+					<li class="hour event">
+						<h4>7 AM</h4>
+						<a class="add">+</a>
+						<img class="logo" src="visuals/images/logo_bumps_and_babies.png">
+					</li>
+					<li class="hour event highlight">
+						<h4>8 AM</h4>
+						<a class="add">+</a>
+						<p class="details">8.45 <br>School drop off</p>
+					</li>
+					<li class="hour">
+						<h4>9 AM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour event">
+						<h4>10 AM</h4>
+						<a class="add">+</a>
+						<img class="logo" src="visuals/images/logo_ocado.png">
+					</li>
+					<li class="hour">
+						<h4>11 AM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour">
+						<h4>12 PM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour">
+						<h4>1 PM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour">
+						<h4>2 PM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour event highlight">
+						<h4>3 PM</h4>
+						<a class="add">+</a>
+						<p class="details">8.45 <br>School pick up</p>
+					</li>
+					<li class="hour">
+						<h4>4 PM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour">
+						<h4>5 PM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour event">
+						<h4>6 PM</h4>
+						<a class="add">+</a>
+						<img class="logo" src="visuals/images/logo_zumba_fitness.png">
+					</li>
+					<li class="hour">
+						<h4>7 PM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour">
+						<h4>8 PM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour event">
+						<h4>9 PM</h4>
+						<a class="add">+</a>
+						<img class="logo" src="visuals/images/logo_wagamama.png">
+					</li>
+					<li class="hour">
+						<h4>10 PM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour">
+						<h4>11 PM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour">
+						<h4>12 PM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour">
+						<h4>1 AM</h4>
+						<a class="add">+</a>
+					</li>
+					<li class="hour">
+						<h4>2 AM</h4>
+						<a class="add">+</a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<aside class="actions">
+			<div class="add-event">
+				<a href='#'>Add event<span class="add">+</span></a>
+			</div>
+			<ul class="services">
+				<li class="ocado"><a href="#"><span>Ocado</span><span class="add">+</span></a></li>
+				<li class="zumba"><a href="#"><span>Zumba</span><span class="add">+</span></a></li>
+				<li class="bumps-babies"><a href="#"><span>Bumps & Babies Group</span><span class="add">+</span></a></li>
+			</ul>
+		</aside>
+		<footer></footer>
+	</aside>
+	<aside class="dash-holder profile">
+		<h2>My <strong>Vodafone</strong></h2>
+		<div class="nav">
+			<h3 class="current">My Profile</h3>
+			<h3>My Statement</h3>
+		</div>
+		<div class="details">
+			<div class="avatar">
+				<h1>Emma</h1>
+				<p class="location">Kensington, West London, UK</p>
+				<p class="edited">Last Edited: 6 June</p>
+				<img src="visuals/images/avatar_large.png">
+			</div>
+			<ul class="tools">
+				<li class="edit">Edit Profile</li>
+				<li class="messages">Messages <span class="count">+6</span></li>
+				<li class="level">Membership Level: <span class="gold">Gold</span></li>
+			</ul>
+		</div>
+		<div class="profile-aspects">
+			<ul class="tabs">
+				<li data-target=".connections" class="connections">My Connections</li>
+				<li data-target=".billing" class="billing current">My Billing</li>
+			</ul>
+			<p class="info">Control your preferences for your remote services and your bill payment details</p>
+			<button class="paging left"><span>Left</span></button>
+			<button class="paging right"><span>Right</span></button>
+			<ul class="panels">
+				<li class="connections">
+					<ul>
+						<li>
+							<p class="label">Sync with Calendars</p>
+							<div class="toggle on"></div>
+							<div class="edit">
+								<img src="visuals/images/icon_edit.png">
+							</div>
+						</li>
+						<li>
+							<p class="label">Sync with Spotify</p>
+							<div class="toggle on"></div>
+							<div class="edit">
+								<img src="visuals/images/icon_edit.png">
+							</div>
+						</li>
+						<li>
+							<p class="label">Sync to bank</p>
+							<div class="toggle"></div>
+							<div class="edit">
+								<img src="visuals/images/icon_edit.png">
+							</div>
+						</li>
+						<li>
+							<p class="label">Sync with Utilities</p>
+							<div class="toggle on"></div>
+							<div class="edit">
+								<img src="visuals/images/icon_edit.png">
+							</div>
+						</li>
+						<li>
+							<p class="label">Sync to car</p>
+							<div class="toggle on"></div>
+							<div class="edit">
+								<img src="visuals/images/icon_edit.png">
+							</div>
+						</li>
+						<li>
+							<p class="label">Sync to Gym</p>
+							<div class="toggle on"></div>
+							<div class="edit">
+								<img src="visuals/images/icon_edit.png">
+							</div>
+						</li>
+						<li>
+							<p class="label">Sync to GoogleMail</p>
+							<div class="toggle on"></div>
+							<div class="edit">
+								<img src="visuals/images/icon_edit.png">
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="billing current">
+					<h2><span class="date">03 May - 04 June</span> £79.70</h2>
+					<div class="usage">
+						<h3>Data usage comparison:</h3>
+						<img src="visuals/images/graph_usage.png">
+					</div>
+					<div class="mobile-charges">
+						<h3>Mobile charges:</h3>
+						<div class="estimate">
+							<h4>Your estimated use this month: <span class="price">£59.00</span></h4>
+							<p>This is 53% higher than usual if you use your phone abroad. We’d recommend switching to our Roaming package whilst you are on boliday to help reduce your international call bill.</p>
+							<a class="tarifs">View roaming tarifs</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</aside>
+	<aside class="dash-holder menu">
+		<dl>
+			<dt class="col-1">Packages:</dt>
+			<dd class="col-1">
+				<dl>
+					<dt class="sub">Mobile</dt>
+					<dd>
+						<ul>
+							<li>PAYG</li>
+							<li>Sim Only</li>
+							<li>Monthly Tarrif</li>
+							<li>All offers</li>
+						</ul>
+					</dd>
+					<dt>Movies</dt>
+					<dt>TV</dt>
+					<dt>Broadband</dt>
+					<dt>Music</dt>
+				</dl>
+			</dd>
+			<dt class="col-2">Products:</dt>
+			<dd class="col-2">
+				<dl>
+					<dt class="sub">Handsets</dt>
+					<dd>
+						<ul>
+							<li>Apple</li>
+							<li>Blackberry</li>
+							<li>Nokia</li>
+							<li>Samsung</li>
+							<li>All offers</li>
+						</ul>
+					</dd>
+					<dt class="sub">Tablets</dt>
+					<dd>
+						<ul>
+							<li>Apple</li>
+							<li>Nokia</li>
+							<li>Samsung</li>
+							<li>All offers</li>
+						</ul>
+					</dd>
+					<dt>Accessories</dt>
+				</dl>
+			</dd>
+			<dt class="col-3">Connected:</dt>
+			<dd class="col-3">
+				<dl>
+					<dt>Network</dt>
+					<dt class="sub">Home</dt>
+					<dd>
+						<ul>
+							<li>Lighting</li>
+							<li>Heating</li>
+							<li>Security</li>
+							<li>Health & Fitness</li>
+						</ul>
+					</dd>
+					<dt>Car</dt>
+				</dl>
+			</dd>
+			<dt class="col-4">Services:</dt>
+			<dd class="col-4">
+				<dl>
+					<dt>Your Devices</dt>
+					<dt>The Network</dt>
+					<dt>Tools & Apps</dt>
+					<dt>Settings</dt>
+					<dt>About us</dt>
+					<dt>eForum</dt>
+					<dt>FAQs</dt>
+					<dt>Help</dt>
+				</dl>
+			</dd>
+		</dl>
+	</aside>
+</div>

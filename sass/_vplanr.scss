@@ -1,0 +1,595 @@
+.vplanr,
+.calendar {
+	&.grey {
+		background-color: $vodafoneDarkerGrey;
+		color: $white;
+		header {
+			background-image: none;
+		}
+		.time {
+			.clock {
+				.analogue {
+					.face {
+						border: 2px solid $white;
+						.big-hand {
+							&:before {
+								background: $white;
+							}
+						}
+						.medium-hand {
+							&:before {
+								background: $white;
+							}
+						}
+					}
+				}
+				.digital {
+					p {
+						color: $white;
+					}
+				}
+			}
+		}
+		.tools {
+			li {
+				border-color: $fadedWhite;
+			}
+		}
+		.services {
+			li {
+				border: none;
+			}
+		}
+		.actions {
+			.add-event {
+				a {
+					background-color: $white;
+					color: $black;
+				}
+			}
+		}
+		footer {
+			background-image: none;
+		}
+	}
+	&.pink {
+		background-color: $darkPink;
+		header {
+			background-image: url(#{$imageDir}background_calendar_header.gif);
+		}
+		.time {
+			.clock {
+				.analogue {
+					.face {
+						border: 2px solid $mediumPink;
+						.big-hand {
+							&:before {
+								background: $mediumPink;
+							}
+						}
+						.medium-hand {
+							&:before {
+								background: $mediumPink;
+							}
+						}
+					}
+				}
+				.digital {
+					p {
+						color: $lightPink;
+					}
+				}
+			}
+		}
+		.tools,
+		.services {
+			li {
+				border-color: $brightPink;
+			}
+		}
+		.actions {
+			.add-event {
+				a {
+					background-color: $white;
+					color: $black;
+				}
+			}
+		}
+		.calendar {
+			li {
+				border-color: $brightPink;
+			}
+		}
+		footer {
+			background-image: url(#{$imageDir}background_calendar_footer.gif);
+		}
+	}
+	&.blue {
+		background-color: $lightBlue;
+		header {
+			background-image: url(#{$imageDir}background_calendar_header_blue.gif);
+			color: $mediumBlue;
+		}
+		.time {
+			.clock {
+				.analogue {
+					.face {
+						border: 2px solid $mediumBlue;
+						.big-hand {
+							&:before {
+								background: $mediumBlue;
+							}
+						}
+						.medium-hand {
+							&:before {
+								background: $mediumBlue;
+							}
+						}
+					}
+				}
+				.digital {
+					p {
+						color: $mediumBlue;
+					}
+				}
+			}
+		}
+		.tools,
+		.services {
+			li {
+				border-color: $fadedWhite;
+			}
+		}
+		.actions {
+			.add-event {
+				a {
+					background-color: $white;
+					color: $black;
+				}
+			}
+		}
+		.calendar {
+			li {
+				border-color: $fadedWhite;
+			}
+		}
+		footer {
+			background-image: url(#{$imageDir}background_calendar_footer_blue.gif);
+		}
+	}
+	font-size: 0;
+	overflow: hidden;
+	header {
+		background-size: 100% 100%;
+		font-size: 0;
+		height: 15%;
+		margin-bottom: 1rem;
+		position: relative;
+		width: 100vw;
+		.customise {
+			display: inline-block;
+			width: 20vw;
+			padding: 2vw 4vw 0 4vw;
+			vertical-align: top;
+			text-align: left;
+			h4 {
+				font-size: .8rem;
+				font-weight: 700;
+				&:before {
+					content: url(#{$imageDir}icon_customise.png);
+					vertical-align: middle;
+				}
+			}
+		}
+		.title {
+			display: inline-block;
+			font-size: 0;
+			padding-top: 10px;
+			text-align: center;
+			width: 60vw;
+			vertical-align: top;
+			.icon {
+				display: inline-block;
+				width: 8%;
+				vertical-align: top;
+			}
+			.heading {
+				display: inline-block;
+				width: 40%;
+				vertical-align: top;
+			}
+		}
+		.time {
+			display: inline-block;
+			width: 20vw;
+			vertical-align: top;
+		}
+	}
+	.time {
+		height: 100px;
+		position: relative;
+		width: 100px;
+		.clock {
+			padding-top: 2rem;
+			font-size: 0;
+			.analogue {
+				display: inline-block;
+				position: relative;
+				width: 30%;
+				vertical-align: top;
+				.face {
+					border-radius: 100%;
+					bottom: 0;
+					left: 0;
+					position: absolute;
+					right: 0;
+					top: 0;
+					height: 40px;
+					width: 40px;
+					.big-hand {
+						bottom: 0;
+						left: 0;
+						margin: auto;
+						position: absolute;
+						right: 0;
+						top: 0;
+						width: 2px;
+						&:before {
+							bottom: 20%;
+							content: '';
+							height: 30%;
+							left: 20%;
+							position: absolute;
+							right: 20%;
+							top: 20%;
+							width: inherit;
+						}
+					}
+					.medium-hand {
+						bottom: 0;
+						left: 0;
+						margin: auto;
+						position: absolute;
+						right: 0;
+						top: 0;
+						width: 2px;
+						&:before {
+							content: '';
+							height: 50%;
+							left: 0;
+							position: absolute;
+							right: 0;
+							top: 0;
+							width: inherit;
+						}
+					}
+				}
+			}
+			.digital {
+				display: inline-block;
+				margin: -10px 0 0 -10px;
+				position: relative;
+				width: 50%;
+				vertical-align: top;
+				p {
+
+					font-size: 2.4rem;
+					font-weight: 200;
+					span {
+						font-size: 2.4rem;
+						font-weight: 200;
+						&.period {
+							position: absolute;
+							font-size: 0.8rem;
+							top: 6px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.tools,
+	.calendar,
+	.actions {
+		display: inline-block;
+		vertical-align: top;
+	}
+	.tools,
+	.actions {
+		padding: 0 10px;
+		width: 15%;
+	}
+	.tools,
+	.services {
+		position: relative;
+		li {
+			background: rgba(0,0,0,.1);
+			border: 1px solid;
+			height: 9vw;
+			margin-bottom: 6px;
+			position: relative;
+			width: 12vw;
+		}
+		li a {
+			background-position: center center;
+			background-repeat: no-repeat;
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			span {
+				display: none;
+			}
+		}
+		.email a {
+			background-image: url(#{$imageDir}icon_email.png);
+			.unread {
+				display: block;
+				position: absolute;
+				top: 3px;
+				right: 3px;
+			}
+		}
+		.send a {
+			background-image: url(#{$imageDir}icon_paper_plane.png);
+
+		}
+		.compose a {
+			background-image: url(#{$imageDir}icon_pencil.png);
+		}
+		.favourite a {
+			background-image: url(#{$imageDir}icon_star.png);
+		}
+		.trash a {
+			background-image: url(#{$imageDir}icon_trash_can.png);
+		}
+		.ocado a {
+			background-image: url(#{$imageDir}logo_ocado.png);
+			background-position: center center;
+			background-size: 60%;
+		}
+		.zumba a {
+			background-image: url(#{$imageDir}logo_zumba_fitness.png);
+			background-position: center center;
+			background-size: 80%;
+		}
+		.bumps-babies a {
+			background-image: url(#{$imageDir}logo_bumps_and_babies.png);
+		}
+	}
+	.actions {
+		text-align: right;
+		.add-event {
+			margin-bottom: 6px;
+			margin-left: 1vw;
+			width: 12vw;
+			a {
+				display: block;
+				font-weight: 700;
+				padding: 6px;
+				text-align: left;
+				position: relative;
+				.add {
+					position: absolute;
+					right: 4px;
+					top: 4px;
+					vertical-align: top;
+				}
+			}
+		}
+		.services {
+			position: relative;
+			margin-left: 1vw;
+
+			a .add {
+				display: block;
+				position: absolute;
+				right: 4px;
+				top: 4px;
+			}
+		}
+	}
+
+	.calendar {
+		height: 80%;
+		overflow-y: scroll;
+		position: relative;
+		-webkit-overflow-scrolling: touch;
+		text-align: left;
+		width: 70%;
+		.timeframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			transition: all .5s ease-in-out;
+			z-index: 1;
+			&.open {
+				opacity: 1;
+				z-index: 2;
+			}
+		}
+		h2 {
+			margin: 0 0 1rem 0;
+			line-height: 0;
+			font-size: 1.6rem;
+			strong {
+				font-size: 1.6rem;
+				font-weight: 700;
+			}
+			.skinny {
+				font-size: 1.6rem;
+				font-weight: 200;
+			}
+		}
+		.paging {
+			background: none;
+			border: none;
+			position: absolute;
+			top: 6px;
+			&.left {
+				left: 50%;
+				&:before {
+					content: url(#{$imageDir}icon_chevron_left_large_white.png);
+				}
+			}
+			&.right {
+				right: 10px;
+				&:before {
+					content: url(#{$imageDir}icon_chevron_right_large_white.png);
+				}
+			}
+			span {
+				display: none;
+			}
+		}
+		ul {
+			font-size: 0;
+		}
+		li {
+			background: rgba(0,0,0,.1);
+			color: $white;
+			display: inline-block;
+			font-size: 0;
+			margin: 0 1% 6px 0;
+			padding: 6px;
+			position: relative;
+			min-height: 6.5rem;
+			vertical-align: top;
+			width: 19%;
+			& * {
+				opacity: .3;
+			}
+			&.event * {
+				opacity: 1;
+			}
+			&.highlight {
+				background: rgb(94,38,79);
+			}
+			&.day,
+			&.add {
+				& * {
+					opacity: 1;
+				}
+			}
+			img {
+				bottom: 6px;
+				max-width: 60%;
+				position: absolute;
+				right: 6px;
+
+
+			}
+			h4,
+			.customise,
+			.details,
+			.no-events {
+				font-size: .9rem;
+				vertical-align: top;
+			}
+			.customise {
+				bottom: 6px;
+				position: absolute;
+				right: 6px;
+				width: 60%;
+			}
+			.details {
+				line-height: 1;
+				opacity: .3;
+				vertical-align: bottom;
+			}
+			.two-row {
+				background: #FFF;
+				display: block;
+				height: 13.25rem;
+				left: 0;
+				padding: 6px;
+				position: absolute;
+				top: 0;
+				width: 100%;
+				z-index: $z-index-medium;
+			}
+			.two-col {
+				background: #FFF;
+				left: 0;
+				padding: 6px;
+				position: absolute;
+				top: 0;
+				width: 205%;
+				z-index: $z-index-medium;
+			}
+			.anniversary {
+				background-color: #598955;
+				h3 {
+					font-size: 1.1rem;
+				}
+				p,
+				strong {
+					font-size: .9rem;
+				}
+			}
+			.instagram {
+				background-color: #A93C49;
+				h3 {
+					font-size: 1.1rem;
+				}
+				p,
+				strong {
+					font-size: .9rem;
+				}
+			}
+			&.fb {
+				background: #3B589E;
+			}
+		}
+		.confirm {
+			background-color: rgba(0,0,0,.8);
+			border: 1px solid $white;
+			font-size: 0;
+			left: 50%;
+			margin-left: -300px;
+			opacity: 0;
+			padding: 40px;
+			position: absolute;
+			text-align: center;
+			top: 4rem;
+			transition: all .5s ease-in-out;
+			width: 600px;
+			z-index: 0;
+			&.open {
+				opacity: 1;
+				z-index: 15;
+			}
+			img,
+			.copy {
+				display: inline-block;
+				width: 50%;
+				vertical-align: middle;
+			}
+			.copy {
+				padding-left: 20px;
+				h3 {
+					font-weight: 700;
+				}
+				.added {
+					font-size: .8rem;
+				}
+			}
+			.close {
+				line-height: 1;
+				position: absolute;
+				right: 10px;
+				text-align: center;
+				top: 6px;
+			}
+		}
+
+	}
+	footer {
+		display: block;
+		height: 5rem;
+		width: 100vw;
+		z-index: $z-index-medium;
+	}
+}

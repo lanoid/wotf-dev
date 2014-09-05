@@ -1,0 +1,820 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi">
+		<meta name="viewport" content="minimal-ui">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<title>Website of the future</title>
+
+		<script src="scripts/lib/handlebars.js"></script>
+
+		<script src="scripts/lib/jquery.js"></script>
+		<script src="scripts/lib/jquery.easing.min.js"></script>
+		<script src="scripts/lib/jquery.scrollstop.js"></script>
+		<script src="scripts/lib/jquery.scrollsnap.js"></script>
+
+		<script src="scripts/wotf.js"></script>
+
+		<link href="css/screen.css" type="text/css" rel="stylesheet">
+
+		<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57×57-precomposed.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72×72-precomposed.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114×114-precomposed.png">
+	</head>
+	<body class="logged-in">
+		<header>
+			<nav>
+				<a class="icon menu" data-target=".dash-holder.menu" data-close=".help-handle, .help-holder, .icon-panel, .dash-handle, .profile, .vplanr"><span>Menu</span></a>
+				<a class="icon shopping"><span>Offers</span></a>
+				<a class="icon help-handler handler" data-handle=".help-handle" data-target=".help-holder" data-close=".dash-handle, .dash-holder, .icon-panel, .profile, .vplanr"><span>Support</span></a>
+				<a class="icon dashboard"></a>
+				<a class="icon search"><span>Search</span></a>
+				<a class="icon trolley"><span>Trolley</span></a>
+				<a class="icon profile" data-target=".dash-holder.profile" data-close=".help-handle, .help-holder, .icon-panel, .dash-handle, .menu, .vplanr"><span>Profile</span></a>
+			</nav>
+			<div class="login" data-closed="-300" data-open="34" data-transition="top" data-units="px">
+				<div class="avatar">
+					<img src="visuals/images/avatar_medium.png">
+				</div>
+				<div class="message">
+					<p class="name error"><strong>Not Emma?</strong></p>
+					<p class="action">You’ll need to login to your account <a href="#"><strong>here</strong></a></p>
+				</div>
+			</div>
+		</header>
+		<div class="dash-frame">
+			<button class="dash-handle both" data-target=".icon-panel" data-close=".help-handle, .help-holder, .menu, .profile"><span class="icon"><span>Dashboard</span></span></button>
+			<aside class="dash-holder icon-panel">
+				<h2>My Vodafone <strong>Dashboard</strong></h2>
+				<div class="dash-panel initial open">
+					<ul class="dash-grid">
+						<li class="devices"><a><span>Devices</span></a></li>
+						<li class="connectivity" data-event="dashboard:open" data-target=".usage"><a><span>Connectivity</span></a></li>
+						<li class="health"><a><span>Health</span></a></li>
+						<li class="movies" data-event="dashboard:open" data-target=".movies"><a><span>Movies</span></a></li>
+						<li class="audio"><a><span>Audio</span></a></li>
+						<li class="wallet"><a><span>Wallet</span></a></li>
+
+						<li class="vplanr" data-target="vplanr"><a><span>Vplanr</span></a></li>
+						<li class="home"><a><span>Home</span></a></li>
+						<li class="car"><a><span>Car</span></a></li>
+						<li class="library"><a><span>Library</span></a></li>
+						<li class="gaming"><a><span>Gaming</span></a></li>
+						<li class="add"><a><span>Add</span></a></li>
+					</ul>
+				</div>
+				<div class="dash-panel movies">
+					<a class="back" data-event="dashboard:open" data-target=".initial"><span>Back</span></a>
+					<ul class="favourite-channels">
+						<li class="my-channels"><a><span>My Channels</span></a></li>
+						<li class="bbc-one"><a><span>BBC One</span></a></li>
+						<li class="bbc-two"><a><span>BBC Two</span></a></li>
+						<li class="bbc-three"><a><span>BBC Three</span></a></li>
+						<li class="bbc-four"><a><span>BBC Four</span></a></li>
+						<li class="bbc-news"><a><span>BBC News</span></a></li>
+						<li class="itv"><a><span>itv</span></a></li>
+						<li class="itv2"><a><span>itv 2</span></a></li>
+						<li class="add"><a><span>Add</span></a></li>
+						<li class="add"><a><span>Add</span></a></li>
+						<li class="add"><a><span>Add</span></a></li>
+						<li class="add"><a><span>Add</span></a></li>
+						<li class="add"><a><span>Add</span></a></li>
+					</ul>
+					<p>Tap to add</p>
+					<ul class="new-channels">
+						<li class="sky-sports-1"><a><span>Sky Sports 1</span></a></li>
+						<li class="sky-sports-2"><a><span>Sky Sports 2</span></a></li>
+						<li class="sky-sports-3"><a><span>Sky Sports 3</span></a></li>
+						<li class="sky-one short"><a><span>Sky One</span></a></li>
+
+						<li class="sky-one-mix"><a><span>Sky One Mix</span></a></li>
+						<li class="sky-movies-premier"><a><span>Sky Movies Premier</span></a></li>
+						<li class="sky-movies-cinema"><a><span>Sky Movies Cinema</span></a></li>
+						<li class="sky-box-office short"><a><span>Sky Box Office</span></a></li>
+
+						<li class="sky-news-active"><a><span>Sky News Active</span></a></li>
+						<li class="sky-gamestar"><a><span>Sky Gamestar</span></a></li>
+						<li class="sky-travel"><a><span>Sky Travel</span></a></li>
+						<li class="sky-fi short"><a><span>Sky Fi</span></a></li>
+					</ul>
+				</div>
+				<div class="dash-panel usage">
+					<a class="back" data-event="dashboard:open" data-target=".initial"><span>Back</span></a>
+					<img src="visuals/images/graph_account_usage.gif">
+				</div>
+			</aside>
+			<aside class="dash-holder vplanr blue">
+				<header>
+					<div class="customise">
+						<img class="dash" data-holder=".icon-panel" data-panel=".initial" src="visuals/images/icon_dashboard_meter_white.png">
+						<!-- <h4>Customise</h4> -->
+					</div>
+					<div class="title">
+						<div class="icon">
+							<img src="visuals/images/icon_vplanr_small_white.png" width="60px">
+						</div>
+						<div class="heading">
+							<h1>Emma’s V-Planr</h1>
+							<p>Tuesday 12th August</p>
+						</div>
+					</div>
+					<div class="time">
+						<div class="clock">
+							<div class="analogue">
+								<div class="face">
+									<div class="big-hand"></div>
+									<div class="medium-hand"></div>
+								</div>
+							</div>
+							<div class="digital">
+								<p><span class="hours">00</span>.<span class="minutes">00</span><span class="period"></span></p>
+							</div>
+						</div>
+					</div>
+				</header>
+				<aside class="tools">
+					<ul>
+						<li class="email">
+							<a href="#"><span>Email</span><span class="unread">3</span></a>
+						</li>
+						<li class="send">
+							<a href="#"><span>Send</span></a>
+						</li>
+						<li class="compose">
+							<a href="#"><span>Compose</span></a>
+						</li>
+						<li class="favourite">
+							<a href="#"><span>Favourite</span></a>
+						</li>
+						<li class="trash">
+							<a href="#"><span>Trash</span></a>
+						</li>
+					</ul>
+				</aside>
+				<section class="calendar">
+					<div class="timeframe month open">
+						<h2>My <strong>Events</strong> <span class="skinny">July/August</span></h2>
+						<button class="paging left"><span>Left</span></button>
+						<button class="paging right"><span>Right</span></button>
+						<div class="confirm">
+							<img class="logo" src="visuals/images/logo_wagamama_large.png">
+							<div class="copy">
+								<h3>Booking confirmed</h3>
+								<p class="booking">9.00pm for 4</p>
+								<p class="added">Added to V-Planr</p>
+							</div>
+							<a class="close">x</a>
+						</div>
+						<ul>
+							<li class="day event active">
+								<h4>12/07</h4>
+								<a class="add">+</a>
+								<img class="logo" src="visuals/images/logo_bumps_and_babies.png">
+							</li>
+							<li class="add">
+								<a class="add">+</a>
+								<img class="logo" src="visuals/images/logo_ocado.png">
+							</li>
+							<li class="add">
+								<a class="add">+</a>
+								<img class="logo" src="visuals/images/logo_zumba_fitness.png">
+							</li>
+							<li class="add wagamama">
+								<a class="add">+</a>
+								<img class="logo" src="visuals/images/logo_wagamama.png">
+							</li>
+							<li class="day">
+								<h4>13/07</h4>
+								<p class="no-events">No events added</p>
+							</li>
+							<li class="day">
+								<h4>14/07</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="day blank">
+								<div class="two-row two-col anniversary">
+									<h4>15/07</h4>
+									<a class="add">+</a>
+									<h3>Sophie and Mark’s anniversary</h3>
+									<p>Party in the park - 2pm til late</p>
+									<p><strong>Families attending:</strong></p>
+									<p>Fiona’s, Naomi’s, Pauls’s, Clare’s, Julie’s</p>
+								</div>
+							</li>
+							<li class="blank">
+							</li>
+							<li class="day">
+								<h4>16/07</h4>
+								<a class="add">+</a>
+								<img class="logo" src="visuals/images/logo_latitude.png">
+							</li>
+							<li class="day">
+								<h4>17/07</h4>
+								<p class="no-events">No events added</p>
+							</li>
+							<li class="day">
+								<h4>20/07</h4>
+								<p class="no-events">No events added</p>
+							</li>
+							<li class="blank">
+							</li>
+							<li class="blank">
+							</li>
+							<li class="day">
+								<div class="two-row instagram">
+									<h4>21/07</h4>
+									<a class="add">+</a>
+									<p><strong>Amanda</strong> left a comment on your instagram photo</p>
+									<p>2 hours ago</p>
+								</div>
+							</li>
+							<li class="day">
+								<h4>22/07</h4>
+								<p class="no-events">No events added</p>
+							</li>
+							<li class="day">
+								<h4>23/07</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="day">
+								<h4>24/07</h4>
+								<img class="logo" src="visuals/images/logo_ocado.png">
+							</li>
+							<li class="day fb">
+								<p>New facebook event</p>
+								<a>click to view</a>
+							</li>
+							<li class="blank">
+							</li>
+							<li class="hour">
+								<h4>25/07</h4>
+								<a class="add">+</a>
+							</li>
+						</ul>
+					</div>
+					<div class="timeframe day">
+						<h2>My <strong>Events</strong> <span class="skinny">July 12</span></h2>
+						<button class="paging left"><span>Left</span></button>
+						<button class="paging right"><span>Right</span></button>
+						<ul>
+							<li class="hour event">
+								<h4>7 AM</h4>
+								<a class="add">+</a>
+								<img class="logo" src="visuals/images/logo_bumps_and_babies.png">
+							</li>
+							<li class="hour event highlight">
+								<h4>8 AM</h4>
+								<a class="add">+</a>
+								<p class="details">8.45 <br>School drop off</p>
+							</li>
+							<li class="hour">
+								<h4>9 AM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour event">
+								<h4>10 AM</h4>
+								<a class="add">+</a>
+								<img class="logo" src="visuals/images/logo_ocado.png">
+							</li>
+							<li class="hour">
+								<h4>11 AM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour">
+								<h4>12 PM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour">
+								<h4>1 PM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour">
+								<h4>2 PM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour event highlight">
+								<h4>3 PM</h4>
+								<a class="add">+</a>
+								<p class="details">8.45 <br>School pick up</p>
+							</li>
+							<li class="hour">
+								<h4>4 PM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour">
+								<h4>5 PM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour event">
+								<h4>6 PM</h4>
+								<a class="add">+</a>
+								<img class="logo" src="visuals/images/logo_zumba_fitness.png">
+							</li>
+							<li class="hour">
+								<h4>7 PM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour">
+								<h4>8 PM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour event">
+								<h4>9 PM</h4>
+								<a class="add">+</a>
+								<img class="logo" src="visuals/images/logo_wagamama.png">
+							</li>
+							<li class="hour">
+								<h4>10 PM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour">
+								<h4>11 PM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour">
+								<h4>12 PM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour">
+								<h4>1 AM</h4>
+								<a class="add">+</a>
+							</li>
+							<li class="hour">
+								<h4>2 AM</h4>
+								<a class="add">+</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<aside class="actions">
+					<div class="add-event">
+						<a href='#'>Add event<span class="add">+</span></a>
+					</div>
+					<ul class="services">
+						<li class="ocado"><a href="#"><span>Ocado</span><span class="add">+</span></a></li>
+						<li class="zumba"><a href="#"><span>Zumba</span><span class="add">+</span></a></li>
+						<li class="bumps-babies"><a href="#"><span>Bumps & Babies Group</span><span class="add">+</span></a></li>
+					</ul>
+				</aside>
+				<footer></footer>
+			</aside>
+			<aside class="dash-holder profile">
+				<h2>My <strong>Vodafone</strong></h2>
+				<div class="nav">
+					<h3 class="current">My Profile</h3>
+					<h3>My Statement</h3>
+				</div>
+				<div class="details">
+					<div class="avatar">
+						<h1>Emma</h1>
+						<p class="location">Kensington, West London, UK</p>
+						<p class="edited">Last Edited: 6 June</p>
+						<img src="visuals/images/avatar_large.png">
+					</div>
+					<ul class="tools">
+						<li class="edit">Edit Profile</li>
+						<li class="messages">Messages <span class="count">+6</span></li>
+						<li class="level">Membership Level: <span class="gold">Gold</span></li>
+					</ul>
+				</div>
+				<div class="profile-aspects">
+					<ul class="tabs">
+						<li data-target=".connections" class="connections">My Connections</li>
+						<li data-target=".billing" class="billing current">My Billing</li>
+					</ul>
+					<p class="info">Control your preferences for your remote services and your bill payment details</p>
+					<button class="paging left"><span>Left</span></button>
+					<button class="paging right"><span>Right</span></button>
+					<ul class="panels">
+						<li class="connections">
+							<ul>
+								<li>
+									<p class="label">Sync with Calendars</p>
+									<div class="toggle on"></div>
+									<div class="edit">
+										<img src="visuals/images/icon_edit.png">
+									</div>
+								</li>
+								<li>
+									<p class="label">Sync with Spotify</p>
+									<div class="toggle on"></div>
+									<div class="edit">
+										<img src="visuals/images/icon_edit.png">
+									</div>
+								</li>
+								<li>
+									<p class="label">Sync to bank</p>
+									<div class="toggle"></div>
+									<div class="edit">
+										<img src="visuals/images/icon_edit.png">
+									</div>
+								</li>
+								<li>
+									<p class="label">Sync with Utilities</p>
+									<div class="toggle on"></div>
+									<div class="edit">
+										<img src="visuals/images/icon_edit.png">
+									</div>
+								</li>
+								<li>
+									<p class="label">Sync to car</p>
+									<div class="toggle on"></div>
+									<div class="edit">
+										<img src="visuals/images/icon_edit.png">
+									</div>
+								</li>
+								<li>
+									<p class="label">Sync to Gym</p>
+									<div class="toggle on"></div>
+									<div class="edit">
+										<img src="visuals/images/icon_edit.png">
+									</div>
+								</li>
+								<li>
+									<p class="label">Sync to GoogleMail</p>
+									<div class="toggle on"></div>
+									<div class="edit">
+										<img src="visuals/images/icon_edit.png">
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li class="billing current">
+							<h2><span class="date">03 May - 04 June</span> £79.70</h2>
+							<div class="usage">
+								<h3>Data usage comparison:</h3>
+								<img src="visuals/images/graph_usage.png">
+							</div>
+							<div class="mobile-charges">
+								<h3>Mobile charges:</h3>
+								<div class="estimate">
+									<h4>Your estimated use this month: <span class="price">£59.00</span></h4>
+									<p>This is 53% higher than usual if you use your phone abroad. We’d recommend switching to our Roaming package whilst you are on boliday to help reduce your international call bill.</p>
+									<a class="tarifs">View roaming tarifs</a>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</aside>
+			<aside class="dash-holder menu">
+				<dl>
+					<dt class="col-1">Packages:</dt>
+					<dd class="col-1">
+						<dl>
+							<dt class="sub">Mobile</dt>
+							<dd>
+								<ul>
+									<li>PAYG</li>
+									<li>Sim Only</li>
+									<li>Monthly Tarrif</li>
+									<li>All offers</li>
+								</ul>
+							</dd>
+							<dt>Movies</dt>
+							<dt>TV</dt>
+							<dt>Broadband</dt>
+							<dt>Music</dt>
+						</dl>
+					</dd>
+					<dt class="col-2">Products:</dt>
+					<dd class="col-2">
+						<dl>
+							<dt class="sub">Handsets</dt>
+							<dd>
+								<ul>
+									<li>Apple</li>
+									<li>Blackberry</li>
+									<li>Nokia</li>
+									<li>Samsung</li>
+									<li>All offers</li>
+								</ul>
+							</dd>
+							<dt class="sub">Tablets</dt>
+							<dd>
+								<ul>
+									<li>Apple</li>
+									<li>Nokia</li>
+									<li>Samsung</li>
+									<li>All offers</li>
+								</ul>
+							</dd>
+							<dt>Accessories</dt>
+						</dl>
+					</dd>
+					<dt class="col-3">Connected:</dt>
+					<dd class="col-3">
+						<dl>
+							<dt>Network</dt>
+							<dt class="sub">Home</dt>
+							<dd>
+								<ul>
+									<li>Lighting</li>
+									<li>Heating</li>
+									<li>Security</li>
+									<li>Health & Fitness</li>
+								</ul>
+							</dd>
+							<dt>Car</dt>
+						</dl>
+					</dd>
+					<dt class="col-4">Services:</dt>
+					<dd class="col-4">
+						<dl>
+							<dt>Your Devices</dt>
+							<dt>The Network</dt>
+							<dt>Tools & Apps</dt>
+							<dt>Settings</dt>
+							<dt>About us</dt>
+							<dt>eForum</dt>
+							<dt>FAQs</dt>
+							<dt>Help</dt>
+						</dl>
+					</dd>
+				</dl>
+			</aside>
+		</div>
+		<main id="content">
+			<div class="scroller">
+				<div class="row">
+					<section class="col full home" id="home" data-url="/scripts/home-data.js">
+						<div class="copy">
+							<h1>Let us keep and eye on him, <br>Emma.</h1>
+							<p>Let Vodafones MyHome and Mimo’s revolutionary Smart Baby Onesie, help you sleep sounder.</p>
+							<a class="cta rectangle">Connect to <strong>Mimo</strong></a>
+							<img class="product-image" src="visuals/images/product_mimo_iphone.png">
+						</div>
+					</section>
+					<section class="col full channels">
+						<a class="close"><span>Close</span></a>
+						<video poster="visuals/images/poster_desperate_housewives.jpg" id="channel-video">
+							<source src="visuals/videos/Carnival.mp4" type="video/mp4">
+						</video>
+						<div class="channel-selector">
+							<div class="handle">
+								<a class="drag"></a>
+								<h2>Choose your channel</h2>
+							</div>
+							<div class="channels">
+								<p class="message">Keep up with your favourite events with<br> <strong>Vf live stream @Vodafone5G speeds</strong>,<br> wherever you are!</p>
+								<ul>
+									<li class="channel4"><span>Channel 4</span></li>
+									<li class="channel5"><span>Channel 5</span></li>
+									<li class="sky-living"><span>Sky Living</span></li>
+								</ul>
+								<ul>
+									<li class="more4"><span>More 4</span></li>
+									<li class="channel5star"><span>5 Star</span></li>
+									<li class="channel5usa"><span>5 USA</span></li>
+								</ul>
+								<ul>
+									<li class="sky-livingit"><span>Sky Livingit</span></li>
+									<li class="sky1"><span>Sky 1</span></li>
+									<li class="sky2"><span>Sky 2</span></li>
+								</ul>
+								</table>
+							</div>
+						</div>
+					</section>
+					<section class="col third music">
+						<div class="spotify">
+							<header>
+								<h2>My Spotify Playlists</h2>
+								<h3>On the move:</h3>
+							</header>
+							<ul class="playlists">
+								<li class="open">
+									<header>
+										<h4>Turin to Forte dei Marmi</h4>
+									</header>
+									<ul class="playlist">
+										<li>
+											<h5 class="title">Get Lucky</h5>
+											<p class="artist">Daft Punk</p>
+										</li>
+										<li>
+											<h5 class="title">Fino All’Estasi</h5>
+											<p class="artist">Emos Ramazotti ft. Nicole</p>
+										</li>
+										<li>
+											<h5 class="title">Every Teardrop is a Waterfall</h5>
+											<p class="artist">Coldplay</p>
+										</li>
+										<li>
+											<h5 class="title">Ride like the wind</h5>
+											<p class="artist">Christopher Cross</p>
+										</li>
+										<li>
+											<h5 class="title">Here for you</h5>
+											<p class="artist">Gorgon City ft. Laura Welsh</p>
+										</li>
+										<li>
+											<h5 class="title">If I Could Change Your Mind</h5>
+											<p class="artist">Haim</p>
+										</li>
+										<li>
+											<h5 class="title">Whole Lotta Love</h5>
+											<p class="artist">Led Zeppelin</p>
+										</li>
+										<li>
+											<h5 class="title">Hawaiian Air</h5>
+											<p class="artist">Friendly Fires</p>
+										</li>
+										<li>
+											<h5 class="title">Dissolve Me</h5>
+											<p class="artist">Alt-J</p>
+										</li>
+										<li>
+											<h5 class="title">Green Flag</h5>
+											<p class="artist">Growing</p>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<header>
+										<h4>Mix</h4>
+									</header>
+								</li>
+								<li>
+									<header class="logo">
+										<img src="visuals/images/logo_fiat.png">
+										<h4> FIAT Compilation 14</h4>
+									</header>
+								</li>
+								<li>
+									<header class="logo">
+										<img src="visuals/images/logo_vespa.png">
+										<h4>Vespas Hottest</h4>
+									</header>
+								</li>
+								<li>
+									<header>
+										<h4>Emma’s Yoga</h4>
+									</header>
+								</li>
+								<li>
+									<header>
+										<h4>Emma - Work</h4>
+									</header>
+								</li>
+								<li>
+									<header>
+										<h4>90’s</h4>
+									</header>
+								</li>
+								<li>
+									<header>
+										<h4>Ambient (Air)</h4>
+									</header>
+								</li>
+							</ul>
+						</div>
+						<footer>
+							<h2>Sync my playlists</h2>
+						</footer>
+					</section>
+					<section class="col two-thirds lifestyle">
+						<div class="copy">
+							<h2><strong>Yoga</strong> on the move</h2>
+							<p><strong>VodafoneYoga</strong> -  now available for iPhone and Android. <a href="#"><strong>Download</strong></a></p>
+						</div>
+					</section>
+					<section class="col third network-feed">
+						<h3><strong>Yoga</strong> on my network</h3>
+						<ul>
+							<li>
+								<p class="date">Jun 5</p>
+								<p class="at">@electricfoxy</p>
+								<p class="message">Can exercise monitors reduce obesity rates? <a href="http://www.cnn.com/2014/06/04/living/ralitsa-vassileva-digital-fitness-monitors/index.html">http://www.cnn.com/2014/06/04/living/ralitsa-vassileva-digital-fitness-monitors/index.html</a></p>
+								<p class="handle">Jennifer Garner @JennyG</p>
+							</li>
+							<li>
+								<div class="avatar">
+									<img src="visuals/images/avatar_yoga_medium.png">
+								</div>
+								<div class="info">
+									<p class="date">Yesterday</p>
+									<p class="at">Yoga.com</p>
+								</div>
+								<p class="message">More info on avoiding injuries in your yoga practice here: <a href="https://yoga.com/article/how-to-avoid-injuries-when-practicing-yoga-at-home">https://yoga.com/article/how-to-avoid-injuries-when-practicing-yoga-at-home</a></p>
+								<p class="handle">#yoga #yogainjuries</p>
+							</li>
+							<li>
+								<p class="date">Jun 5</p>
+								<p class="at">@electricfoxy</p>
+								<p class="message">Can exercise monitors reduce obesity rates? <a href="http://www.cnn.com/2014/06/04/living/ralitsa-vassileva-digital-fitness-monitors/index.html">http://www.cnn.com/2014/06/04/living/ralitsa-vassileva-digital-fitness-monitors/index.html</a></p>
+								<p class="handle">Jennifer Garner @JennyG</p>
+							</li>
+							<li>
+								<div class="avatar">
+									<img src="visuals/images/avatar_yoga_medium.png">
+								</div>
+								<div class="info">
+									<p class="date">Yesterday</p>
+									<p class="at">Yoga.com</p>
+								</div>
+								<p class="message">More info on avoiding injuries in your yoga practice here: <a href="https://yoga.com/article/how-to-avoid-injuries-when-practicing-yoga-at-home">https://yoga.com/article/how-to-avoid-injuries-when-practicing-yoga-at-home</a></p>
+								<p class="handle">#yoga #yogainjuries</p>
+							</li>
+						</ul>
+						<p><a href="#"><span>More</span></a></p>
+					</section>
+					<section class="col third products">
+						<h2><strong>Yoga accessories trending now</strong></h2>
+						<ul class="product-list">
+							<li>
+								<img src="visuals/images/product_jawbone_up.jpg">
+								<ul class="rating background one">
+									<li><span>Bad</span></li>
+									<li><span>Poor</span></li>
+									<li><span>OK</span></li>
+									<li><span>Good</span></li>
+									<li><span>Amazing</span></li>
+								</ul>
+								<p class="product-name">LG G-Watch</p>
+								<p class="product-description">Powered by Android Wear.</p>
+								<ul class="details">
+									<li class="price">£149.99</li>
+									<li><a class="point arrow right" href="#" data-url="partials/lg-g-watch.html"><span>View details</span></a></li>
+								</ul>
+								<img src="visuals/images/product_smartwatch.jpg">
+							</li>
+							<li>
+								<ul class="rating background three">
+									<li><span>Bad</span></li>
+									<li><span>Poor</span></li>
+									<li><span>OK</span></li>
+									<li><span>Good</span></li>
+									<li><span>Amazing</span></li>
+								</ul>
+								<p class="product-name">UP by Jawbone</p>
+								<p class="product-description">UP by Jawbone conmbines a wristband and app iPhone, iPad or iPod touch.</p>
+								<ul class="details">
+									<li class="price">£119.99</li>
+									<li><a class="point arrow right" href="#" data-url="partials/lg-g-watch.html"><span>View details</span></a></li>
+								</ul>
+								<img src="visuals/images/product_nike_fuelband.jpg">
+							</li>
+						</ul>
+					</section>
+					<section class="col quarter photos">
+						<header>
+							<h2>My Photos</h2>
+						</header>
+						<div class="photo-set">
+							<div class="controls">
+								<h3>Nike FunRun</h3>
+								<a class="close">X</a>
+							</div>
+							<img src="visuals/images/photo_running.jpg">
+						</div>
+					</section>
+					<section class="col three-quarters first">
+						<header>
+							<h1>Be the first</h1>
+						</header>
+						<div class="join">
+							<h3>Would you help us make a new service we’ve been working on here at Vodafone?</h3>
+							<div class="image">
+								<img src="visuals/images/logo_vplanr.jpg">
+							</div>
+							<ul>
+								<li>Organise your daily, weekly and monthly activities online</li>
+								<li>Book shopping deliveries from your local stores and our partners such as Ocado, Waitrose and Sainsburys</li>
+								<li>Reserve a table at your favourite restaurant or with our friends at  Wagamamas, Oblix and Harvey Nichols</li>
+								<li>Plan events, book tickets with Ticketmaster and   manage your  social calendar in one place</li>
+								<li>Set up diaries and calendars for yourself and your family</li>
+								<li>Even book a nanny to look after Molly on saturday night!</li>
+							</ul>
+							<div class="add"><a>Tap to add it to your dashboard and start a 90 day trial!</a></div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+		<div class="help-frame">
+			<button class="help-handle" data-target=".help-holder" data-close=".dash-handle, .dash-holder"><span>Help</span></button>
+			<aside class="help-holder">
+				<nav class="help-nav">
+					<a href="#" class="message"><span>Message</span></a>
+					<a href="#" class="comment"><span>Comment</span></a>
+					<a href="#" class="call"><span>Call</span></a>
+					<a href="#" class="sound"><span>Sound</span></a>
+					<a href="#" class="faq"><span>FAQ</span></a>
+					<a href="#" class="play"><span>Play</span></a>
+				</nav>
+				<h3><strong>Ask Tom.</strong> Your Vodafone concierge</h3>
+				<div class="video">
+					<video id="help" poster="visuals/images/help_video_poster.jpg" controls>
+						<source type="video/mp4" src="visuals/videos/RioClip.mp4">
+					</video>
+				</div>
+				<a href="#" class="close help-handler handler" data-handle=".help-handle" data-target=".help-holder" data-close=".dash-handle, .dash-holder"><span>Close</span></a>
+			</aside>
+		</div>
+		<footer></footer>
+	</body>
+</html>

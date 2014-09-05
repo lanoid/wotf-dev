@@ -1,0 +1,132 @@
+section.home {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	transition: background .5s ease-in-out;
+	&:before {
+		background-image: url(#{$imageDir}vodafone_trapezium.png);
+		background-repeat: no-repeat;
+		content: '';
+		display: block;
+		height: 244px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 118px;
+		z-index: 15;
+	}
+	.copy {
+		color: $black;
+		padding: 2rem;
+		position: absolute;
+		top: 70%;
+		width: 60vw;
+		z-index: $z-index-medium;
+	}
+	.expand {
+		left: 40%;
+		top: 0;
+		transition: all .5s ease-in-out;
+	}
+	&.white {
+		color: $white;
+		.copy {
+			color: $white;
+			.hashtags a {
+				color: $white;
+			}
+		}
+	}
+	&.black {
+		color: $black;
+		.copy {
+			color: $black;
+			.hashtags a {
+				color: $black;
+			}
+		}
+	}
+}
+
+.logged-out {
+	section.home {
+		cursor: pointer;
+		.panel-nav {
+			bottom: 26%;
+			left: 2rem;
+		}
+
+		.video-container {
+			background-color: $black;
+			bottom: 0;
+			left: 0;
+			overflow: hidden;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transition: opacity .5s ease-in-out;
+			z-index: $z-index-medium;
+			video {
+				bottom: 0;
+				height: 100%;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+				-webkit-transform: scaleY(1.3) scaleX(1.3);
+				-moz-transform: scaleY(1.3) scaleX(1.3);
+				width: 100%;
+			}
+		}
+		.expand {
+			left: 35%;
+			position: absolute;
+			top: 0;
+
+		}
+	}
+}
+
+.logged-in {
+	.home {
+		background-image: url(#{$imageDir}hero_emma_baby.jpg);
+		background-size: cover;
+		.copy {
+			top: 36%;
+			h1 {
+				line-height: 1;
+				margin-bottom: 1rem;
+			}
+			.product-image {
+				position: absolute;
+				left: 50%;
+			}
+		}
+	}
+
+}
+
+.panel-nav {
+	position: absolute;
+	z-index: $z-index-high;
+	li {
+		display: inline;
+		margin-right: 5px;
+		font-size: 1.2rem;
+		span {
+			display: none;
+		}
+		&:before {
+			content: '○';
+		}
+		&.current {
+			&:before {
+				content: '●';
+			}
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

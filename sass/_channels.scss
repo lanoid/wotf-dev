@@ -1,0 +1,122 @@
+section.channels {
+	color: $white;
+	text-align: center;
+	transition: all .5s ease-in-out;
+	width: 0;
+	&.open {
+		width: 100vw;
+	}
+	.close {
+		position: absolute;
+		top: 50px;
+		left: 20px;
+		z-index: 2;
+		&:after {
+			background-color: $vodafoneRed;
+			border-radius: 100%;
+			content: url(#{$imageDir}icon_close.png);
+			padding: 7px 6px 3px 6px;
+		}
+		span {
+			display: none;
+		}
+	}
+	video {
+		bottom: 0;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+	.channel-selector {
+		background: rgba(0,0,0,.2);
+		position: absolute;
+		right: 1em;
+		bottom: -21rem;
+		width: 33.3vw;
+		z-index: 2;
+		transition: all .5s ease-in-out;
+		&.open {
+			bottom: 0;
+			.channels {
+				.message {
+					height: 0;
+				}
+			}
+		}
+		.handle {
+			background-color: $vodafoneRed;
+			.drag {
+				display: block;
+				padding-top: 10px;
+				&:after {
+					content: url(#{$imageDir}icon_menu_burger.png);
+				}
+			}
+			h2 {
+				font-weight: 700;
+			}
+		}
+		.channels {
+			padding-bottom: 2rem;
+			.message {
+				transition: all .5s ease-in-out;
+				font-size: 1rem;
+				height: 5em;
+				overflow: hidden;
+				margin: .5rem;
+				strong {
+					font-size: 1rem;
+				}
+			}
+			ul {
+				display: inline-block;
+				font-size: 0;
+				margin: 0 auto;
+				li {
+					background-color: rgba(255,255,255,0.4);
+					display: inline-block;
+					margin: 3px;
+					height: 90px;
+					width: 90px;
+					background-repeat: no-repeat;
+					background-position: center center;
+					&.channel4 {
+						background-image: url(#{$imageDir}logo_channel_4.png);
+					}
+					&.channel5 {
+						background-image: url(#{$imageDir}logo_channel5.png);
+					}
+					&.sky-living {
+						background-image: url(#{$imageDir}logo_sky_living.png);
+					}
+					&.more4 {
+						background-image: url(#{$imageDir}logo_more4.png);
+					}
+					&.channel5star {
+						background-image: url(#{$imageDir}logo_channel5star.png);
+					}
+					&.channel5usa {
+						background-image: url(#{$imageDir}logo_channel5usa.png);
+					}
+					&.sky-livingit {
+						background-image: url(#{$imageDir}logo_sky_livingit.png);
+					}
+					&.sky1 {
+						background-image: url(#{$imageDir}logo_sky1.png);
+					}
+					&.sky2 {
+						background-image: url(#{$imageDir}logo_sky2.png);
+					}
+					span {
+						display: none;
+					}
+				}
+			}
+
+		}
+	}
+}

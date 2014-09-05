@@ -1,0 +1,491 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0">
+		<meta name="viewport" content="minimal-ui">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<title>Website of the future</title>
+
+		<script src="scripts/lib/handlebars.js"></script>
+
+		<script src="scripts/lib/jquery.js"></script>
+		<script src="scripts/lib/jquery.easing.min.js"></script>
+		<script src="scripts/lib/jquery.scrollstop.js"></script>
+		<script src="scripts/lib/jquery.scrollsnap.js"></script>
+
+		<script id="home-template" type="text/x-handlebars-template">
+		<div class="content">
+			{{#if video}}
+			<div class="video-container">
+				<video poster="{{ video.poster }}" autoplay loop>
+					<source src="{{ video.src }}" type="video/mp4">
+				</video>
+			</div>
+			{{/if}}
+			<div class="copy">
+				{{#if title}}
+				<h1>{{{title}}}</h1>
+				{{/if}}
+				{{#if byline}}
+				<div class="byline">
+					{{#each byline.texts}}
+					<p>{{{text}}}</p>
+					{{/each}}
+					{{#each byline.links}}
+					<a href="{{href}}">{{{link}}}</a>
+					{{/each}}
+				</div>
+				{{/if}}
+				{{#if hashtags}}
+				<ul class="hashtags">
+					{{#each hashtags}}
+					<li><a href="{{href}}">{{text}}</a></li>
+					{{/each}}
+				</ul>
+				{{/if}}
+				{{#if expand}}
+				<div class="expand {{expand.direction}}" style="left:{{expand.x}};top:{{expand.y}};">
+					<a class="point plus {{expand.direction}}" href="#"><span>MESSAGE</span></a>
+					<div class="message" data-max-width="{{expand.width}}" data-unit="vw">
+						<div class="message-inner" style="width: {{expand.width}}">
+							<h3>{{expand.title}}</h3>
+							<p>{{expand.message}}</p>
+							<a href="{{expand.href}}"><strong>{{expand.link}}</strong></a>
+						</div>
+					</div>
+				</div>
+				{{/if}}
+			</div>
+		</div>
+		</script>
+		<script id="movie-template" type="text/x-handlebars-template">
+		<div class="content">
+			<div class="copy">
+				{{#if title}}
+				<h2>{{{title}}}</h2>
+				{{/if}}
+				{{#if byline}}
+				<div class="byline">
+					{{#each byline.texts}}
+					<p>{{{text}}}</p>
+					{{/each}}
+					{{#each byline.links}}
+					<a href="{{href}}">{{{link}}}</a>
+					{{/each}}
+				</div>
+				{{/if}}
+				{{#if hashtags}}
+				<ul class="hashtags">
+					{{#each hashtags}}
+					<li><a href="{{href}}">{{text}}</a></li>
+					{{/each}}
+				</ul>
+				{{/if}}
+				{{#if expand}}
+				<div class="spotlight-handle {{expand.direction}}" style="left:{{expand.x}};top:{{expand.y}};">
+					<a class="point arrow {{expand.direction}}" href="#"><span>MESSAGE</span></a>
+					<div class="spotlight closed">
+
+					</div>
+				</div>
+				{{/if}}
+			</div>
+		</div>
+		</script>
+		<script id="event-template" type="text/x-handlebars-template">
+			<div class="content event-1">
+				<div class="copy sub-copy">
+					<h2>New events local to you</h2>
+					<p>Geo-located: <strong>West Kensington, London</strong></p>
+				</div>
+				<div class="copy main-copy">
+					<h2>V&amp;A Museum presents Horst</h2>
+					<div class="byline-links-container">
+						<h3>Horse, New star of the V&amp;A</h3>
+						<p class="links">
+							<a href="#">http://xx/xxx</a>
+							<a href="#">@TimeOutLondon</a>
+						</p>
+					</div>
+					<img src="visuals/images/icon_time_out.png" class="time-out-image">
+				</div>
+				<div class="vplanr">
+					<img src="visuals/images/icon_vplanr_small.png">
+					<p>Up for some beta testing? Try our new organiser tool <strong>V-Planr</strong> for <strong>FREE!</strong></p>
+				</div>
+			</div>
+		</script>
+
+		<script type="text/x-handlebars-template" id="template-event-1">
+			<div class="content event-1">
+				<div class="copy sub-copy">
+					<h2>New events local to you</h2>
+					<p>Geo-located: <strong>West Kensington, London</strong></p>
+				</div>
+				<div class="copy main-copy">
+					<h2>V&amp;A Museum presents Horst</h2>
+					<div class="byline-links-container">
+						<h3>Horse, New star of the V&amp;A</h3>
+						<p class="links">
+							<a href="#">http://xx/xxx</a>
+							<a href="#">@TimeOutLondon</a>
+						</p>
+					</div>
+					<img src="visuals/images/icon_time_out.png" class="time-out-image">
+				</div>
+				<div class="vplanr">
+					<img src="visuals/images/icon_vplanr_small.png">
+					<p>Up for some beta testing? Try our new organiser tool <strong>V-Planr</strong> for <strong>FREE!</strong></p>
+				</div>
+			</div>
+		</script>
+
+		<script type="text/x-handlebars-template" id="template-event-2">
+			<div class="content event-2">
+				<a class="point arrow right" data-timeout="eventPanel" href="#"><span></span></a>
+				<div class="overlay">
+					<img src="visuals/images/hero_latitude_overlay.png">
+				</div>
+				<div class="copy sub-copy">
+					<h2>New events local to you</h2>
+					<p>Geo-located: <strong>West Kensington, London</strong></p>
+				</div>
+				<div class="copy main-copy">
+					<h1><span class="latitude">Latitude</span> Festival</h1>
+
+					<p>
+						<span>Coming to Suffolk...this year’s most anticipated</span>
+						<span>music festival. It’s time to start your journey!</span>
+					</p>
+					<p>
+						<span>Preorder tickets here to claim your</span>
+						<span><strong>150 mWallet</strong> points</span>
+					</p>
+					<p class="tandcs"> (t&c’s apply)</p>
+				</div>
+				<div class="vplanr">
+					<img src="visuals/images/icon_vplanr_small.png">
+					<p>Up for some beta testing? Try our new organiser tool <strong>V-Planr</strong> for <strong>FREE!</strong></p>
+				</div>
+			</div>
+		</script>
+
+		<script type="text/x-handlebars-template" id="template-event-3">
+			<div class="content event-3">
+				<div class="copy sub-copy">
+					<h2>New events local to you</h2>
+					<p>Geo-located: <strong>West Kensington, London</strong></p>
+				</div>
+				<div class="copy main-copy">
+					<h1>E'' fantastica!</h1>
+					<p>
+						<span>It’s time to kick off your Converse and pour yourselves</span>
+						<span>a glass of rosé in St Tropez.</span>
+					</p>
+
+					<p>
+						<span>Upgrade to Vodafone Gold and get <strong>250 mWallet</strong> points</span>
+						<span class="equivalent">(equivalent to a European flight)!</span>
+					</p>
+				</div>
+				<div class="vplanr">
+					<img src="visuals/images/icon_vplanr_small.png">
+					<p>Up for some beta testing? Try our new organiser tool <strong>V-Planr</strong> for <strong>FREE!</strong></p>
+				</div>
+			</div>
+		</script>
+
+		<script src="scripts/wotf.js"></script>
+
+		<link href="css/screen.css" type="text/css" rel="stylesheet">
+
+		<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57×57-precomposed.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72×72-precomposed.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114×114-precomposed.png">
+	</head>
+	<body class="logged-out">
+		<header>
+			<nav>
+				<a class="icon menu" data-target=".dash-holder.menu" data-close=".help-handle, .help-holder, .icon-panel, .dash-handle, .profile, .touch-lock"><span>Menu</span></a>
+				<a class="icon shopping"><span>Offers</span></a>
+				<a class="icon help-handler handler" data-handle=".help-handle" data-target=".help-holder" data-close=".dash-handle, .dash-holder"><span>Support</span></a>
+				<a class="icon dashboard"></a>
+				<a class="icon search"><span>Search</span></a>
+				<a class="icon trolley"><span>Trolley</span></a>
+				<a class="icon profile" data-target=".login"><span>Profile</span><span class="error"></span></a>
+			</nav>
+			<div class="login">
+				<div class="avatar">
+					<img src="visuals/images/avatar_medium.png">
+				</div>
+				<div class="message">
+					<p class="name error"><strong>Not Emma?</strong></p>
+					<p class="action">You’ll need to login to your account <a class="dash-handler handler animate" data-animate=".dash-handle" data-target=".touch-lock" data-close=".help-handle, .help-holder, .login"><strong>here</strong></a></p>
+				</div>
+			</div>
+		</header>
+		<div class="dash-frame">
+			<button class="dash-handle both" data-target=".touch-lock" data-close=".help-handle, .help-holder, .login"><span class="icon"><span>Dashboard</span></span></button>
+			<aside class="dash-holder touch-lock">
+				<h2><strong>Vodafone ID</strong> is ready. Your print can be used for logging in.</h2>
+				<div class="fingerprint">
+					<a href="logged-in.html"><img src="visuals/images/fingerprint.png"></a>
+				</div>
+			</aside>
+			<aside class="dash-holder menu">
+				<dl>
+					<dt class="col-1">Packages:</dt>
+					<dd class="col-1">
+						<dl>
+							<dt class="sub">Mobile</dt>
+							<dd>
+								<ul>
+									<li>PAYG</li>
+									<li>Sim Only</li>
+									<li>Monthly Tarrif</li>
+									<li>All offers</li>
+								</ul>
+							</dd>
+							<dt>Movies</dt>
+							<dt>TV</dt>
+							<dt>Broadband</dt>
+							<dt>Music</dt>
+						</dl>
+					</dd>
+					<dt class="col-2">Products:</dt>
+					<dd class="col-2">
+						<dl>
+							<dt class="sub">Handsets</dt>
+							<dd>
+								<ul>
+									<li>Apple</li>
+									<li>Blackberry</li>
+									<li>Nokia</li>
+									<li>Samsung</li>
+									<li>All offers</li>
+								</ul>
+							</dd>
+							<dt class="sub">Tablets</dt>
+							<dd>
+								<ul>
+									<li>Apple</li>
+									<li>Nokia</li>
+									<li>Samsung</li>
+									<li>All offers</li>
+								</ul>
+							</dd>
+							<dt>Accessories</dt>
+						</dl>
+					</dd>
+					<dt class="col-3">Connected:</dt>
+					<dd class="col-3">
+						<dl>
+							<dt>Network</dt>
+							<dt class="sub">Home</dt>
+							<dd>
+								<ul>
+									<li>Lighting</li>
+									<li>Heating</li>
+									<li>Security</li>
+									<li>Health & Fitness</li>
+								</ul>
+							</dd>
+							<dt>Car</dt>
+						</dl>
+					</dd>
+					<dt class="col-4">Services:</dt>
+					<dd class="col-4">
+						<dl>
+							<dt>Your Devices</dt>
+							<dt>The Network</dt>
+							<dt>Tools & Apps</dt>
+							<dt>Settings</dt>
+							<dt>About us</dt>
+							<dt>eForum</dt>
+							<dt>FAQs</dt>
+							<dt>Help</dt>
+						</dl>
+					</dd>
+				</dl>
+			</aside>
+		</div>
+		<main id="content">
+			<div class="scroller">
+				<div class="row">
+					<section class="col full home white" id="home1" data-timer="homePanels" data-template="#home-template" data-url="json/home-data.js" ></section>
+					<section class="col full movie black" id="movie1" data-template="#movie-template" data-url="json/movie-data.js" style="background-image: url(visuals/images/hero_two_faces_movie.jpg);">
+						<div class="content">
+							<div class="copy">
+								<h2>Your movies. Anywhere</h2>
+								<div class="byline">
+									<p>The Two Faces of January</p>
+									<p>Ready to stream from June 1</p>
+								</div>
+							</div>
+						</div>
+						<a class="point arrow down" data-target=".movie-frame" href="#"><span>MESSAGE</span></a>
+						<aside data-units="%" class="movie-frame">
+							<ul class="options">
+								<li class="sales">
+									<img src="visuals/images/product_movie_device_range.png">
+									<h4 class="large">73%</h4>
+									<p>of customers stream their movies on more than 3 digital devices <a href="#"><strong>#onthemove</strong></a></p>
+								</li>
+								<li class="packages">
+									<ul class="formats">
+										<li class="mobile"><a href="#"><span>Mobile</span></a></li>
+										<li class="television"><a href="#"><span>Television</span></a></li>
+										<li class="home-phone"><a href="#"><span>Home Phone</span></a></li>
+										<li class="radio"><a href="#"><span>Radio</span></a></li>
+									</ul>
+									<div class="format television">
+										<h4>Movies with <span class="now-logo"><span>NowTV</span></span></h4>
+										<p>We’ve upgraded your entertainment package to include <strong>NowTV</strong> for you to watch movies wherever you want on wahtever you like!</p>
+										<img class="television" src="visuals/images/logo_sky_channels.png">
+									</div>
+									<a class="before-point" href="#">View all upgrades</a>
+								</li>
+							</ul>
+						</aside>
+					</section>
+					<section class="col full events" id="event1" data-template="#event-template" data-url="json/event-data.js" data-timer="eventPanels"></section>
+					<section class="col full partner samsung">
+						<div class="partner-logo">
+							<p>Powered by Vodafone 5G and</p>
+							<img width="200px" src="visuals/images/logo_samsung_galaxy_s.png" />
+						</div>
+						<div class="copy">
+							<h1>A Vodafone First. Global PONG!</h1>
+							<p>Compete in the largest game of PONG ever conceived!</p>
+							<p>With Samsung Galaxy S we’re giving you the chance to play and win big!</p>
+							<a href="#">Enter competition</a>
+						</div>
+					</section>
+					<section class="col half products apple-tv">
+						<div class="section-inner">
+							<div class="subsection">
+								<h1>Technology you’ll love</h1>
+								<ul class="hashtags">
+									<li><a href="#">#instore</a></li>
+									<li><a href="#">#trendingtech</a></li>
+								</ul>
+							</div>
+							<div class="subsection main-image">
+								<img src="visuals/images/product_apple_tv.png">
+							</div>
+							<div class="subsection hd-tv-copy">
+								<h2>HD TV</h2>
+
+								<p class="package">
+									<span><a class="point arrow left"></a></span>
+									<span>Available FREE with selected movie package</span>
+								</p>
+								<p class="icon-clapper-board">Exclusive to Vodafone</p>
+							</div>
+						</div>
+					</section>
+					<section class="col half products nokia-tablet">
+						<div class="section-inner product-list open">
+							<a class="point arrow right" data-first=".nokia-tablet .product-list" data-second=".nokia-tablet .product"><span>Reveal</span></a>
+						</div>
+						<div class="section-inner product">
+							<ul class="sharing">
+								<li class="text">Share this product</li>
+								<li class="fb"><a href="#"></a></li>
+								<li class="tw"><a href="#"></a></li>
+								<li class="gl"><a href="#"></a></li>
+								<li class="in"><a href="#"></a></li>
+								<li class="pn"><a href="#"></a></li>
+							</ul>
+							<div class="subsection main-image">
+								<img src="visuals/images/product_windows_tablet_full.jpg">
+							</div>
+							<div class="subsection">
+								<h2>Nokia 2520</h2>
+								<div class="package-container">
+									<div class="image-container">
+										<img src="visuals/images/icon_handset_black.png">
+									</div>
+									<div class="package-details">
+										<p class="package">Available as part of Vodafones mobile entertainment package</p>
+										<a href="#" class="tarrifs">
+											<a class="point arrow right" data-first=".nokia-tablet .product" data-second=".nokia-tablet .product-list"><span>Reveal</span></a>
+											<span><strong>View available tarrifs</strong></span>
+										</a>
+									</div>
+								</div>
+
+								<div class="subsection review">
+									<div class="rating-container">
+										<ul class="rating three">
+											<li><span>Bad</span></li>
+											<li><span>Poor</span></li>
+											<li><span>OK</span></li>
+											<li><span>Good</span></li>
+											<li><span>Amazing</span></li>
+										</ul>
+										<p class="meta"><span class="date">May 2013</span> <span class="handle">Lilkala</span></p>
+									</div>
+									<div class="review-copy">
+										<h3>THE tablet!</h3>
+										<p class="user-text">The best tablet yet. Had the 2220 this far superior. Get one</p>
+										<p class="public-rating">
+											<span><strong>77</strong> of <strong>168</strong></span>
+											<span>people found this interesting</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="col half feedback">
+						<div class="record">
+							<h2>Have your say</h2>
+							<p>Your chance to tell us your thoughts on our products and services and we’ll reward those who give us their time with <strong>500 mwallet points</strong> for each month’s best idea!</p>
+
+							<ul class="recording-methods">
+								<li class="video">
+									<img src="visuals/images/icon_webcam.png">
+									<p>Record <strong>video</strong></p>
+								</li>
+								<li class="voice">
+									<img src="visuals/images/icon_microphone.png">
+									<p>Record <strong>voice</strong></p>
+								</li>
+							</ul>
+						</div>
+						<div class="ideas">
+							<h3>Your Vodafone. <strong>Your ideas</strong></h3>
+							<p class="quote">Let me see my diary plans for the month in one view in the VPlanr</p>
+							<p class="name">Josie P, Beckenham #jojoP</p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+		<div class="help-frame">
+			<button class="help-handle" data-target=".help-holder" data-close=".dash-handle, .dash-holder"><span>Help</span></button>
+			<aside class="help-holder">
+				<nav class="help-nav">
+					<a href="#" class="message"><span>Message</span></a>
+					<a href="#" class="comment"><span>Comment</span></a>
+					<a href="#" class="call"><span>Call</span></a>
+					<a href="#" class="sound"><span>Sound</span></a>
+					<a href="#" class="faq"><span>FAQ</span></a>
+					<a href="#" class="play"><span>Play</span></a>
+				</nav>
+				<h3><strong>Ask Tom.</strong> Your Vodafone concierge</h3>
+				<div class="video">
+					<video id="help" poster="visuals/images/help_video_poster.jpg" controls>
+						<source type="video/mp4" src="visuals/videos/RioClip.mp4">
+					</video>
+				</div>
+				<a href="#" class="close help-handler handler" data-handle=".help-handle" data-target=".help-holder" data-close=".dash-handle, .dash-holder"><span>Close</span></a>
+			</aside>
+		</div>
+		<footer></footer>
+	</body>
+</html>

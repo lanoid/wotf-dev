@@ -1,0 +1,245 @@
+.logged-out {
+	background: #000;
+	.events {
+		background-color: #666;
+		background-position: center center;
+		transition: background-image .5s ease-in-out;
+		background-repeat: no-repeat;
+		background-size: 100%;
+
+		.point {
+			left: 94%;
+			position: absolute;
+			top: 30%;
+			z-index: 3;
+		}
+
+		.overlay {
+			height: 100%;
+			width: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			overflow-x: hidden;
+			overflow-y: hidden;
+			z-index: 2;
+			transition: all .5s ease-in-out;
+			&.open {
+				width: 100%;
+			}
+		}
+
+		.panel-nav {
+			color: white;
+			position: absolute;
+			right: 5%;
+			top: 10%;
+		}
+
+		.copy {
+			color: $white;
+			padding-bottom: 2rem;
+			position: absolute;
+			right: 5%;
+			text-align: right;
+			bottom: 10%;
+			width: 40vw;
+			z-index: 1;
+			&.main-copy {
+				h2 {
+					margin-bottom: 25px;
+				}
+				h3 {
+					font-weight: bold;
+				}
+			}
+
+			.byline-links-container {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 20px;
+			}
+			.links {
+				padding: 0;
+				font-size: 0.8rem;
+
+				a {
+					margin-right: 10px;
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+
+			.time-out-image {
+				display: inline-block;
+				vertical-align: middle;
+			}
+
+			h2 {
+				font-weight: 700;
+				font-size: 1.8rem;
+			}
+			h3 {
+				font-size: 1.3rem;
+				font-weight: normal;
+			}
+			p {
+				padding: 1rem;
+			}
+			.byline {
+				text-align: left;
+				h3 {
+					font-size: 2rem;
+					font-weight: 700;
+				}
+				p {
+					font-size: 1.6rem;
+					padding: 0;
+				}
+			}
+			.hashtags {
+				li {
+					a {
+						font-size: 1.2rem;
+						font-weight: 400;
+					}
+				}
+			}
+			.tickets {
+				padding: 1rem;
+				text-align: left;
+				a {
+					background-image: url(#{$imageDir}icon_right_pointing_chevron_white.png);
+					background-position: right center;
+					background-repeat: no-repeat;
+					display: block;
+					strong {
+						font-weight: 700;
+					}
+				}
+				p {
+					font-size: 0.8rem;
+					padding: 0;
+				}
+			}
+		}
+		.sub-copy {
+			color: $white;
+			position: absolute;
+			top: 15%;
+			right: 5%;
+			p {
+				font-size: 1rem;
+				padding: 0;
+			}
+		}
+		.vplanr {
+			background-color: $vodafoneDarkGrey;
+			color: $white;
+			font-size: 0;
+			left: 10vw;
+			position: absolute;
+			top: 4%;
+			width:	35vw;
+			img {
+				display: inline-block;
+				padding: 1em 0 1em 1em;
+				width: 9vw;
+				vertical-align: middle;
+			}
+			p {
+				display: inline-block;
+				padding: 1em;
+				width: 25vw;
+				vertical-align: top;
+			}
+		}
+	}
+
+	.geo {
+		height: 2em;
+		padding-right: 2vw;
+		width: 100%;
+		li {
+			strong {
+				font-weight: 700;
+			}
+		}
+	}
+
+	.event-2 {
+		.sub-copy {
+			.point {
+				display: inline-block;
+				margin-top: 1rem;
+				position: relative;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 20;
+			}
+		}
+
+		.copy {
+			h1 {
+				font-size: 2.4rem;
+				margin-bottom: 10px;
+
+				span {
+					font-size: 2.4rem;
+				}
+			}
+
+			p {
+				font-size: 1.05rem;
+				line-height: 1.2;
+				padding: 0;
+				margin-bottom: 20px;
+
+				span {
+					font-size: 1.05rem;
+					line-height: 1.2;
+					display: block;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			.tandcs {
+				font-size: .8rem;
+			}
+		}
+	}
+
+	.event-3 {
+		.copy {
+			h1 {
+				font-size: 2.4rem;
+			}
+
+			p {
+				padding: 0;
+				margin-bottom: 10px;
+			}
+
+			p, p span {
+				font-size: 1.05rem;
+			}
+
+			p {
+				span {
+					display: block;
+				}
+			}
+
+			.equivalent {
+				font-size: .9rem;
+			}
+		}
+	}
+}

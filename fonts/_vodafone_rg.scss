@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Vodafone Regular';
+    src: url('../fonts/vodafone_rg_bold.eot');
+    src: url('../fonts/vodafone_rg_bold.eot') format('embedded-opentype'),
+         url('../fonts/vodafone_rg_bold.woff') format('woff'),
+         url('../fonts/vodafone_rg_bold.ttf') format('truetype'),
+         url('../fonts/vodafone_rg_bold.svg#VodafoneRgBold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'Vodafone Regular';
+    src: url('../fonts/vodafone_rg.eot');
+    src: url('../fonts/vodafone_rg.eot') format('embedded-opentype'),
+         url('../fonts/vodafone_rg.woff') format('woff'),
+         url('../fonts/vodafone_rg.ttf') format('truetype'),
+         url('../fonts/vodafone_rg.svg#VodafoneRgRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'Vodafone Regular';
+  src: url('../fonts/vodafone_rg_lt.eot');
+  src: url('../fonts/vodafone_rg_lt.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/vodafone_rg_lt.woff') format('woff'),
+       url('../fonts/vodafone_rg_lt.ttf')  format('truetype'),
+       url('../fonts/vodafone_rg_lt.svg#VodafoneLt-Regular') format('svg');
+  font-style:   normal;
+  font-weight:  200;
+}

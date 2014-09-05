@@ -1,0 +1,12 @@
+body > footer {
+	background: $vodafoneMidGrey;
+	bottom: 0;
+	height: 2%;
+	position: absolute;
+	text-align: center;
+	width: 100vw;
+	z-index: $z-index-medium;
+	a {
+		color: $white;
+	}
+}

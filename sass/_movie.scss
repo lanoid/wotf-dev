@@ -1,0 +1,175 @@
+.logged-out {
+	.movie {
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		transition: background .5s ease-in-out;
+		.copy {
+			color: $white;
+			padding: 1rem;
+			position: absolute;
+			right: 0;
+			text-align: right;
+			top: 20%;
+			width: 40%;
+			.panel-nav {
+				padding: 1rem 0 0 1rem;
+			}
+			h2 {
+				font-weight: 700;
+			}
+			.byline {
+				p:first-child {
+					font-size: 1.6rem;
+					font-weight: 700;
+				}
+			}
+			.expand {
+				left: 300%;
+				top: -60%;
+				transition: all .5s ease-in-out;
+			}
+		}
+		.panel-nav {
+			color: white;
+			left: 1rem;
+			top: 62%;
+		}
+		.sub-copy {
+			color: $white;
+			position: absolute;
+			right: 2em;
+			top: 26%;
+			width: 352px;
+			h3 {
+				background-image: url(#{$imageDir}type_faces_of_january.png);
+				display: block;
+				height: 124px;
+				width: 352px;
+				span {
+					display: none;
+				}
+			}
+		}
+		.point {
+			position: absolute;
+			top: 29.5%;
+			left: 55.5%;
+			z-index: 2;
+		}
+		.movie-frame {
+			background-image: url(#{$imageDir}background_movie_aside.png);
+			background-size: 100% 100%;
+			position: absolute;
+			top: 100%;
+			height: 75%;
+			transition: top .5s ease-in-out;
+			width: 100%;
+			z-index: 1;
+			&.open {
+				top: 30%;
+			}
+			.options {
+				font-size: 0;
+				li {
+					display: inline-block;
+					vertical-align: top;
+					&.sales {
+						padding: 15% 0 10px 20px;
+						width: 60%;
+					}
+
+					&.packages {
+						padding: 13% 20px 10px 10px;
+						width: 40%;
+					}
+				}
+				.sales {
+					font-size: 0;
+					text-align: center;
+					img {
+						margin-bottom: 20px;
+						width: 90%;
+					}
+					h4 {
+						color: $vodafonePurple;
+						display: inline-block;
+						line-height: 1;
+						text-align: left;
+						width: 15%;
+						vertical-align: top;
+					}
+					p {
+						display: inline-block;
+						line-height: 1;
+						margin-bottom: 2%;
+						text-align: left;
+						width: 85%;
+						vertical-align: top;
+					}
+					a {
+						color: $black;
+					}
+				}
+				.packages {
+					text-align: right;
+					h4 {
+						font-size: 2.2rem;
+						font-weight: 700;
+						text-align: left;
+						vertical-align: top;
+					}
+					p {
+						margin-bottom: 2%;
+						text-align: left;
+					}
+					img {
+						text-align: right;
+						width: 80%;
+					}
+					a {
+						color: $black;
+						font-weight: bold;
+					}
+				}
+				.formats {
+					margin-bottom: 20px;
+					text-align: left;
+					li {
+						display: inline-block;
+						a {
+							display: block;
+							height: 70px;
+							width: 70px;
+							span {
+								display: none;
+							}
+						}
+						&.mobile a {
+							background-image: url(#{$imageDir}icon_handset.png);
+						}
+						&.television a {
+							background-image: url(#{$imageDir}icon_television.png);
+						}
+						&.home-phone a {
+							background-image: url(#{$imageDir}icon_home_phone.png);
+						}
+						&.radio a {
+							background-image: url(#{$imageDir}icon_radio.png);
+						}
+					}
+				}
+				.now-logo {
+					background-image: url(#{$imageDir}logo_nowtv.png);
+					display: inline-block;
+					height: 51px;
+					width: 171px;
+					vertical-align: text-top;
+					span {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}

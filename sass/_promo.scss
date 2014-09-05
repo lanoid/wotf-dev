@@ -1,0 +1,20 @@
+.promo {
+	background: url(#{$imageDir}hero_bond.jpg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	.copy {
+		background-color: $greyOpaque;
+		bottom: 0;
+		color: $white;
+		padding-bottom: 2rem;
+		position: absolute;
+		text-align: center;
+		h2 {
+			background-color: $vodafoneRed;
+			padding: 10px;
+		}
+		p {
+			padding: 10px;
+		}
+	}
+}

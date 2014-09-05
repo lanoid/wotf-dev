@@ -1,0 +1,78 @@
+$z-index-lowest: 0;
+$z-index-low: 5;
+$z-index-medium: 10;
+$z-index-high: 15;
+$z-index-highest: 20;
+
+body,
+body * {
+	margin: 0;
+	padding: 0;
+	@include box-sizing(border-box);
+}
+
+body {
+	height: 100%;
+}
+
+main {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	overflow: hidden;
+	-webkit-overflow-scrolling: touch;
+	right: 0;
+	top: 0;
+	z-index: $z-index-lowest;
+	.scroller {
+		height: 100%;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		width: 100%;
+	}
+}
+
+.row {
+	display: inline-block;
+	font-size: 0;
+	height: 100%;
+	width: auto;
+	vertical-align: top;
+	white-space: nowrap;
+}
+
+.col {
+	display: inline-block;
+	font-size: 1rem;
+	height: 100%;
+	overflow: hidden;
+	padding: 4vh 0;
+	position: relative;
+	vertical-align: top;
+	white-space: normal;
+}
+
+.full {
+	width: 100vw;
+}
+.three-quarters {
+	width: 75vw;
+}
+.two-thirds {
+	width: 66.666vw;
+}
+.half {
+	width: 50vw;
+}
+.third {
+	width: 33.333vw;
+}
+.quarter {
+	width: 25vw;
+}
+.two-thirds-percent {
+	width: 66.666%;
+}
+.third-percent {
+	width: 33.333%;
+}
