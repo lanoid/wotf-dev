@@ -30,7 +30,7 @@
 	},
 	"video" : {
 		"poster" : "",
-		"src" : "//svcsdev.engagesciences.net/vodafone/wotf-videos/city_flyover.mp4"
+		"src" : "visuals/videos/city_flyover.mp4"
 	}
 },
 {
