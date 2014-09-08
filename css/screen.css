@@ -2913,38 +2913,43 @@ section.home {
       .calendar .calendar h2 .skinny {
         font-size: 1.6rem;
         font-weight: 200; }
-    /* line 428, ../sass/_vplanr.scss */
+      /* line 427, ../sass/_vplanr.scss */
+      .vplanr .calendar h2 a,
+      .calendar .calendar h2 a {
+        font-size: 1.6rem;
+        font-weight: 200; }
+    /* line 432, ../sass/_vplanr.scss */
     .vplanr .calendar .paging,
     .calendar .calendar .paging {
       background: none;
       border: none;
       position: absolute;
       top: 6px; }
-      /* line 433, ../sass/_vplanr.scss */
+      /* line 437, ../sass/_vplanr.scss */
       .vplanr .calendar .paging.left,
       .calendar .calendar .paging.left {
         left: 50%; }
-        /* line 435, ../sass/_vplanr.scss */
+        /* line 439, ../sass/_vplanr.scss */
         .vplanr .calendar .paging.left:before,
         .calendar .calendar .paging.left:before {
           content: url(../visuals/images/icon_chevron_left_large_white.png); }
-      /* line 439, ../sass/_vplanr.scss */
+      /* line 443, ../sass/_vplanr.scss */
       .vplanr .calendar .paging.right,
       .calendar .calendar .paging.right {
         right: 10px; }
-        /* line 441, ../sass/_vplanr.scss */
+        /* line 445, ../sass/_vplanr.scss */
         .vplanr .calendar .paging.right:before,
         .calendar .calendar .paging.right:before {
           content: url(../visuals/images/icon_chevron_right_large_white.png); }
-      /* line 445, ../sass/_vplanr.scss */
+      /* line 449, ../sass/_vplanr.scss */
       .vplanr .calendar .paging span,
       .calendar .calendar .paging span {
         display: none; }
-    /* line 449, ../sass/_vplanr.scss */
+    /* line 453, ../sass/_vplanr.scss */
     .vplanr .calendar ul,
     .calendar .calendar ul {
       font-size: 0; }
-    /* line 452, ../sass/_vplanr.scss */
+    /* line 456, ../sass/_vplanr.scss */
     .vplanr .calendar li,
     .calendar .calendar li {
       background: rgba(0, 0, 0, 0.1);
@@ -2957,31 +2962,31 @@ section.home {
       min-height: 6.5rem;
       vertical-align: top;
       width: 19%; }
-      /* line 463, ../sass/_vplanr.scss */
+      /* line 467, ../sass/_vplanr.scss */
       .vplanr .calendar li *,
       .calendar .calendar li * {
         opacity: .3; }
-      /* line 466, ../sass/_vplanr.scss */
+      /* line 470, ../sass/_vplanr.scss */
       .vplanr .calendar li.event *,
       .calendar .calendar li.event * {
         opacity: 1; }
-      /* line 469, ../sass/_vplanr.scss */
+      /* line 473, ../sass/_vplanr.scss */
       .vplanr .calendar li.highlight,
       .calendar .calendar li.highlight {
         background: #5e264f; }
-      /* line 474, ../sass/_vplanr.scss */
+      /* line 478, ../sass/_vplanr.scss */
       .vplanr .calendar li.day *, .vplanr .calendar li.add *,
       .calendar .calendar li.day *,
       .calendar .calendar li.add * {
         opacity: 1; }
-      /* line 478, ../sass/_vplanr.scss */
+      /* line 482, ../sass/_vplanr.scss */
       .vplanr .calendar li img,
       .calendar .calendar li img {
         bottom: 6px;
         max-width: 60%;
         position: absolute;
         right: 6px; }
-      /* line 486, ../sass/_vplanr.scss */
+      /* line 490, ../sass/_vplanr.scss */
       .vplanr .calendar li h4,
       .vplanr .calendar li .customise,
       .vplanr .calendar li .details,
@@ -2992,20 +2997,20 @@ section.home {
       .calendar .calendar li .no-events {
         font-size: .9rem;
         vertical-align: top; }
-      /* line 493, ../sass/_vplanr.scss */
+      /* line 497, ../sass/_vplanr.scss */
       .vplanr .calendar li .customise,
       .calendar .calendar li .customise {
         bottom: 6px;
         position: absolute;
         right: 6px;
         width: 60%; }
-      /* line 499, ../sass/_vplanr.scss */
+      /* line 503, ../sass/_vplanr.scss */
       .vplanr .calendar li .details,
       .calendar .calendar li .details {
         line-height: 1;
         opacity: .3;
         vertical-align: bottom; }
-      /* line 504, ../sass/_vplanr.scss */
+      /* line 508, ../sass/_vplanr.scss */
       .vplanr .calendar li .two-row,
       .calendar .calendar li .two-row {
         background: #FFF;
@@ -3017,7 +3022,7 @@ section.home {
         top: 0;
         width: 100%;
         z-index: 10; }
-      /* line 515, ../sass/_vplanr.scss */
+      /* line 519, ../sass/_vplanr.scss */
       .vplanr .calendar li .two-col,
       .calendar .calendar li .two-col {
         background: #FFF;
@@ -3027,39 +3032,39 @@ section.home {
         top: 0;
         width: 205%;
         z-index: 10; }
-      /* line 524, ../sass/_vplanr.scss */
+      /* line 528, ../sass/_vplanr.scss */
       .vplanr .calendar li .anniversary,
       .calendar .calendar li .anniversary {
         background-color: #598955; }
-        /* line 526, ../sass/_vplanr.scss */
+        /* line 530, ../sass/_vplanr.scss */
         .vplanr .calendar li .anniversary h3,
         .calendar .calendar li .anniversary h3 {
           font-size: 1.1rem; }
-        /* line 529, ../sass/_vplanr.scss */
+        /* line 533, ../sass/_vplanr.scss */
         .vplanr .calendar li .anniversary p,
         .vplanr .calendar li .anniversary strong,
         .calendar .calendar li .anniversary p,
         .calendar .calendar li .anniversary strong {
           font-size: .9rem; }
-      /* line 534, ../sass/_vplanr.scss */
+      /* line 538, ../sass/_vplanr.scss */
       .vplanr .calendar li .instagram,
       .calendar .calendar li .instagram {
         background-color: #A93C49; }
-        /* line 536, ../sass/_vplanr.scss */
+        /* line 540, ../sass/_vplanr.scss */
         .vplanr .calendar li .instagram h3,
         .calendar .calendar li .instagram h3 {
           font-size: 1.1rem; }
-        /* line 539, ../sass/_vplanr.scss */
+        /* line 543, ../sass/_vplanr.scss */
         .vplanr .calendar li .instagram p,
         .vplanr .calendar li .instagram strong,
         .calendar .calendar li .instagram p,
         .calendar .calendar li .instagram strong {
           font-size: .9rem; }
-      /* line 544, ../sass/_vplanr.scss */
+      /* line 548, ../sass/_vplanr.scss */
       .vplanr .calendar li.fb,
       .calendar .calendar li.fb {
         background: #3B589E; }
-    /* line 548, ../sass/_vplanr.scss */
+    /* line 552, ../sass/_vplanr.scss */
     .vplanr .calendar .confirm,
     .calendar .calendar .confirm {
       background-color: rgba(0, 0, 0, 0.8);
@@ -3077,12 +3082,12 @@ section.home {
       transition: all .5s ease-in-out;
       width: 600px;
       z-index: 0; }
-      /* line 564, ../sass/_vplanr.scss */
+      /* line 568, ../sass/_vplanr.scss */
       .vplanr .calendar .confirm.open,
       .calendar .calendar .confirm.open {
         opacity: 1;
         z-index: 15; }
-      /* line 568, ../sass/_vplanr.scss */
+      /* line 572, ../sass/_vplanr.scss */
       .vplanr .calendar .confirm img,
       .vplanr .calendar .confirm .copy,
       .calendar .calendar .confirm img,
@@ -3090,19 +3095,19 @@ section.home {
         display: inline-block;
         width: 50%;
         vertical-align: middle; }
-      /* line 574, ../sass/_vplanr.scss */
+      /* line 578, ../sass/_vplanr.scss */
       .vplanr .calendar .confirm .copy,
       .calendar .calendar .confirm .copy {
         padding-left: 20px; }
-        /* line 576, ../sass/_vplanr.scss */
+        /* line 580, ../sass/_vplanr.scss */
         .vplanr .calendar .confirm .copy h3,
         .calendar .calendar .confirm .copy h3 {
           font-weight: 700; }
-        /* line 579, ../sass/_vplanr.scss */
+        /* line 583, ../sass/_vplanr.scss */
         .vplanr .calendar .confirm .copy .added,
         .calendar .calendar .confirm .copy .added {
           font-size: .8rem; }
-      /* line 583, ../sass/_vplanr.scss */
+      /* line 587, ../sass/_vplanr.scss */
       .vplanr .calendar .confirm .close,
       .calendar .calendar .confirm .close {
         line-height: 1;
@@ -3110,7 +3115,7 @@ section.home {
         right: 10px;
         text-align: center;
         top: 6px; }
-  /* line 593, ../sass/_vplanr.scss */
+  /* line 597, ../sass/_vplanr.scss */
   .vplanr footer,
   .calendar footer {
     display: block;

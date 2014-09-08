@@ -153,6 +153,11 @@ var wotf = {
 			$('.calendar .timeframe.day').toggleClass('open');
 		});
 
+		$('.timeframe a.month').off().on('click', function() {
+			$('.calendar .timeframe.month').toggleClass('open');
+			$('.calendar .timeframe.day').toggleClass('open');
+		});
+
 		$('.channel-selector .drag').off().on('click', function(e){
 			var $handle = $(e.currentTarget),
 				$parent = $handle.parents('.channel-selector');
