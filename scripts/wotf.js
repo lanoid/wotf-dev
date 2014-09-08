@@ -23,7 +23,9 @@ var wotf = {
 	init : function() {
 		$(document).ready(function(){
 			wotf.bindCustom();
+
 			wotf.events();
+			
 			wotf.snap('.scroller','.col');
 			wotf.clock($('.clock'));
 
@@ -34,7 +36,6 @@ var wotf = {
 	// bind all custom events once only
 	bindCustom : function() {
 		// Event bindings
-		$(wotf.evts).on('scroll:snap', wotf.snapHandler);
 		$(wotf.evts).off().on('tap:double', function() {
 			// alert('!');
 		});
@@ -219,24 +220,13 @@ var wotf = {
 			duration: 100,
 			easing : 'easeInCirc',
 			onSnap : function(e) {
-				$(wotf.evts).trigger('scroll:snap', e);
+				$('section').removeClass('current');
+				$(e).addClass('current');
+				if($('section:not(#'+$(e).attr('id')+')').find('video').length > 0){
+					$('section:not(#'+$(e).attr('id')+')').find('video')[0].pause();
+				}
 			}
 		});
-	},
-	// Do things when snapping has happened.
-	snapHandler : function(e, data) {
-		var $data = $(data);
-
-		// if($data.hasClass('video')){
-		// 	var video = $data.find('video')[0];
-		// 	video.muted = true;
-		// 	video.loop = true;
-		// 	video.play();
-		// } else {
-		// 	$('video').each(function() {
-		// 		$(this)[0].pause();
-		// 	});
-		// }
 	},
 	// Load panels based on their element
 	panelLoader : function($el) {
@@ -255,7 +245,9 @@ var wotf = {
 			$el.append(template(pageData));
 			$el.find('.expand').on('click', wotf.revealMessage);
 
-			if($el.find('video').length === 1){
+			console.log($el.hasClass('current'));
+
+			if($el.find('video').length === 1 && $el.hasClass('current')){
 				$el.find('video')[0].play();
 			}
 
@@ -302,6 +294,12 @@ var wotf = {
 		$el.find('.content').remove();
 		$el.append(template(data));
 		$el.find('.expand').on('click', wotf.revealMessage);
+
+		if($el.find('video').length === 1 && $el.hasClass('current')){
+			$el.find('video')[0].play();
+		} else if($el.find('video').length === 1 && !$el.hasClass('current')){
+			$el.find('video')[0].pause();
+		}
 
 		if(data.eventTemplate) {
 			$el.find('.content').html($(data.eventTemplate).html());
