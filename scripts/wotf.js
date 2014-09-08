@@ -22,6 +22,7 @@ var wotf = {
 	// Set things up
 	init : function() {
 		$(document).ready(function(){
+			wotf.bindCustom();
 			wotf.events();
 			wotf.snap('.scroller','.col');
 			wotf.clock($('.clock'));
@@ -30,24 +31,26 @@ var wotf = {
 			wotf.panelLoader($('#event1'));
 		});
 	},
-	// Get all the events that can be bound, bound (recallable if stuff changes)
-	events : function() {
-		console.log('bind!');
+	// bind all custom events once only
+	bindCustom : function() {
 		// Event bindings
-		$(wotf.evts).off().on('scroll:snap', wotf.snapHandler);
+		$(wotf.evts).on('scroll:snap', wotf.snapHandler);
 		$(wotf.evts).off().on('tap:double', function() {
 			// alert('!');
 		});
-		$(wotf.evts).off().on('dash:close', function() {
+		$(wotf.evts).on('dash:close', function() {
+			// console.log('dash:close');
 			$('.dash-holder, .dash-handle').removeClass('open');
 		});
 
-		$(wotf.evts).off().on('channels:open', function() {
+		$(wotf.evts).on('channels:open', function() {
+			// console.log('cahnnels:open');
 			$('section.channels').addClass('open');
 			wotf.scroll($('section.channels').position().left,1000);
 		});
 
-		$(wotf.evts).off().on('dashboard:open', function(e,d) {
+		$(wotf.evts).on('dashboard:open', function(e,d) {
+			// console.log('dashboard:open');
 			$('.dash-panel:not('+d+')').removeClass('open');
 			$('.dash-panel').filter(d).addClass('open');
 			if($('.dash-panel.movies').hasClass('open')){
@@ -57,25 +60,40 @@ var wotf = {
 			}
 		});
 
-		$(wotf.evts).off().on('vplanr:open', function() {
+		$(wotf.evts).on('dash:open', function(e,d) {
+			$('.dash-holder'+d.holder+', .dash-handle').addClass('open');
+			$('.dash-panel:not('+d.panel+')').removeClass('open');
+			$('.dash-panel').filter(d.panel).addClass('open');
+		});
+
+		$(wotf.evts).on('vplanr:open', function() {
+			// console.log('vplanr:open');
 			$('.dash-holder, .dash-handle').removeClass('open');
 			$('.dash-holder.vplanr').addClass('open');
 		});
 
-		$(wotf.evts).off().on('vplanr:close', function() {
+		$(wotf.evts).on('vplanr:close', function() {
+			// console.log('vplanr:open');
 			$('.dash-holder.vplanr').removeClass('open');
 		});
 		
-		$(wotf.evts).off().on('panel:pause', function(e,timer) {
+		$(wotf.evts).on('panel:pause', function(e,timer) {
+			// console.log('panel:pause');
 			clearInterval(wotf[timer]);
 		});
 
-		$(wotf.evts).off().on('panel:play', function(e,$nav) {
+		$(wotf.evts).on('panel:play', function(e,$nav) {
+			// console.log('panel:play');
 			wotf.autoPanel($($nav));
 		});
+	},
+	// Get all the events that can be bound, bound (recallable if stuff changes)
+	events : function() {
+		
 
 		// Event Triggers
 		$('.dash-grid .movies').off().on('click', function(e) {
+			// console.log($(this).data('event'));
 			$(wotf.evts).trigger($(this).data('event'), $(this).data('target'));
 		});
 
@@ -88,17 +106,12 @@ var wotf = {
 			$(wotf.evts).trigger('channels:open');
 		});
 
-		$('.icon-panel .vplanr, .first .add').off().on('click', function() {
+		$('.icon-panel .vplanr, .first .add').on('click', function() {
+			// console.log('vplanr:open');
 			$(wotf.evts).trigger('vplanr:open');
 		});
 
-		$(wotf.evts).off().on('dash:open', function(e,d) {
-			$('.dash-holder'+d.holder+', .dash-handle').addClass('open');
-			$('.dash-panel:not('+d.panel+')').removeClass('open');
-			$('.dash-panel').filter(d.panel).addClass('open');
-		});
-
-		$('.vplanr .dash').off().on('click', function() {
+		$('.vplanr .dash').on('click', function() {
 			$(wotf.evts).trigger('vplanr:close');
 			$(wotf.evts).trigger('dash:open',{holder : $(this).data('holder'), panel : $(this).data('panel')});
 		});
@@ -170,7 +183,7 @@ var wotf = {
 
 			$.get('partials/logged-in-dash.html',function(data) {
 				$('.dash-frame').replaceWith(data);
-				wotf.events();
+				wotf.events();	
 				wotf.clock($('.clock'));
 			});
 
@@ -184,7 +197,6 @@ var wotf = {
 	},
 	dblClick : function($target) {
 		$target.on('click', function(e) {
-			// console.log(wotf.clicks);
 			e.stopPropagation();
 
 			if($(this).hasClass('tapped') && wotf.clicks === 1){
@@ -195,7 +207,6 @@ var wotf = {
 			wotf.clicks++;
 
 			setTimeout(function(){
-				// console.log('too late');
 				wotf.clicks = 0;
 				$(this).removeClass('tapped');
 			}, 800);
@@ -418,7 +429,6 @@ var wotf = {
 	},
 	// Slide and reveal a product panel
 	productReveal : function(e) {
-		console.log('reveal');
 		var $trigger = $(e.currentTarget),
 			url = $trigger.data('url'),
 			section = $trigger.parents('section'),
@@ -429,7 +439,6 @@ var wotf = {
 		} else if($product.length > 0){
 			$product.addClass('open');
 		} else {
-			console.log('get!');
 			$.get(url, function(data) {
 				section.after(data);
 
@@ -463,7 +472,6 @@ var wotf = {
 	},
 	// open a panel with the associated handle at the same time, allow other handlers to do the same
 	handlePanel : function(e) {
-		console.log($(e.currentTarget));
 		var $handle = $(e.currentTarget),
 			$panel = $($handle.data('target')),
 			$close = $($handle.data('close'));

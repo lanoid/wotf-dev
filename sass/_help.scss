@@ -28,6 +28,8 @@
 		right: 0;
 		top: 96%;
 		-webkit-backface-visibility: hidden;
+		transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
 		transition: -webkit-mask-image .5s ease-in-out;
 		width: 40vw;
 		z-index: $z-index-highest;
@@ -49,6 +51,8 @@
 		position: fixed;
 		text-align: center;
 		bottom: -100%;
+		transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
 		transition: all 1s ease-in-out;
 		width: 100vw;
 		z-index: $z-index-low;
@@ -95,6 +99,8 @@
 			margin-top: 1%;
 		}
 		&.animation {
+			transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
 			transition: top 0s ease-in-out;
 		}
 		.video {

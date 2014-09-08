@@ -3,6 +3,8 @@
 	.events {
 		background-color: #666;
 		background-position: center center;
+		transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
 		transition: background-image .5s ease-in-out;
 		background-repeat: no-repeat;
 		background-size: 100%;
@@ -23,6 +25,8 @@
 			overflow-x: hidden;
 			overflow-y: hidden;
 			z-index: 2;
+			transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
 			transition: all .5s ease-in-out;
 			&.open {
 				width: 100%;

@@ -1,6 +1,8 @@
 .logged-in {
 	.col.full.product {
 		border-left: 1px solid $vodafoneLightGrey;
+		transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
 		transition: all 1s ease-in-out;
 		&.open {
 			width: 100vw;
@@ -225,6 +227,8 @@
 					.reviews-tab {
 						opacity: 0;
 						position: absolute;
+						transform: translate3d(0,0,0);
+						-webkit-transform: translate3d(0,0,0);
 						transition: opacity .5s ease-in-out;
 						width: 100%;
 						&.current {

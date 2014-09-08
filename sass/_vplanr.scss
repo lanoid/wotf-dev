@@ -403,6 +403,8 @@
 			top: 0;
 			left: 0;
 			opacity: 0;
+			transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
 			transition: all .5s ease-in-out;
 			z-index: 1;
 			&.open {
@@ -554,6 +556,8 @@
 			position: absolute;
 			text-align: center;
 			top: 4rem;
+			transform: translate3d(0,0,0);
+			-webkit-transform: translate3d(0,0,0);
 			transition: all .5s ease-in-out;
 			width: 600px;
 			z-index: 0;
