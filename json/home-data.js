@@ -2,7 +2,6 @@
 	"id" : "home1",
 	"panel" : "home",
 	"type" : "image",
-	"src" : "visuals/images/hero_london_city.jpg",
 	"color" : "white",
 	"title" : "A better network for you",
 	"byline" : {

@@ -1,5 +1,15 @@
 // Apologies if this files seems a bit etch-a-sketch, this is a work in progress.
 
+$.fn.scrollStopped = function(callback) {           
+	$(this).scroll(function(){
+		var self = this, $this = $(self);
+		if ($this.data('scrollTimeout')) {
+			clearTimeout($this.data('scrollTimeout'));
+		}
+		$this.data('scrollTimeout', setTimeout(callback,250,self));
+	});
+};
+
 var wotf = {
 	// partials directory
 	partials : 'partials/',
@@ -31,6 +41,15 @@ var wotf = {
 
 			wotf.panelLoader($('#home1'));
 			wotf.panelLoader($('#event1'));
+
+			$('.scroller').scrollStopped(function(){
+				if($('.scroller .row').position().left === 0){
+					$('section:first').addClass('current');
+					if($('section:first').find('video').length > 0){
+						$('section:first').find('video')[0].play();
+					}
+				}
+			});
 		});
 	},
 	// bind all custom events once only
@@ -239,13 +258,14 @@ var wotf = {
 
 		$.getJSON($el.data('url'), function(data) {
 			var pageData = data[0];
-
-			$el.css('background-image','url('+pageData.src+')');
+			if(pageData.hasOwnProperty('src')){
+				$el.css('background-image','url('+pageData.src+')');
+			} else {
+				$el.css('background-image','none');
+			}
 			$el.removeClass('black white').addClass(pageData.color);
 			$el.append(template(pageData));
 			$el.find('.expand').on('click', wotf.revealMessage);
-
-			console.log($el.hasClass('current'));
 
 			if($el.find('video').length === 1 && $el.hasClass('current')){
 				$el.find('video')[0].play();
@@ -260,9 +280,12 @@ var wotf = {
 
 				// CACHE ALL THE THINGS!
 				wotf.jsonCache[v.id] = v;
-				var img = new Image();
-					img.src = v.src;
-				wotf.imgCache[v.id] = img;
+				
+				if(pageData.hasOwnProperty('src')){
+					var img = new Image();
+						img.src = v.src;
+					wotf.imgCache[v.id] = img;
+				}
 			});
 
 			if(data.length > 1){
@@ -289,7 +312,13 @@ var wotf = {
 		var source = $($el.data('template')).html(),
 			template = Handlebars.compile(source);
 
-		$el.css('background-image','url('+data.src+')');
+		if(data.hasOwnProperty('src')){
+			$el.css('background-image','url('+data.src+')');
+		} else {
+			$el.css('background-image','none');
+		}
+
+		// $el.css('background-image','url('+data.src+')');
 		$el.removeClass('black white').addClass(data.color);
 		$el.find('.content').remove();
 		$el.append(template(data));
