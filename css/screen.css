@@ -816,10 +816,13 @@ section.home {
     .dash-frame .dash-holder h2 {
       color: #FFF;
       margin: 4% 0; }
-    /* line 82, ../sass/_dash.scss */
+      /* line 81, ../sass/_dash.scss */
+      .dash-frame .dash-holder h2 strong {
+        font-size: 2rem; }
+    /* line 85, ../sass/_dash.scss */
     .dash-frame .dash-holder.icon-panel {
       color: #FFF; }
-      /* line 84, ../sass/_dash.scss */
+      /* line 87, ../sass/_dash.scss */
       .dash-frame .dash-holder.icon-panel > .movies {
         background-color: #4A4D4E;
         transform: translate3d(0, 0, 0);
@@ -827,315 +830,318 @@ section.home {
         transition: all .5s ease-in-out;
         position: absolute;
         z-index: 1; }
-        /* line 92, ../sass/_dash.scss */
+        /* line 95, ../sass/_dash.scss */
         .dash-frame .dash-holder.icon-panel > .movies p {
           font-size: 1rem;
           padding-left: 35px;
           text-align: left; }
-          /* line 96, ../sass/_dash.scss */
+          /* line 99, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel > .movies p:after {
             content: url(../visuals/images/icon_upward_arrow_white.png);
             vertical-align: middle; }
-      /* line 102, ../sass/_dash.scss */
+      /* line 105, ../sass/_dash.scss */
       .dash-frame .dash-holder.icon-panel > .initial {
         position: absolute;
         z-index: 2; }
-      /* line 107, ../sass/_dash.scss */
+      /* line 110, ../sass/_dash.scss */
       .dash-frame .dash-holder.icon-panel.customise {
         top: -90%;
         height: 90%; }
-        /* line 110, ../sass/_dash.scss */
+        /* line 113, ../sass/_dash.scss */
         .dash-frame .dash-holder.icon-panel.customise.open {
           top: 0; }
-        /* line 113, ../sass/_dash.scss */
+        /* line 116, ../sass/_dash.scss */
         .dash-frame .dash-holder.icon-panel.customise > .movies {
           opacity: 1;
           z-index: 2; }
-        /* line 117, ../sass/_dash.scss */
+        /* line 120, ../sass/_dash.scss */
         .dash-frame .dash-holder.icon-panel.customise > .initial {
           transform: translate3d(0, 0, 0);
           -webkit-transform: translate3d(0, 0, 0);
           transition: all .5s ease-in-out;
           opacity: 0;
           z-index: 1; }
-      /* line 125, ../sass/_dash.scss */
+      /* line 128, ../sass/_dash.scss */
       .dash-frame .dash-holder.icon-panel .dash-panel {
         opacity: 0;
         transform: translate3d(0, 0, 0);
         -webkit-transform: translate3d(0, 0, 0);
         transition: all .5s ease-in-out;
         z-index: 1; }
-        /* line 131, ../sass/_dash.scss */
+        /* line 134, ../sass/_dash.scss */
         .dash-frame .dash-holder.icon-panel .dash-panel.open {
           opacity: 1;
           z-index: 2; }
-      /* line 136, ../sass/_dash.scss */
+      /* line 139, ../sass/_dash.scss */
       .dash-frame .dash-holder.icon-panel .dash-grid {
         font-size: 0;
         margin: 0 auto;
         width: 95%; }
-        /* line 140, ../sass/_dash.scss */
+        /* line 143, ../sass/_dash.scss */
         .dash-frame .dash-holder.icon-panel .dash-grid li {
           display: inline-block;
           height: 192px;
           margin-bottom: 5px;
           margin-right: 5px;
           width: 148px; }
-          /* line 146, ../sass/_dash.scss */
+          /* line 149, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li:nth-child(6n+6) {
             margin-right: 0; }
-          /* line 149, ../sass/_dash.scss */
+          /* line 152, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li a {
             display: block;
             height: 192px;
             width: 148px; }
-            /* line 153, ../sass/_dash.scss */
+            /* line 156, ../sass/_dash.scss */
             .dash-frame .dash-holder.icon-panel .dash-grid li a span {
               display: none; }
-          /* line 158, ../sass/_dash.scss */
+          /* line 161, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.devices a {
             background-image: url(../visuals/images/dash_icon_devices.gif); }
-          /* line 163, ../sass/_dash.scss */
+          /* line 166, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.connectivity a {
             background-image: url(../visuals/images/dash_icon_connectivity.gif); }
-          /* line 167, ../sass/_dash.scss */
+          /* line 170, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.connectivity.ready a {
             background-image: url(../visuals/images/dash_icon_connectivity_hover.gif); }
-          /* line 173, ../sass/_dash.scss */
+          /* line 176, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.health a {
             background-image: url(../visuals/images/dash_icon_health.gif); }
-          /* line 178, ../sass/_dash.scss */
+          /* line 181, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.movies a {
             background-image: url(../visuals/images/dash_icon_movies.gif); }
-          /* line 183, ../sass/_dash.scss */
+          /* line 186, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.audio a {
             background-image: url(../visuals/images/dash_icon_audio.gif); }
-          /* line 188, ../sass/_dash.scss */
+          /* line 191, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.wallet a {
             background-image: url(../visuals/images/dash_icon_wallet.gif); }
-          /* line 193, ../sass/_dash.scss */
+          /* line 196, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.vplanr a {
             background-image: url(../visuals/images/dash_icon_vplanr.gif); }
-          /* line 198, ../sass/_dash.scss */
+          /* line 201, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.home a {
             background-image: url(../visuals/images/dash_icon_home.gif); }
-          /* line 203, ../sass/_dash.scss */
+          /* line 206, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.car a {
             background-image: url(../visuals/images/dash_icon_car.gif); }
-          /* line 208, ../sass/_dash.scss */
+          /* line 211, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.library a {
             background-image: url(../visuals/images/dash_icon_library.gif); }
-          /* line 213, ../sass/_dash.scss */
+          /* line 216, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.gaming a {
             background-image: url(../visuals/images/dash_icon_gaming.gif); }
-          /* line 218, ../sass/_dash.scss */
+          /* line 221, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .dash-grid li.add a {
             background-image: url(../visuals/images/dash_icon_add.gif); }
-      /* line 224, ../sass/_dash.scss */
+      /* line 227, ../sass/_dash.scss */
       .dash-frame .dash-holder.icon-panel .favourite-channels {
         font-size: 0; }
-        /* line 226, ../sass/_dash.scss */
+        /* line 229, ../sass/_dash.scss */
         .dash-frame .dash-holder.icon-panel .favourite-channels li {
           display: inline-block; }
-          /* line 228, ../sass/_dash.scss */
+          /* line 231, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .favourite-channels li a {
             display: block;
             height: 110px;
             width: 110px;
             margin-bottom: 15px;
             margin-right: 15px; }
-            /* line 234, ../sass/_dash.scss */
+            /* line 237, ../sass/_dash.scss */
             .dash-frame .dash-holder.icon-panel .favourite-channels li a:nth-child(6), .dash-frame .dash-holder.icon-panel .favourite-channels li a:nth-child(13) {
               margin-right: 0; }
-            /* line 238, ../sass/_dash.scss */
+            /* line 241, ../sass/_dash.scss */
             .dash-frame .dash-holder.icon-panel .favourite-channels li a span {
               display: none; }
-          /* line 243, ../sass/_dash.scss */
+          /* line 246, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .favourite-channels li.my-channels a {
             background-image: url(../visuals/images/dash_my_channels.gif);
             width: 235px; }
-          /* line 249, ../sass/_dash.scss */
+          /* line 252, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .favourite-channels li.bbc-one a {
             background-image: url(../visuals/images/dash_icon_bbc_one.gif); }
-          /* line 254, ../sass/_dash.scss */
+          /* line 257, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .favourite-channels li.bbc-two a {
             background-image: url(../visuals/images/dash_icon_bbc_two.gif); }
-          /* line 259, ../sass/_dash.scss */
+          /* line 262, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .favourite-channels li.bbc-three a {
             background-image: url(../visuals/images/dash_icon_bbc_three.gif); }
-          /* line 264, ../sass/_dash.scss */
+          /* line 267, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .favourite-channels li.bbc-four a {
             background-image: url(../visuals/images/dash_icon_bbc_four.gif); }
-          /* line 269, ../sass/_dash.scss */
+          /* line 272, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .favourite-channels li.bbc-news a {
             background-image: url(../visuals/images/dash_icon_bbc_news.gif); }
-          /* line 274, ../sass/_dash.scss */
+          /* line 277, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .favourite-channels li.itv a {
             background-image: url(../visuals/images/dash_icon_itv.gif); }
-          /* line 279, ../sass/_dash.scss */
+          /* line 282, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .favourite-channels li.itv2 a {
             background-image: url(../visuals/images/dash_icon_itv2.gif); }
-          /* line 284, ../sass/_dash.scss */
+          /* line 287, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .favourite-channels li.add a {
             background-image: url(../visuals/images/dash_icon_custom_add.gif); }
-      /* line 290, ../sass/_dash.scss */
+      /* line 293, ../sass/_dash.scss */
       .dash-frame .dash-holder.icon-panel .new-channels {
         font-size: 0; }
-        /* line 292, ../sass/_dash.scss */
+        /* line 295, ../sass/_dash.scss */
         .dash-frame .dash-holder.icon-panel .new-channels li {
           display: inline-block; }
-          /* line 294, ../sass/_dash.scss */
+          /* line 297, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li a {
             display: block;
             height: 64px;
             width: 241px;
             margin-bottom: 10px;
             margin-right: 10px; }
-            /* line 300, ../sass/_dash.scss */
+            /* line 303, ../sass/_dash.scss */
             .dash-frame .dash-holder.icon-panel .new-channels li a:nth-child(4), .dash-frame .dash-holder.icon-panel .new-channels li a:nth-child(8), .dash-frame .dash-holder.icon-panel .new-channels li a:nth-child(12) {
               margin-right: 0; }
-            /* line 305, ../sass/_dash.scss */
+            /* line 308, ../sass/_dash.scss */
             .dash-frame .dash-holder.icon-panel .new-channels li a span {
               display: none; }
-          /* line 310, ../sass/_dash.scss */
+          /* line 313, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.short a {
             width: 166px; }
-          /* line 315, ../sass/_dash.scss */
+          /* line 318, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.sky-sports-1 a {
             background-image: url(../visuals/images/dash_icon_sky_sports_1.gif); }
-          /* line 320, ../sass/_dash.scss */
+          /* line 323, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.sky-sports-2 a {
             background-image: url(../visuals/images/dash_icon_sky_sports_2.gif); }
-          /* line 325, ../sass/_dash.scss */
+          /* line 328, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.sky-sports-3 a {
             background-image: url(../visuals/images/dash_icon_sky_sports_3.gif); }
-          /* line 330, ../sass/_dash.scss */
+          /* line 333, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.sky-one a {
             background-image: url(../visuals/images/dash_icon_sky_one.gif); }
-          /* line 335, ../sass/_dash.scss */
+          /* line 338, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.sky-one-mix a {
             background-image: url(../visuals/images/dash_icon_sky_one_mix.gif); }
-          /* line 340, ../sass/_dash.scss */
+          /* line 343, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.sky-movies-premier a {
             background-image: url(../visuals/images/dash_icon_sky_movies_premier.gif); }
-          /* line 345, ../sass/_dash.scss */
+          /* line 348, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.sky-movies-cinema a {
             background-image: url(../visuals/images/dash_icon_sky_movies_cinema.gif); }
-          /* line 350, ../sass/_dash.scss */
+          /* line 353, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.sky-box-office a {
             background-image: url(../visuals/images/dash_icon_sky_box_office.gif); }
-          /* line 355, ../sass/_dash.scss */
+          /* line 358, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.sky-news-active a {
             background-image: url(../visuals/images/dash_icon_sky_news_active.gif); }
-          /* line 360, ../sass/_dash.scss */
+          /* line 363, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.sky-gamestar a {
             background-image: url(../visuals/images/dash_icon_sky_gamestar.gif); }
-          /* line 365, ../sass/_dash.scss */
+          /* line 368, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.sky-travel a {
             background-image: url(../visuals/images/dash_icon_sky_travel.gif); }
-          /* line 370, ../sass/_dash.scss */
+          /* line 373, ../sass/_dash.scss */
           .dash-frame .dash-holder.icon-panel .new-channels li.sky-fi a {
             background-image: url(../visuals/images/dash_icon_sky_fi.gif); }
-      /* line 377, ../sass/_dash.scss */
+      /* line 380, ../sass/_dash.scss */
       .dash-frame .dash-holder.icon-panel .movies .back {
         left: 3rem;
         position: absolute;
         top: -2rem; }
-        /* line 381, ../sass/_dash.scss */
+        /* line 384, ../sass/_dash.scss */
         .dash-frame .dash-holder.icon-panel .movies .back:before {
           content: url(../visuals/images/icon_chevron_left_large_white.png); }
-        /* line 384, ../sass/_dash.scss */
+        /* line 387, ../sass/_dash.scss */
         .dash-frame .dash-holder.icon-panel .movies .back span {
           display: none; }
-      /* line 390, ../sass/_dash.scss */
+      /* line 393, ../sass/_dash.scss */
       .dash-frame .dash-holder.icon-panel .usage .back {
         left: 3rem;
         position: absolute;
-        top: 5rem; }
-        /* line 394, ../sass/_dash.scss */
+        top: -3rem; }
+        /* line 397, ../sass/_dash.scss */
         .dash-frame .dash-holder.icon-panel .usage .back:before {
           content: url(../visuals/images/icon_chevron_left_large_white.png); }
-        /* line 397, ../sass/_dash.scss */
+        /* line 400, ../sass/_dash.scss */
         .dash-frame .dash-holder.icon-panel .usage .back span {
           display: none; }
-    /* line 404, ../sass/_dash.scss */
+        /* line 403, ../sass/_dash.scss */
+        .dash-frame .dash-holder.icon-panel .usage .back img {
+          margin-top: -1rem; }
+    /* line 410, ../sass/_dash.scss */
     .dash-frame .dash-holder.vplanr.open {
       height: 100%;
       top: 0;
       padding: 35px 0; }
-    /* line 411, ../sass/_dash.scss */
+    /* line 417, ../sass/_dash.scss */
     .dash-frame .dash-holder.touch-lock h2 {
       font-size: 1.2rem;
       font-weight: 400;
       margin-top: 6rem; }
-      /* line 415, ../sass/_dash.scss */
+      /* line 421, ../sass/_dash.scss */
       .dash-frame .dash-holder.touch-lock h2 strong {
         color: #B9BB1F;
         font-size: 1.2rem; }
-    /* line 421, ../sass/_dash.scss */
+    /* line 427, ../sass/_dash.scss */
     .dash-frame .dash-holder.menu {
       color: #FFF;
       text-align: left; }
-      /* line 424, ../sass/_dash.scss */
+      /* line 430, ../sass/_dash.scss */
       .dash-frame .dash-holder.menu > dl {
         width: 80%;
         margin: 8rem auto 0;
         position: relative; }
-        /* line 428, ../sass/_dash.scss */
+        /* line 434, ../sass/_dash.scss */
         .dash-frame .dash-holder.menu > dl > dt {
           font-size: 1.4rem; }
-        /* line 432, ../sass/_dash.scss */
+        /* line 438, ../sass/_dash.scss */
         .dash-frame .dash-holder.menu > dl dl dt {
           font-size: 1.4rem;
           font-weight: 700; }
-          /* line 436, ../sass/_dash.scss */
+          /* line 442, ../sass/_dash.scss */
           .dash-frame .dash-holder.menu > dl dl dt.sub:after {
             content: url(../visuals/images/icon_chevron_down_white.png);
             padding-left: 10px;
             vertical-align: bottom; }
-      /* line 445, ../sass/_dash.scss */
+      /* line 451, ../sass/_dash.scss */
       .dash-frame .dash-holder.menu .col-1,
       .dash-frame .dash-holder.menu .col-2,
       .dash-frame .dash-holder.menu .col-3,
       .dash-frame .dash-holder.menu .col-4 {
         position: absolute;
         width: 25%; }
-      /* line 452, ../sass/_dash.scss */
+      /* line 458, ../sass/_dash.scss */
       .dash-frame .dash-holder.menu dd.col-1,
       .dash-frame .dash-holder.menu dd.col-2,
       .dash-frame .dash-holder.menu dd.col-3,
       .dash-frame .dash-holder.menu dd.col-4 {
         top: 2rem; }
-      /* line 460, ../sass/_dash.scss */
+      /* line 466, ../sass/_dash.scss */
       .dash-frame .dash-holder.menu dd.col-4 dt:nth-child(2) {
         margin-bottom: 1rem; }
-      /* line 463, ../sass/_dash.scss */
+      /* line 469, ../sass/_dash.scss */
       .dash-frame .dash-holder.menu dd.col-4 dt:nth-child(5) {
         margin-bottom: 1rem; }
-      /* line 468, ../sass/_dash.scss */
+      /* line 474, ../sass/_dash.scss */
       .dash-frame .dash-holder.menu .col-1 {
         left: 0; }
-      /* line 471, ../sass/_dash.scss */
+      /* line 477, ../sass/_dash.scss */
       .dash-frame .dash-holder.menu .col-2 {
         left: 25%; }
-      /* line 474, ../sass/_dash.scss */
+      /* line 480, ../sass/_dash.scss */
       .dash-frame .dash-holder.menu .col-3 {
         left: 50%; }
-      /* line 477, ../sass/_dash.scss */
+      /* line 483, ../sass/_dash.scss */
       .dash-frame .dash-holder.menu .col-4 {
         left: 75%; }
-    /* line 481, ../sass/_dash.scss */
+    /* line 487, ../sass/_dash.scss */
     .dash-frame .dash-holder.profile {
       font-size: 0;
       height: 100%;
       position: relative;
       text-align: left;
       top: -100%; }
-      /* line 488, ../sass/_dash.scss */
+      /* line 494, ../sass/_dash.scss */
       .dash-frame .dash-holder.profile.open {
         background-color: #4A4D4E;
         top: 0; }
-      /* line 492, ../sass/_dash.scss */
+      /* line 498, ../sass/_dash.scss */
       .dash-frame .dash-holder.profile > h2 {
         left: 50%;
         margin-left: -10rem;
@@ -1143,63 +1149,63 @@ section.home {
         text-align: center;
         top: 0;
         width: 20rem; }
-      /* line 500, ../sass/_dash.scss */
+      /* line 506, ../sass/_dash.scss */
       .dash-frame .dash-holder.profile > .nav {
         border-right: 1px solid #333637;
         padding-right: 10px;
         position: absolute;
         right: 6vw;
         top: 35px; }
-        /* line 506, ../sass/_dash.scss */
+        /* line 512, ../sass/_dash.scss */
         .dash-frame .dash-holder.profile > .nav h3 {
           color: #A1A1A1;
           font-size: 1rem; }
-          /* line 509, ../sass/_dash.scss */
+          /* line 515, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile > .nav h3.current {
             color: #FFF;
             font-size: 1.2rem;
             font-weight: 700; }
-      /* line 516, ../sass/_dash.scss */
+      /* line 522, ../sass/_dash.scss */
       .dash-frame .dash-holder.profile .details {
         color: #FFF;
         display: inline-block;
         margin-top: 6rem;
         width: 50%;
         vertical-align: top; }
-        /* line 522, ../sass/_dash.scss */
+        /* line 528, ../sass/_dash.scss */
         .dash-frame .dash-holder.profile .details .avatar {
           padding-left: 3rem; }
-          /* line 524, ../sass/_dash.scss */
+          /* line 530, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .details .avatar h3 {
             line-height: 0; }
-          /* line 527, ../sass/_dash.scss */
+          /* line 533, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .details .avatar .location {
             line-height: 1; }
-          /* line 530, ../sass/_dash.scss */
+          /* line 536, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .details .avatar .edited {
             font-size: .8rem;
             line-height: 1; }
-          /* line 534, ../sass/_dash.scss */
+          /* line 540, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .details .avatar img {
             margin-top: 1rem; }
-        /* line 538, ../sass/_dash.scss */
+        /* line 544, ../sass/_dash.scss */
         .dash-frame .dash-holder.profile .details .tools {
           width: 54%; }
-          /* line 540, ../sass/_dash.scss */
+          /* line 546, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .details .tools li {
             background-repeat: no-repeat;
             border-bottom: 1px solid #333637;
             padding: 1rem 0 1rem 6rem;
             position: relative; }
-            /* line 545, ../sass/_dash.scss */
+            /* line 551, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .details .tools li.edit {
               background-image: url(../visuals/images/icon_cog.png);
               background-position: top 50% left 55px; }
-            /* line 549, ../sass/_dash.scss */
+            /* line 555, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .details .tools li.messages {
               background-image: url(../visuals/images/icon_envelope_small.png);
               background-position: top 50% left 54px; }
-              /* line 552, ../sass/_dash.scss */
+              /* line 558, ../sass/_dash.scss */
               .dash-frame .dash-holder.profile .details .tools li.messages .count {
                 background-color: #C54E68;
                 border-radius: 28px;
@@ -1208,23 +1214,23 @@ section.home {
                 padding: 2px;
                 text-align: center;
                 width: 40px; }
-            /* line 562, ../sass/_dash.scss */
+            /* line 568, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .details .tools li.level {
               background-image: url(../visuals/images/icon_wallet_small.png);
               background-position: top 50% left 56px; }
-              /* line 565, ../sass/_dash.scss */
+              /* line 571, ../sass/_dash.scss */
               .dash-frame .dash-holder.profile .details .tools li.level .gold {
                 color: #D49F71;
                 margin-left: 10px;
                 position: absolute;
                 text-transform: uppercase;
                 width: 10rem; }
-                /* line 571, ../sass/_dash.scss */
+                /* line 577, ../sass/_dash.scss */
                 .dash-frame .dash-holder.profile .details .tools li.level .gold:before {
                   content: url(../visuals/images/icon_gold_medal.png);
                   padding-right: 20px;
                   vertical-align: -webkit-baseline-middle; }
-      /* line 581, ../sass/_dash.scss */
+      /* line 587, ../sass/_dash.scss */
       .dash-frame .dash-holder.profile .profile-aspects {
         color: #FFF;
         display: inline-block;
@@ -1233,114 +1239,114 @@ section.home {
         position: relative;
         vertical-align: top;
         width: 50%; }
-        /* line 589, ../sass/_dash.scss */
+        /* line 595, ../sass/_dash.scss */
         .dash-frame .dash-holder.profile .profile-aspects .tabs {
           font-size: 0; }
-          /* line 591, ../sass/_dash.scss */
+          /* line 597, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .tabs li {
             color: #666565;
             display: inline-block;
             font-size: 1.6rem;
             position: relative;
             width: 50%; }
-            /* line 597, ../sass/_dash.scss */
+            /* line 603, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .tabs li:first-child {
               text-align: left;
               border-right: 3px solid #FFF; }
-            /* line 601, ../sass/_dash.scss */
+            /* line 607, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .tabs li:last-child {
               text-align: right;
               padding-right: 3rem; }
-            /* line 605, ../sass/_dash.scss */
+            /* line 611, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .tabs li.current {
               color: #FFF; }
-        /* line 610, ../sass/_dash.scss */
+        /* line 616, ../sass/_dash.scss */
         .dash-frame .dash-holder.profile .profile-aspects .paging {
           border: none;
           background: none;
           position: absolute;
           top: 1rem;
           z-index: 3; }
-          /* line 616, ../sass/_dash.scss */
+          /* line 622, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .paging.right {
             right: 28px; }
-            /* line 618, ../sass/_dash.scss */
+            /* line 624, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .paging.right:after {
               content: url(../visuals/images/icon_chevron_right_large_white.png); }
-          /* line 622, ../sass/_dash.scss */
+          /* line 628, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .paging.left {
             left: -30px; }
-            /* line 624, ../sass/_dash.scss */
+            /* line 630, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .paging.left:after {
               content: url(../visuals/images/icon_chevron_left_large_white.png); }
-          /* line 628, ../sass/_dash.scss */
+          /* line 634, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .paging span {
             display: none; }
-        /* line 632, ../sass/_dash.scss */
+        /* line 638, ../sass/_dash.scss */
         .dash-frame .dash-holder.profile .profile-aspects .info {
           font-size: .6rem; }
-        /* line 636, ../sass/_dash.scss */
+        /* line 642, ../sass/_dash.scss */
         .dash-frame .dash-holder.profile .profile-aspects .panels > li {
           opacity: 0;
           transform: translate3d(0, 0, 0);
           -webkit-transform: translate3d(0, 0, 0);
           transition: all .5s ease-in-out; }
-          /* line 641, ../sass/_dash.scss */
+          /* line 647, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .panels > li.current {
             opacity: 1 !important; }
-        /* line 646, ../sass/_dash.scss */
+        /* line 652, ../sass/_dash.scss */
         .dash-frame .dash-holder.profile .profile-aspects .billing {
           z-index: 1; }
-          /* line 648, ../sass/_dash.scss */
+          /* line 654, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .billing h2 {
             font-weight: 700; }
-          /* line 651, ../sass/_dash.scss */
+          /* line 657, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .billing h3 {
             font-size: .8rem;
             font-weight: bold; }
-          /* line 655, ../sass/_dash.scss */
+          /* line 661, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .billing .usage,
           .dash-frame .dash-holder.profile .profile-aspects .billing .mobile-charges {
             border-top: 1px solid #333637;
             padding: 2rem 0 1rem 0; }
-          /* line 660, ../sass/_dash.scss */
+          /* line 666, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .billing .mobile-charges {
             background-image: url(../visuals/images/icon_exclamation_red.png);
             background-position: top 2rem left 0;
             background-repeat: no-repeat;
             padding-left: 2.5rem; }
-            /* line 666, ../sass/_dash.scss */
+            /* line 672, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .billing .mobile-charges .estimate h4 {
               font-size: .9rem;
               font-weight: bold; }
-            /* line 670, ../sass/_dash.scss */
+            /* line 676, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .billing .mobile-charges .estimate p {
               font-size: .8rem; }
-            /* line 674, ../sass/_dash.scss */
+            /* line 680, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .billing .mobile-charges .estimate .tarifs:after {
               content: url(../visuals/images/icon_chevron_right.png);
               padding-left: 5px; }
-        /* line 682, ../sass/_dash.scss */
+        /* line 688, ../sass/_dash.scss */
         .dash-frame .dash-holder.profile .profile-aspects .connections {
           position: absolute;
           width: 440px;
           z-index: 2; }
-          /* line 686, ../sass/_dash.scss */
+          /* line 692, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .connections li {
             border-bottom: 1px solid #333637;
             font-size: 0;
             padding: 4px; }
-          /* line 691, ../sass/_dash.scss */
+          /* line 697, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .connections .label {
             display: inline-block;
             width: 60%; }
-          /* line 695, ../sass/_dash.scss */
+          /* line 701, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .connections .toggle {
             display: inline-block;
             position: relative;
             vertical-align: middle;
             width: 86px; }
-            /* line 700, ../sass/_dash.scss */
+            /* line 706, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .connections .toggle:after {
               background-color: rgba(0, 0, 0, 0.4);
               border-radius: 20px;
@@ -1348,7 +1354,7 @@ section.home {
               display: block;
               padding: 20px;
               width: 40px; }
-            /* line 708, ../sass/_dash.scss */
+            /* line 714, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .connections .toggle:before {
               background-color: #7D8692;
               border-radius: 100%;
@@ -1363,14 +1369,14 @@ section.home {
               transform: translate3d(0, 0, 0);
               -webkit-transform: translate3d(0, 0, 0);
               transition: all .5s ease-in-out; }
-            /* line 724, ../sass/_dash.scss */
+            /* line 730, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .connections .toggle.on:before {
               background-color: #9C299F;
               content: url(../visuals/images/icon_on_tick.png);
               padding: 8px 8px;
               left: 46px;
               right: 10px; }
-          /* line 733, ../sass/_dash.scss */
+          /* line 739, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .connections .edit {
             display: inline-block;
             padding-left: 10px;

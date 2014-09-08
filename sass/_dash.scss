@@ -78,6 +78,9 @@
 		h2 {
 			color: $white;
 			margin: 4% 0;
+			strong {
+				font-size: 2rem;
+			}
 		}
 		&.icon-panel {
 			color: $white;
@@ -390,12 +393,15 @@
 				.back {
 					left: 3rem;
 					position: absolute;
-					top: 5rem;
+					top: -3rem;
 					&:before {
 						content: url(#{$imageDir}icon_chevron_left_large_white.png);
 					}
 					span {
 						display: none;
+					}
+					img {
+						margin-top: -1rem;
 					}
 				}
 			}

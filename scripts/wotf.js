@@ -39,18 +39,15 @@ var wotf = {
 			// alert('!');
 		});
 		$(wotf.evts).on('dash:close', function() {
-			// console.log('dash:close');
 			$('.dash-holder, .dash-handle').removeClass('open');
 		});
 
 		$(wotf.evts).on('channels:open', function() {
-			// console.log('cahnnels:open');
 			$('section.channels').addClass('open');
 			wotf.scroll($('section.channels').position().left,1000);
 		});
 
 		$(wotf.evts).on('dashboard:open', function(e,d) {
-			// console.log('dashboard:open');
 			$('.dash-panel:not('+d+')').removeClass('open');
 			$('.dash-panel').filter(d).addClass('open');
 			if($('.dash-panel.movies').hasClass('open')){
@@ -67,23 +64,19 @@ var wotf = {
 		});
 
 		$(wotf.evts).on('vplanr:open', function() {
-			// console.log('vplanr:open');
 			$('.dash-holder, .dash-handle').removeClass('open');
 			$('.dash-holder.vplanr').addClass('open');
 		});
 
 		$(wotf.evts).on('vplanr:close', function() {
-			// console.log('vplanr:open');
 			$('.dash-holder.vplanr').removeClass('open');
 		});
 		
 		$(wotf.evts).on('panel:pause', function(e,timer) {
-			// console.log('panel:pause');
 			clearInterval(wotf[timer]);
 		});
 
 		$(wotf.evts).on('panel:play', function(e,$nav) {
-			// console.log('panel:play');
 			wotf.autoPanel($($nav));
 		});
 	},
@@ -92,8 +85,7 @@ var wotf = {
 		
 
 		// Event Triggers
-		$('.dash-grid .movies').off().on('click', function(e) {
-			// console.log($(this).data('event'));
+		$('.dash-grid .movies').on('click', function(e) {
 			$(wotf.evts).trigger($(this).data('event'), $(this).data('target'));
 		});
 
@@ -107,7 +99,6 @@ var wotf = {
 		});
 
 		$('.icon-panel .vplanr, .first .add').on('click', function() {
-			// console.log('vplanr:open');
 			$(wotf.evts).trigger('vplanr:open');
 		});
 
@@ -135,8 +126,6 @@ var wotf = {
 		// Function Calls
 		wotf.dblClick($('section.home'));
 		wotf.tabs($('.profile-aspects'));
-		
-		
 
 		// Small funciton bindings
 		$('.day.active').off().on('click', function() {
@@ -147,7 +136,6 @@ var wotf = {
 		$('.channel-selector .drag').off().on('click', function(e){
 			var $handle = $(e.currentTarget),
 				$parent = $handle.parents('.channel-selector');
-
 			$parent.toggleClass('open');
 		});
 
@@ -155,8 +143,8 @@ var wotf = {
 			$(this).parent().removeClass('open');
 		});
 
-		$('.toggle').on('click', function() {
-			$(this).toggleClass('on');
+		$('.toggle').off().on('click', function(e) {
+			$(e.currentTarget).toggleClass('on');
 		})
 
 		$('.add.wagamama').off().on('click', function() {
