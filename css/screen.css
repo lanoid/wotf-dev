@@ -108,6 +108,14 @@ main {
     width: 100%; }
 
 /* line 35, ../sass/_layout.scss */
+#content {
+  opacity: 1;
+  transition: opacity .5s ease-in-out; }
+  /* line 38, ../sass/_layout.scss */
+  #content.loading {
+    opacity: 0; }
+
+/* line 43, ../sass/_layout.scss */
 .row {
   display: inline-block;
   font-size: 0;
@@ -116,7 +124,7 @@ main {
   vertical-align: top;
   white-space: nowrap; }
 
-/* line 44, ../sass/_layout.scss */
+/* line 52, ../sass/_layout.scss */
 .col {
   display: inline-block;
   font-size: 1rem;
@@ -127,35 +135,35 @@ main {
   vertical-align: top;
   white-space: normal; }
 
-/* line 55, ../sass/_layout.scss */
+/* line 63, ../sass/_layout.scss */
 .full {
   width: 100vw; }
 
-/* line 58, ../sass/_layout.scss */
+/* line 66, ../sass/_layout.scss */
 .three-quarters {
   width: 75vw; }
 
-/* line 61, ../sass/_layout.scss */
+/* line 69, ../sass/_layout.scss */
 .two-thirds {
   width: 66.666vw; }
 
-/* line 64, ../sass/_layout.scss */
+/* line 72, ../sass/_layout.scss */
 .half {
   width: 50vw; }
 
-/* line 67, ../sass/_layout.scss */
+/* line 75, ../sass/_layout.scss */
 .third {
   width: 33.333vw; }
 
-/* line 70, ../sass/_layout.scss */
+/* line 78, ../sass/_layout.scss */
 .quarter {
   width: 25vw; }
 
-/* line 73, ../sass/_layout.scss */
+/* line 81, ../sass/_layout.scss */
 .two-thirds-percent {
   width: 66.666%; }
 
-/* line 76, ../sass/_layout.scss */
+/* line 84, ../sass/_layout.scss */
 .third-percent {
   width: 33.333%; }
 

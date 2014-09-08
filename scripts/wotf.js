@@ -199,10 +199,17 @@ var wotf = {
 				wotf.events();	
 				wotf.clock($('.clock'));
 			});
+			
+			$('#content').addClass('loading');
 
 			$.get('partials/logged-in-content.html',function(data) {
 				$('body').addClass('logged-in').removeClass('logged-out');
 				$('#content').replaceWith(data);
+				setTimeout(function() {
+					$('#content').removeClass('loading');
+				}, 200);
+				
+
 				wotf.events();
 				wotf.snap('.scroller','.col');
 			});

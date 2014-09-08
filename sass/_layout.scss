@@ -32,6 +32,14 @@ main {
 	}
 }
 
+#content {
+	opacity: 1;
+	transition: opacity .5s ease-in-out;
+	&.loading {
+		opacity: 0;
+	}
+}
+
 .row {
 	display: inline-block;
 	font-size: 0;
