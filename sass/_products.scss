@@ -36,6 +36,7 @@
 			}
 		}
 		&.nokia-tablet {
+			color: #000;
 			padding: 0;
 			.section-inner {
 				&.product-list {
@@ -168,8 +169,30 @@
 			}
 			.tarrifs {
 				font-weight: 700;
-				color: black;
+				color: $black;
 				font-size: 1rem;
+			}
+			.view {
+				&:after {
+					content: url(#{$imageDir}icon_chevron_right_small_black.png);
+					margin-left: 6px;
+					vertical-align: center;
+				}
+			}
+			.buy {
+				font-size: 1.2rem;
+				font-weight: 700;
+				color: $black;
+				&:after {
+					background: url(#{$imageDir}/icon_chevron_right_medium_black.png);
+					background-size: cover;
+					content: '';
+					display: inline-block;
+					height: 12px;
+					width: 8px;
+					margin-left: 6px;
+					vertical-align: baseline;
+				}
 			}
 		}
 

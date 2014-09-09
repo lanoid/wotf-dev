@@ -14,7 +14,7 @@ section.channels {
 		left: 20px;
 		z-index: 2;
 		&:after {
-			background-color: $vodafoneRed;
+			background-color: $vodafoneDarkGrey;
 			border-radius: 100%;
 			content: url(#{$imageDir}icon_close.png);
 			padding: 7px 6px 3px 6px;

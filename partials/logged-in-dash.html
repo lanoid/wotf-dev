@@ -56,13 +56,16 @@
 		</div>
 		<div class="dash-panel usage">
 			<a class="back" data-event="dashboard:open" data-target=".initial"><span>Back</span></a>
-			<img src="visuals/images/graph_account_usage.gif">
+			<img src="visuals/images/graph_account_usage.gif" usemap="#graphmap">
+			<map name="graphmap">
+				<area shape="rect" coords="600,200,748,224" class="bills" data-target=".profile" data-close=".dash-handle, .icon-panel">
+			</map>
 		</div>
 	</aside>
 	<aside class="dash-holder vplanr grey">
 		<header>
 			<div class="customise">
-				<img class="dash" data-holder=".icon-panel" data-panel=".initial" src="visuals/images/icon_dashboard_meter_white.png">
+				<img class="dash" data-holder=".icon-panel" data-panel=".initial" src="visuals/images/icon_chevron_left_large_white.png">
 				<!-- <h4>Customise</h4> -->
 			</div>
 			<div class="title">
@@ -71,7 +74,7 @@
 				</div>
 				<div class="heading">
 					<h1>Emma’s V-Planr</h1>
-					<p>Tuesday 12th August</p>
+					<p>Tuesday 12th July</p>
 				</div>
 			</div>
 			<div class="time">
@@ -319,6 +322,7 @@
 		<div class="nav">
 			<h3 class="current">My Profile</h3>
 			<h3>My Statement</h3>
+			<a class="logout"></a>
 		</div>
 		<div class="details">
 			<div class="avatar">
@@ -396,7 +400,7 @@
 					</ul>
 				</li>
 				<li class="billing current">
-					<h2><span class="date">03 May - 04 June</span> £79.70</h2>
+					<h2><span class="date">03 June - 04 July</span> £79.70</h2>
 					<div class="usage">
 						<h3>Data usage comparison:</h3>
 						<img src="visuals/images/graph_usage.png">

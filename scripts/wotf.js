@@ -148,6 +148,13 @@ var wotf = {
 		wotf.tabs($('.profile-aspects'));
 
 		// Small funciton bindings
+		$('.bills').on('click', function(e) {
+			wotf.handlePanel(e);
+			if(!$('.dash-holder.profile').find('.tabs .billing').hasClass('current')){
+				$('.dash-holder.profile').find('.tabs .billing').click();
+			}
+		});
+
 		$('.day.active').off().on('click', function() {
 			$('.calendar .timeframe.month').toggleClass('open');
 			$('.calendar .timeframe.day').toggleClass('open');
@@ -166,6 +173,7 @@ var wotf = {
 
 		$('section.channels .close').off().on('click', function() {
 			$(this).parent().removeClass('open');
+			$(this).parent().find('video')[0].pause();
 		});
 
 		$('.toggle').off().on('click', function(e) {
@@ -184,10 +192,17 @@ var wotf = {
 				$target = $($el.data('target'));
 			$target.toggleClass('open');
 		});
+
+		$('.logout').off().on('click', function(e) {
+			e.preventDefault();
+
+			
+		});
+
 		$('.fingerprint').off().on('click', function(e) {
 			e.preventDefault();
 
-			$('.dash-holder, .dash-handle').removeClass('open');
+			$('.dash-holder, .dash-handle').hide();
 
 			$.get('partials/logged-in-header.html',function(data) {
 				$('body > header').replaceWith(data);
@@ -196,7 +211,7 @@ var wotf = {
 
 			$.get('partials/logged-in-dash.html',function(data) {
 				$('.dash-frame').replaceWith(data);
-				wotf.events();	
+				wotf.events();
 				wotf.clock($('.clock'));
 			});
 			
@@ -207,7 +222,7 @@ var wotf = {
 				$('#content').replaceWith(data);
 				setTimeout(function() {
 					$('#content').removeClass('loading');
-				}, 200);
+				}, 100);
 				
 
 				wotf.events();
