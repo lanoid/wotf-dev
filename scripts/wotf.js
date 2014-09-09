@@ -29,6 +29,12 @@ var wotf = {
 	eventPanels : '',
 	// clicks
 	clicks : 0,
+	$loggedOutHeader : {},
+	$loggedOutDash : {},
+	$loggedOutContent : {},
+	$loggedInHeader : {},
+	$loggedInDash : {},
+	$loggedInContent : {},
 	// Set things up
 	init : function() {
 		$(document).ready(function(){
@@ -202,32 +208,87 @@ var wotf = {
 		$('.fingerprint').off().on('click', function(e) {
 			e.preventDefault();
 
-			$('.dash-holder, .dash-handle').hide();
+			$('.dash-holder, .dash-handle').hide().removeClass('open');
 
-			$.get('partials/logged-in-header.html',function(data) {
-				$('body > header').replaceWith(data);
+			if($.isEmptyObject(wotf.$loggedInHeader)){
+				$.get('partials/logged-in-header.html',function(data) {
+					wotf.$loggedOutHeader = $('body > header');
+					wotf.$loggedInHeader = $(data);
+					
+					$('body > header').replaceWith(data);
+					wotf.events();
+				});
+			} else {
+				$('body > header').replaceWith(wotf.$loggedInHeader);
 				wotf.events();
-			});
+			}
 
-			$.get('partials/logged-in-dash.html',function(data) {
-				$('.dash-frame').replaceWith(data);
+			if($.isEmptyObject(wotf.$loggedInDash)){
+				$.get('partials/logged-in-dash.html',function(data) {
+					wotf.$loggedOutDash = $('.dash-frame');
+					wotf.$loggedInDash = $(data);
+
+					$('.dash-frame').replaceWith(data);
+					wotf.events();
+					wotf.clock($('.clock'));
+				});
+			} else {
+				$('.dash-frame').replaceWith(wotf.$loggedInDash);
 				wotf.events();
 				wotf.clock($('.clock'));
-			});
+			}
+			
 			
 			$('#content').addClass('loading');
 
-			$.get('partials/logged-in-content.html',function(data) {
+			if($.isEmptyObject(wotf.$loggedInContent)){
+				$.get('partials/logged-in-content.html',function(data) {
+					wotf.$loggedOutContent = $('#content');
+					wotf.$loggedInContent = $(data);
+					
+					$('body').addClass('logged-in').removeClass('logged-out');
+					$('#content').replaceWith(data);
+					
+					setTimeout(function() {
+						$('#content').removeClass('loading');
+					}, 100);
+					
+					wotf.events();
+					wotf.snap('.scroller','.col');
+				});
+			} else {
 				$('body').addClass('logged-in').removeClass('logged-out');
-				$('#content').replaceWith(data);
+				$('#content').replaceWith(wotf.$loggedInContent);
+
 				setTimeout(function() {
 					$('#content').removeClass('loading');
 				}, 100);
-				
 
 				wotf.events();
 				wotf.snap('.scroller','.col');
-			});
+			}
+		});
+
+		$('.logout').off().on('click', function(e) {
+			$('.dash-holder, .dash-handle').removeClass('open');
+			$('body').addClass('logged-out').removeClass('logged-in');
+
+			$('body > header').replaceWith(wotf.$loggedOutHeader);
+			$('.dash-frame').replaceWith(wotf.$loggedOutDash);
+			$('#content').replaceWith(wotf.$loggedOutContent);
+
+			$('.dash-holder, .dash-handle').show();
+
+			setTimeout(function() {
+				$('#content').removeClass('loading');
+			}, 100);
+
+			wotf.events();
+			wotf.snap('.scroller','.col');
+			wotf.clock($('.clock'));
+
+			wotf.panelLoader($('#home1'));
+			wotf.panelLoader($('#event1'));
 		});
 	},
 	dblClick : function($target) {
