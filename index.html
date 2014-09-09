@@ -48,7 +48,7 @@
 				{{/if}}
 				{{#if expand}}
 				<div class="expand {{expand.direction}}" style="left:{{expand.x}};top:{{expand.y}};">
-					<a class="point plus {{expand.direction}}" href="#"><span>MESSAGE</span></a>
+					<a class="point plus {{expand.direction}}"><span>MESSAGE</span></a>
 					<div class="message" data-max-width="{{expand.width}}" data-unit="vw">
 						<div class="message-inner" style="width: {{expand.width}}">
 							<h3>{{expand.title}}</h3>
@@ -86,7 +86,7 @@
 				{{/if}}
 				{{#if expand}}
 				<div class="spotlight-handle {{expand.direction}}" style="left:{{expand.x}};top:{{expand.y}};">
-					<a class="point arrow {{expand.direction}}" href="#"><span>MESSAGE</span></a>
+					<a class="point arrow {{expand.direction}}"><span>MESSAGE</span></a>
 					<div class="spotlight closed">
 
 					</div>
@@ -106,8 +106,8 @@
 					<div class="byline-links-container">
 						<h3>Horse, New star of the V&amp;A</h3>
 						<p class="links">
-							<a href="#">http://xx/xxx</a>
-							<a href="#">@TimeOutLondon</a>
+							<a>http://xx/xxx</a>
+							<a>@TimeOutLondon</a>
 						</p>
 					</div>
 					<img src="visuals/images/icon_time_out.png" class="time-out-image">
@@ -130,8 +130,8 @@
 					<div class="byline-links-container">
 						<h3>Horse, New star of the V&amp;A</h3>
 						<p class="links">
-							<a href="#">http://xx/xxx</a>
-							<a href="#">@TimeOutLondon</a>
+							<a>http://xx/xxx</a>
+							<a>@TimeOutLondon</a>
 						</p>
 					</div>
 					<img src="visuals/images/icon_time_out.png" class="time-out-image">
@@ -145,7 +145,7 @@
 
 		<script type="text/x-handlebars-template" id="template-event-2">
 			<div class="content event-2">
-				<a class="point arrow right" data-timeout="eventPanel" href="#"><span></span></a>
+				<a class="point arrow right" data-timeout="eventPanel"><span></span></a>
 				<div class="overlay">
 					<img src="visuals/images/hero_latitude_overlay.png">
 				</div>
@@ -315,7 +315,11 @@
 		<main id="content">
 			<div class="scroller">
 				<div class="row">
-					<section class="col full home white current" id="home1" data-timer="homePanels" data-template="#home-template" data-url="json/home-data.js" ></section>
+					<section class="col full offer white current rhombus closed">
+						<a class="close close-cross"><span>Close</span></a>
+						<img src="visuals/images/m_and_s_promotion.png">
+					</section>
+					<section class="col full home white current rhombus" id="home1" data-timer="homePanels" data-template="#home-template" data-url="json/home-data.js" ></section>
 					<section class="col full movie black" id="movie1" data-template="#movie-template" data-url="json/movie-data.js" style="background-image: url(visuals/images/hero_two_faces_movie.jpg);">
 						<div class="content">
 							<div class="copy">
@@ -326,27 +330,27 @@
 								</div>
 							</div>
 						</div>
-						<a class="point arrow down" data-target=".movie-frame" href="#"><span>MESSAGE</span></a>
+						<a class="point arrow down" data-target=".movie-frame"><span>MESSAGE</span></a>
 						<aside data-units="%" class="movie-frame">
 							<ul class="options">
 								<li class="sales">
 									<img src="visuals/images/product_movie_device_range.png">
 									<h4 class="large">73%</h4>
-									<p>of customers stream their movies on more than 3 digital devices <a href="#"><strong>#onthemove</strong></a></p>
+									<p>of customers stream their movies on more than 3 digital devices <a><strong>#onthemove</strong></a></p>
 								</li>
 								<li class="packages">
 									<ul class="formats">
-										<li class="mobile"><a href="#"><span>Mobile</span></a></li>
-										<li class="television"><a href="#"><span>Television</span></a></li>
-										<li class="home-phone"><a href="#"><span>Home Phone</span></a></li>
-										<li class="radio"><a href="#"><span>Radio</span></a></li>
+										<li class="mobile"><a><span>Mobile</span></a></li>
+										<li class="television"><a><span>Television</span></a></li>
+										<li class="home-phone"><a><span>Home Phone</span></a></li>
+										<li class="radio"><a><span>Radio</span></a></li>
 									</ul>
 									<div class="format television">
 										<h4>Movies with <span class="now-logo"><span>NowTV</span></span></h4>
 										<p>We’ve upgraded your entertainment package to include <strong>NowTV</strong> for you to watch movies wherever you want on wahtever you like!</p>
 										<img class="television" src="visuals/images/logo_sky_channels.png">
 									</div>
-									<a class="before-point" href="#">View all upgrades</a>
+									<a class="before-point">View all upgrades</a>
 								</li>
 							</ul>
 						</aside>
@@ -369,8 +373,8 @@
 							<div class="subsection">
 								<h1>Technology you’ll love</h1>
 								<ul class="hashtags">
-									<li><a href="#">#instore</a></li>
-									<li><a href="#">#trendingtech</a></li>
+									<li><a>#instore</a></li>
+									<li><a>#trendingtech</a></li>
 								</ul>
 							</div>
 							<div class="subsection main-image">
@@ -472,12 +476,12 @@
 			<button class="help-handle" data-target=".help-holder" data-close=".dash-handle, .dash-holder"><span>Help</span></button>
 			<aside class="help-holder">
 				<nav class="help-nav">
-					<a href="#" class="message"><span>Message</span></a>
-					<a href="#" class="comment"><span>Comment</span></a>
-					<a href="#" class="call"><span>Call</span></a>
-					<a href="#" class="sound"><span>Sound</span></a>
-					<a href="#" class="faq"><span>FAQ</span></a>
-					<a href="#" class="play"><span>Play</span></a>
+					<a class="message"><span>Message</span></a>
+					<a class="comment"><span>Comment</span></a>
+					<a class="call"><span>Call</span></a>
+					<a class="sound"><span>Sound</span></a>
+					<a class="faq"><span>FAQ</span></a>
+					<a class="play"><span>Play</span></a>
 				</nav>
 				<h3><strong>Ask Tom.</strong> Your Vodafone concierge</h3>
 				<div class="video">
@@ -485,7 +489,7 @@
 						<source type="video/mp4" src="visuals/videos/RioClip.mp4">
 					</video>
 				</div>
-				<a href="#" class="close help-handler handler" data-handle=".help-handle" data-target=".help-holder" data-close=".dash-handle, .dash-holder"><span>Close</span></a>
+				<a class="close close-cross help-handler handler" data-handle=".help-handle" data-target=".help-holder" data-close=".dash-handle, .dash-holder"><span>Close</span></a>
 			</aside>
 		</div>
 		<footer></footer>

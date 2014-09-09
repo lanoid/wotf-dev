@@ -201,8 +201,10 @@ var wotf = {
 
 		$('.logout').off().on('click', function(e) {
 			e.preventDefault();
+		});
 
-			
+		$('.offer .close').off().on('click', function() {
+			$('.offer').addClass('closed');
 		});
 
 		$('.fingerprint').off().on('click', function(e) {
@@ -276,6 +278,8 @@ var wotf = {
 			$('body > header').replaceWith(wotf.$loggedOutHeader);
 			$('.dash-frame').replaceWith(wotf.$loggedOutDash);
 			$('#content').replaceWith(wotf.$loggedOutContent);
+
+			$('.offer').removeClass('closed');
 
 			$('.dash-holder, .dash-handle').show();
 

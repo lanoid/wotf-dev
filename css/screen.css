@@ -227,13 +227,13 @@ p {
 
 /* line 57, ../sass/_typography.scss */
 a {
-  color: #FFF;
+  color: white;
   text-decoration: none; }
 
 /* line 62, ../sass/_typography.scss */
 .cta {
-  background-color: #9D2A9F;
-  color: #FFF;
+  background-color: #9d2a9f;
+  color: white;
   display: inline-block;
   font-size: 1.4rem;
   font-weight: 400;
@@ -259,12 +259,12 @@ strong {
   font-size: 1.2rem; }
   /* line 3, ../sass/_icons.scss */
   .before-point:before {
-    background-color: #E30913;
+    background-color: #e30913;
     background-image: url(../visuals/images/icon_right_pointing_chevron_white.png);
     background-position: center center;
     background-repeat: no-repeat;
     border-radius: 100%;
-    color: #FFF;
+    color: white;
     content: '';
     display: inline-block;
     height: 2rem;
@@ -276,9 +276,9 @@ strong {
 
 /* line 21, ../sass/_icons.scss */
 .point {
-  background-color: #E30913;
+  background-color: #e30913;
   border-radius: 100%;
-  color: #FFF;
+  color: white;
   display: block;
   font-size: 2rem;
   height: 3rem;
@@ -354,8 +354,8 @@ strong {
     transform: rotate(45deg); }
   /* line 118, ../sass/_icons.scss */
   .expand .message {
-    background-color: #E30913;
-    color: #FFF;
+    background-color: #e30913;
+    color: white;
     height: 5rem;
     overflow: hidden;
     padding: 0;
@@ -397,7 +397,7 @@ strong {
 
 /* line 164, ../sass/_icons.scss */
 .add {
-  color: #FF0000; }
+  color: red; }
 
 /* line 168, ../sass/_icons.scss */
 .hashtags {
@@ -435,35 +435,35 @@ strong {
       display: none; }
   /* line 203, ../sass/_icons.scss */
   .rating.background li:before {
-    background-color: #F6F5F5;
-    color: #FFF; }
+    background-color: #f6f5f5;
+    color: white; }
   /* line 211, ../sass/_icons.scss */
   .rating.background.one li:nth-child(-n+1):before {
-    background-color: #000; }
+    background-color: black; }
   /* line 216, ../sass/_icons.scss */
   .rating.background.one li:nth-child(n+2):before {
-    background-color: #D1CFCF; }
+    background-color: #d1cfcf; }
   /* line 226, ../sass/_icons.scss */
   .rating.background.two li:nth-child(-n+2):before {
-    background-color: #000; }
+    background-color: black; }
   /* line 231, ../sass/_icons.scss */
   .rating.background.two li:nth-child(n+3):before {
-    background-color: #D1CFCF; }
+    background-color: #d1cfcf; }
   /* line 240, ../sass/_icons.scss */
   .rating.background.three li:nth-child(-n+3):before {
-    background-color: #000; }
+    background-color: black; }
   /* line 245, ../sass/_icons.scss */
   .rating.background.three li:nth-child(n+4):before {
-    background-color: #D1CFCF; }
+    background-color: #d1cfcf; }
   /* line 254, ../sass/_icons.scss */
   .rating.background.four li:nth-child(-n+4):before {
-    background-color: #000; }
+    background-color: black; }
   /* line 259, ../sass/_icons.scss */
   .rating.background.four li:nth-child(n+5):before {
-    background-color: #D1CFCF; }
+    background-color: #d1cfcf; }
   /* line 268, ../sass/_icons.scss */
   .rating.background.five li:nth-child(-n+5):before {
-    background-color: #000; }
+    background-color: black; }
 
 /* line 278, ../sass/_icons.scss */
 .sharing li {
@@ -492,6 +492,37 @@ strong {
   .sharing li.pn {
     background-position: -116px 0; }
 
+/* line 306, ../sass/_icons.scss */
+.close-cross {
+  position: absolute;
+  text-align: center; }
+  /* line 309, ../sass/_icons.scss */
+  .close-cross:before {
+    content: url(../visuals/images/icon_close.png);
+    background-color: #393b3d;
+    border-radius: 100%;
+    display: block;
+    height: 14px;
+    margin: 0 auto;
+    padding: 4px 4px 9px;
+    width: 20px; }
+  /* line 319, ../sass/_icons.scss */
+  .close-cross span {
+    display: none; }
+
+/* line 325, ../sass/_icons.scss */
+.rhombus:before {
+  background-image: url(../visuals/images/vodafone_trapezium.png);
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  height: 244px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 118px;
+  z-index: 15; }
+
 /* line 1, ../sass/_header.scss */
 body > header {
   position: absolute;
@@ -504,15 +535,15 @@ body > header {
     top: 0;
     width: 100vw;
     z-index: 10;
-    background: #4A4D4E;
-    color: #FFF;
+    background: #4a4d4e;
+    color: white;
     text-align: center;
     width: 100vw;
     font-size: 0;
     z-index: 15; }
     /* line 17, ../sass/_header.scss */
     body > header nav .icon {
-      background-color: #4A4D4E;
+      background-color: #4a4d4e;
       background-position: center center;
       background-repeat: no-repeat;
       border-left: 1px solid #333637;
@@ -563,7 +594,7 @@ body > header {
         width: 5px; }
   /* line 70, ../sass/_header.scss */
   body > header .login {
-    background-color: #393B3D;
+    background-color: #393b3d;
     font-size: 0;
     -webkit-mask-image: url(../visuals/images/mask_logged_out_tab.png);
     -webkit-mask-size: 100% 100%;
@@ -587,7 +618,7 @@ body > header {
       vertical-align: top; }
     /* line 93, ../sass/_header.scss */
     body > header .login .message {
-      color: #FFF;
+      color: white;
       display: inline-block;
       width: 50%;
       vertical-align: top; }
@@ -602,7 +633,7 @@ body > header {
 
 /* line 1, ../sass/_footer.scss */
 body > footer {
-  background: #4A4D4E;
+  background: #4a4d4e;
   bottom: 0;
   height: 2%;
   position: absolute;
@@ -611,7 +642,7 @@ body > footer {
   z-index: 10; }
   /* line 9, ../sass/_footer.scss */
   body > footer a {
-    color: #FFF; }
+    color: white; }
 
 /* line 1, ../sass/_home.scss */
 section.home {
@@ -623,61 +654,49 @@ section.home {
   -webkit-transform: translate3d(0, 0, 0);
   transition: background .5s ease-in-out; }
   /* line 9, ../sass/_home.scss */
-  section.home:before {
-    background-image: url(../visuals/images/vodafone_trapezium.png);
-    background-repeat: no-repeat;
-    content: '';
-    display: block;
-    height: 244px;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 118px;
-    z-index: 15; }
-  /* line 21, ../sass/_home.scss */
   section.home .copy {
-    color: #000;
+    color: black;
     padding: 2rem;
     position: absolute;
     top: 70%;
     width: 60vw;
     z-index: 10; }
-  /* line 29, ../sass/_home.scss */
+  /* line 17, ../sass/_home.scss */
   section.home .expand {
     left: 40%;
     top: 0;
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transition: all .5s ease-in-out; }
-  /* line 36, ../sass/_home.scss */
+  /* line 24, ../sass/_home.scss */
   section.home.white {
-    color: #FFF; }
-    /* line 38, ../sass/_home.scss */
+    color: white; }
+    /* line 26, ../sass/_home.scss */
     section.home.white .copy {
-      color: #FFF; }
-      /* line 40, ../sass/_home.scss */
+      color: white; }
+      /* line 28, ../sass/_home.scss */
       section.home.white .copy .hashtags a {
-        color: #FFF; }
-  /* line 45, ../sass/_home.scss */
+        color: white; }
+  /* line 33, ../sass/_home.scss */
   section.home.black {
-    color: #000; }
-    /* line 47, ../sass/_home.scss */
+    color: black; }
+    /* line 35, ../sass/_home.scss */
     section.home.black .copy {
-      color: #000; }
-      /* line 49, ../sass/_home.scss */
+      color: black; }
+      /* line 37, ../sass/_home.scss */
       section.home.black .copy .hashtags a {
-        color: #000; }
+        color: black; }
 
-/* line 57, ../sass/_home.scss */
+/* line 45, ../sass/_home.scss */
 .logged-out section.home {
   cursor: pointer; }
-  /* line 59, ../sass/_home.scss */
+  /* line 47, ../sass/_home.scss */
   .logged-out section.home .panel-nav {
     bottom: 26%;
     left: 2rem; }
-  /* line 64, ../sass/_home.scss */
+  /* line 52, ../sass/_home.scss */
   .logged-out section.home .video-container {
-    background-color: #000;
+    background-color: black;
     bottom: 0;
     left: 0;
     overflow: hidden;
@@ -688,7 +707,7 @@ section.home {
     -webkit-transform: translate3d(0, 0, 0);
     transition: opacity .5s ease-in-out;
     z-index: 10; }
-    /* line 76, ../sass/_home.scss */
+    /* line 64, ../sass/_home.scss */
     .logged-out section.home .video-container video {
       bottom: 0;
       height: 100%;
@@ -699,47 +718,47 @@ section.home {
       -webkit-transform: scaleY(1.3) scaleX(1.3);
       -moz-transform: scaleY(1.3) scaleX(1.3);
       width: 100%; }
-  /* line 88, ../sass/_home.scss */
+  /* line 76, ../sass/_home.scss */
   .logged-out section.home .expand {
     left: 35%;
     position: absolute;
     top: 0; }
 
-/* line 98, ../sass/_home.scss */
+/* line 86, ../sass/_home.scss */
 .logged-in .home {
   background-image: url(../visuals/images/hero_emma_baby.jpg);
   background-size: cover; }
-  /* line 101, ../sass/_home.scss */
+  /* line 89, ../sass/_home.scss */
   .logged-in .home .copy {
     top: 36%; }
-    /* line 103, ../sass/_home.scss */
+    /* line 91, ../sass/_home.scss */
     .logged-in .home .copy h1 {
       line-height: 1;
       margin-bottom: 1rem; }
-    /* line 107, ../sass/_home.scss */
+    /* line 95, ../sass/_home.scss */
     .logged-in .home .copy .product-image {
       position: absolute;
       left: 50%; }
 
-/* line 116, ../sass/_home.scss */
+/* line 104, ../sass/_home.scss */
 .panel-nav {
   position: absolute;
   z-index: 15; }
-  /* line 119, ../sass/_home.scss */
+  /* line 107, ../sass/_home.scss */
   .panel-nav li {
     display: inline;
     margin-right: 5px;
     font-size: 1.2rem; }
-    /* line 123, ../sass/_home.scss */
+    /* line 111, ../sass/_home.scss */
     .panel-nav li span {
       display: none; }
-    /* line 126, ../sass/_home.scss */
+    /* line 114, ../sass/_home.scss */
     .panel-nav li:before {
       content: '○'; }
-    /* line 130, ../sass/_home.scss */
+    /* line 118, ../sass/_home.scss */
     .panel-nav li.current:before {
       content: '●'; }
-    /* line 134, ../sass/_home.scss */
+    /* line 122, ../sass/_home.scss */
     .panel-nav li:last-child {
       margin-right: 0; }
 
@@ -758,9 +777,9 @@ section.home {
   /* line 12, ../sass/_dash.scss */
   .dash-frame .dash-handle {
     background: none;
-    background-color: #4A4D4E;
+    background-color: #4a4d4e;
     border: none;
-    color: #FFF;
+    color: white;
     left: 0;
     margin: 0 auto;
     -webkit-mask-image: url(../visuals/images/mask_dashboard_handle.png);
@@ -780,7 +799,7 @@ section.home {
       top: 0; }
     /* line 34, ../sass/_dash.scss */
     .dash-frame .dash-handle.open {
-      background-color: #4A4D4E;
+      background-color: #4a4d4e;
       top: 76%; }
       /* line 37, ../sass/_dash.scss */
       .dash-frame .dash-handle.open.customise {
@@ -799,7 +818,7 @@ section.home {
         display: none; }
   /* line 54, ../sass/_dash.scss */
   .dash-frame .dash-holder {
-    background: #4A4D4E;
+    background: #4a4d4e;
     height: 80%;
     overflow: hidden;
     position: fixed;
@@ -824,17 +843,17 @@ section.home {
       transition: top 0s ease-in-out; }
     /* line 78, ../sass/_dash.scss */
     .dash-frame .dash-holder h2 {
-      color: #FFF;
+      color: white;
       margin: 4% 0; }
       /* line 81, ../sass/_dash.scss */
       .dash-frame .dash-holder h2 strong {
         font-size: 2rem; }
     /* line 85, ../sass/_dash.scss */
     .dash-frame .dash-holder.icon-panel {
-      color: #FFF; }
+      color: white; }
       /* line 87, ../sass/_dash.scss */
       .dash-frame .dash-holder.icon-panel > .movies {
-        background-color: #4A4D4E;
+        background-color: #4a4d4e;
         transform: translate3d(0, 0, 0);
         -webkit-transform: translate3d(0, 0, 0);
         transition: all .5s ease-in-out;
@@ -1086,11 +1105,11 @@ section.home {
       margin-top: 6rem; }
       /* line 421, ../sass/_dash.scss */
       .dash-frame .dash-holder.touch-lock h2 strong {
-        color: #B9BB1F;
+        color: #b9bb1f;
         font-size: 1.2rem; }
     /* line 427, ../sass/_dash.scss */
     .dash-frame .dash-holder.menu {
-      color: #FFF;
+      color: white;
       text-align: left; }
       /* line 430, ../sass/_dash.scss */
       .dash-frame .dash-holder.menu > dl {
@@ -1149,7 +1168,7 @@ section.home {
       top: -100%; }
       /* line 494, ../sass/_dash.scss */
       .dash-frame .dash-holder.profile.open {
-        background-color: #4A4D4E;
+        background-color: #4a4d4e;
         top: 0; }
       /* line 498, ../sass/_dash.scss */
       .dash-frame .dash-holder.profile > h2 {
@@ -1168,25 +1187,25 @@ section.home {
         top: 35px; }
         /* line 512, ../sass/_dash.scss */
         .dash-frame .dash-holder.profile > .nav h3 {
-          color: #A1A1A1;
+          color: #a1a1a1;
           font-size: 1rem; }
           /* line 515, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile > .nav h3.current {
-            color: #FFF;
+            color: white;
             font-size: 1.2rem;
             font-weight: 700; }
         /* line 521, ../sass/_dash.scss */
         .dash-frame .dash-holder.profile > .nav .logout {
           background-image: url(../visuals/images/icon_exit.png);
           display: block;
-          position: absolute;
           height: 20px;
+          position: absolute;
           right: -30px;
           top: 2px;
           width: 20px; }
       /* line 531, ../sass/_dash.scss */
       .dash-frame .dash-holder.profile .details {
-        color: #FFF;
+        color: white;
         display: inline-block;
         margin-top: 6rem;
         width: 50%;
@@ -1226,7 +1245,7 @@ section.home {
               background-position: top 50% left 54px; }
               /* line 567, ../sass/_dash.scss */
               .dash-frame .dash-holder.profile .details .tools li.messages .count {
-                background-color: #C54E68;
+                background-color: #c54e68;
                 border-radius: 28px;
                 display: inline-block;
                 margin-left: 20px;
@@ -1239,7 +1258,7 @@ section.home {
               background-position: top 50% left 56px; }
               /* line 580, ../sass/_dash.scss */
               .dash-frame .dash-holder.profile .details .tools li.level .gold {
-                color: #D49F71;
+                color: #d49f71;
                 margin-left: 10px;
                 position: absolute;
                 text-transform: uppercase;
@@ -1251,7 +1270,7 @@ section.home {
                   vertical-align: -webkit-baseline-middle; }
       /* line 596, ../sass/_dash.scss */
       .dash-frame .dash-holder.profile .profile-aspects {
-        color: #FFF;
+        color: white;
         display: inline-block;
         margin-top: 6rem;
         padding-right: 6vw;
@@ -1263,7 +1282,7 @@ section.home {
           font-size: 0; }
           /* line 606, ../sass/_dash.scss */
           .dash-frame .dash-holder.profile .profile-aspects .tabs li {
-            color: #FFF;
+            color: white;
             display: inline-block;
             font-size: 1.6rem;
             position: relative;
@@ -1271,7 +1290,7 @@ section.home {
             /* line 612, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .tabs li:first-child {
               text-align: left;
-              border-right: 3px solid #FFF; }
+              border-right: 3px solid white; }
             /* line 616, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .tabs li:last-child {
               text-align: right;
@@ -1375,7 +1394,7 @@ section.home {
               width: 40px; }
             /* line 723, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .connections .toggle:before {
-              background-color: #7D8692;
+              background-color: #7d8692;
               border-radius: 100%;
               content: url(../visuals/images/icon_off_cross.png);
               font-size: 8px;
@@ -1390,7 +1409,7 @@ section.home {
               transition: all .5s ease-in-out; }
             /* line 739, ../sass/_dash.scss */
             .dash-frame .dash-holder.profile .profile-aspects .connections .toggle.on:before {
-              background-color: #9C299F;
+              background-color: #9c299f;
               content: url(../visuals/images/icon_on_tick.png);
               padding: 8px 8px;
               left: 46px;
@@ -1417,12 +1436,12 @@ section.home {
   /* line 13, ../sass/_help.scss */
   .help-frame .help-handle {
     background: none;
-    background-color: #4A4D4E;
+    background-color: #4a4d4e;
     background-image: url(../visuals/images/icon_support.png);
     background-position: center center;
     background-repeat: no-repeat;
     border: none;
-    color: #FFF;
+    color: white;
     height: 4%;
     left: 0;
     margin: 0 auto;
@@ -1449,7 +1468,7 @@ section.home {
   /* line 45, ../sass/_help.scss */
   .help-frame .help-holder {
     background: #616161;
-    color: #FFF;
+    color: white;
     font-size: 0;
     height: 100%;
     padding-top: 6%;
@@ -1521,27 +1540,13 @@ section.home {
         height: 100%;
         width: 100%; }
     /* line 118, ../sass/_help.scss */
-    .help-frame .help-holder .close {
-      position: absolute;
+    .help-frame .help-holder .close-cross {
       top: 65px;
       left: 40px; }
-      /* line 122, ../sass/_help.scss */
-      .help-frame .help-holder .close:before {
-        content: url(../visuals/images/icon_close.png);
-        background-color: rgba(0, 0, 0, 0.3);
-        border-radius: 100%;
-        display: block;
-        height: 14px;
-        margin: 0 auto;
-        padding: 4px 4px 9px;
-        width: 20px; }
-      /* line 133, ../sass/_help.scss */
-      .help-frame .help-holder .close span {
-        display: none; }
 
 /* line 2, ../sass/_products.scss */
 .logged-out .products {
-  background-color: #FFF;
+  background-color: white;
   background-repeat: no-repeat;
   position: relative;
   font-size: 0; }
@@ -1555,7 +1560,7 @@ section.home {
       margin-bottom: 0; }
   /* line 16, ../sass/_products.scss */
   .logged-out .products .section-inner {
-    background: #FFF;
+    background: white;
     display: inline-block; }
   /* line 21, ../sass/_products.scss */
   .logged-out .products.apple-tv {
@@ -1632,7 +1637,7 @@ section.home {
     right: 2rem; }
   /* line 98, ../sass/_products.scss */
   .logged-out .products h1 {
-    color: #E30913;
+    color: #e30913;
     font-weight: 700;
     margin-bottom: -.5rem; }
   /* line 103, ../sass/_products.scss */
@@ -1698,7 +1703,7 @@ section.home {
     /* line 170, ../sass/_products.scss */
     .logged-out .products .package-container .tarrifs {
       font-weight: 700;
-      color: #000;
+      color: black;
       font-size: 1rem; }
     /* line 176, ../sass/_products.scss */
     .logged-out .products .package-container .view:after {
@@ -1709,7 +1714,7 @@ section.home {
     .logged-out .products .package-container .buy {
       font-size: 1.2rem;
       font-weight: 700;
-      color: #000; }
+      color: black; }
       /* line 186, ../sass/_products.scss */
       .logged-out .products .package-container .buy:after {
         background: url(../visuals/images//icon_chevron_right_medium_black.png);
@@ -1753,8 +1758,8 @@ section.home {
     padding: 0; }
   /* line 235, ../sass/_products.scss */
   .logged-out .products .copy {
-    background-color: #E30913;
-    color: #FFF;
+    background-color: #e30913;
+    color: white;
     padding: 1em;
     position: absolute;
     top: 40%;
@@ -1844,7 +1849,7 @@ section.home {
       top: 10%; }
     /* line 43, ../sass/_events.scss */
     .logged-out .events .copy {
-      color: #FFF;
+      color: white;
       padding-bottom: 2rem;
       position: absolute;
       right: 5%;
@@ -1922,7 +1927,7 @@ section.home {
           padding: 0; }
     /* line 132, ../sass/_events.scss */
     .logged-out .events .sub-copy {
-      color: #FFF;
+      color: white;
       position: absolute;
       top: 15%;
       right: 5%; }
@@ -1932,8 +1937,8 @@ section.home {
         padding: 0; }
     /* line 142, ../sass/_events.scss */
     .logged-out .events .vplanr {
-      background-color: #393B3D;
-      color: #FFF;
+      background-color: #393b3d;
+      color: white;
       font-size: 0;
       left: 10vw;
       position: absolute;
@@ -2019,13 +2024,13 @@ section.home {
   .promo .copy {
     background-color: rgba(40, 40, 40, 0.4);
     bottom: 0;
-    color: #FFF;
+    color: white;
     padding-bottom: 2rem;
     position: absolute;
     text-align: center; }
     /* line 12, ../sass/_promo.scss */
     .promo .copy h2 {
-      background-color: #E30913;
+      background-color: #e30913;
       padding: 10px; }
     /* line 16, ../sass/_promo.scss */
     .promo .copy p {
@@ -2041,7 +2046,7 @@ section.home {
   transition: background .5s ease-in-out; }
   /* line 9, ../sass/_movie.scss */
   .logged-out .movie .copy {
-    color: #FFF;
+    color: white;
     padding: 1rem;
     position: absolute;
     right: 0;
@@ -2072,7 +2077,7 @@ section.home {
     top: 62%; }
   /* line 42, ../sass/_movie.scss */
   .logged-out .movie .sub-copy {
-    color: #FFF;
+    color: white;
     position: absolute;
     right: 2em;
     top: 26%;
@@ -2132,7 +2137,7 @@ section.home {
           width: 90%; }
         /* line 100, ../sass/_movie.scss */
         .logged-out .movie .movie-frame .options .sales h4 {
-          color: #9D2A9F;
+          color: #9d2a9f;
           display: inline-block;
           line-height: 1;
           text-align: left;
@@ -2148,7 +2153,7 @@ section.home {
           vertical-align: top; }
         /* line 116, ../sass/_movie.scss */
         .logged-out .movie .movie-frame .options .sales a {
-          color: #000; }
+          color: black; }
       /* line 120, ../sass/_movie.scss */
       .logged-out .movie .movie-frame .options .packages {
         text-align: right; }
@@ -2168,7 +2173,7 @@ section.home {
           width: 80%; }
         /* line 136, ../sass/_movie.scss */
         .logged-out .movie .movie-frame .options .packages a {
-          color: #000;
+          color: black;
           font-weight: bold; }
       /* line 141, ../sass/_movie.scss */
       .logged-out .movie .movie-frame .options .formats {
@@ -2215,8 +2220,8 @@ section.home {
   position: relative; }
   /* line 6, ../sass/_connecting.scss */
   .logged-out .connecting .copy {
-    background-color: #E30913;
-    color: #FFF;
+    background-color: #e30913;
+    color: white;
     display: inline-block;
     padding: 1em;
     position: absolute;
@@ -2238,8 +2243,8 @@ section.home {
         top: 120%; }
   /* line 32, ../sass/_connecting.scss */
   .logged-out .connecting .message {
-    background: #393B3D;
-    color: #FFF;
+    background: #393b3d;
+    color: white;
     overflow: hidden;
     position: absolute;
     transform: translate3d(0, 0, 0);
@@ -2323,7 +2328,7 @@ section.home {
             vertical-align: middle; }
           /* line 114, ../sass/_connecting.scss */
           .logged-out .connecting .message .content .links li a.devices {
-            background-color: #FFF;
+            background-color: white;
             color: #323232; }
             /* line 117, ../sass/_connecting.scss */
             .logged-out .connecting .message .content .links li a.devices:after {
@@ -2335,8 +2340,8 @@ section.home {
 
 /* line 2, ../sass/_feedback.scss */
 .logged-out .feedback {
-  background-color: #5C5C5C;
-  color: #FFF;
+  background-color: #5c5c5c;
+  color: white;
   height: 100%; }
   /* line 6, ../sass/_feedback.scss */
   .logged-out .feedback .record {
@@ -2351,8 +2356,8 @@ section.home {
       line-height: 1.3; }
     /* line 16, ../sass/_feedback.scss */
     .logged-out .feedback .record .point {
-      background-color: #FFF;
-      color: #E30913;
+      background-color: white;
+      color: #e30913;
       font-size: 2rem;
       height: 2rem;
       position: absolute;
@@ -2421,21 +2426,21 @@ section.home {
   position: relative; }
   /* line 7, ../sass/_lifestyle.scss */
   .logged-in .lifestyle .copy {
-    color: #000;
+    color: black;
     left: 5%;
     position: absolute;
     top: 20%;
     width: 50%; }
     /* line 13, ../sass/_lifestyle.scss */
     .logged-in .lifestyle .copy a {
-      color: #000; }
+      color: black; }
       /* line 15, ../sass/_lifestyle.scss */
       .logged-in .lifestyle .copy a:after {
         content: url(../visuals/images/icon_right_pointing_chevron_black.png);
         padding-left: 5px; }
 /* line 22, ../sass/_lifestyle.scss */
 .logged-in .network-feed {
-  background-color: #F6F5F5;
+  background-color: #f6f5f5;
   background-image: url(../visuals/images/background_content_arrow_top.png);
   background-position: center 0;
   background-repeat: no-repeat;
@@ -2449,7 +2454,7 @@ section.home {
     word-break: break-all; }
     /* line 34, ../sass/_lifestyle.scss */
     .logged-in .network-feed p a {
-      color: #000; }
+      color: black; }
   /* line 38, ../sass/_lifestyle.scss */
   .logged-in .network-feed ul li {
     border-bottom: 1px solid #9696A1;
@@ -2489,8 +2494,8 @@ section.home {
   /* line 3, ../sass/_vplanr.scss */
   .vplanr.grey,
   .calendar.grey {
-    background-color: #4A4D4E;
-    color: #FFF; }
+    background-color: #4a4d4e;
+    color: white; }
     /* line 6, ../sass/_vplanr.scss */
     .vplanr.grey header,
     .calendar.grey header {
@@ -2498,19 +2503,19 @@ section.home {
     /* line 12, ../sass/_vplanr.scss */
     .vplanr.grey .time .clock .analogue .face,
     .calendar.grey .time .clock .analogue .face {
-      border: 2px solid #FFF; }
+      border: 2px solid white; }
       /* line 15, ../sass/_vplanr.scss */
       .vplanr.grey .time .clock .analogue .face .big-hand:before,
       .calendar.grey .time .clock .analogue .face .big-hand:before {
-        background: #FFF; }
+        background: white; }
       /* line 20, ../sass/_vplanr.scss */
       .vplanr.grey .time .clock .analogue .face .medium-hand:before,
       .calendar.grey .time .clock .analogue .face .medium-hand:before {
-        background: #FFF; }
+        background: white; }
     /* line 27, ../sass/_vplanr.scss */
     .vplanr.grey .time .clock .digital p,
     .calendar.grey .time .clock .digital p {
-      color: #FFF; }
+      color: white; }
     /* line 34, ../sass/_vplanr.scss */
     .vplanr.grey .tools li,
     .calendar.grey .tools li {
@@ -2522,8 +2527,8 @@ section.home {
     /* line 45, ../sass/_vplanr.scss */
     .vplanr.grey .actions .add-event a,
     .calendar.grey .actions .add-event a {
-      background-color: #FFF;
-      color: #000; }
+      background-color: white;
+      color: black; }
     /* line 51, ../sass/_vplanr.scss */
     .vplanr.grey footer,
     .calendar.grey footer {
@@ -2531,7 +2536,7 @@ section.home {
   /* line 55, ../sass/_vplanr.scss */
   .vplanr.pink,
   .calendar.pink {
-    background-color: #CF1853; }
+    background-color: #cf1853; }
     /* line 57, ../sass/_vplanr.scss */
     .vplanr.pink header,
     .calendar.pink header {
@@ -2539,34 +2544,34 @@ section.home {
     /* line 63, ../sass/_vplanr.scss */
     .vplanr.pink .time .clock .analogue .face,
     .calendar.pink .time .clock .analogue .face {
-      border: 2px solid #EF236E; }
+      border: 2px solid #ef236e; }
       /* line 66, ../sass/_vplanr.scss */
       .vplanr.pink .time .clock .analogue .face .big-hand:before,
       .calendar.pink .time .clock .analogue .face .big-hand:before {
-        background: #EF236E; }
+        background: #ef236e; }
       /* line 71, ../sass/_vplanr.scss */
       .vplanr.pink .time .clock .analogue .face .medium-hand:before,
       .calendar.pink .time .clock .analogue .face .medium-hand:before {
-        background: #EF236E; }
+        background: #ef236e; }
     /* line 78, ../sass/_vplanr.scss */
     .vplanr.pink .time .clock .digital p,
     .calendar.pink .time .clock .digital p {
-      color: #F06773; }
+      color: #f06773; }
     /* line 86, ../sass/_vplanr.scss */
     .vplanr.pink .tools li,
     .vplanr.pink .services li,
     .calendar.pink .tools li,
     .calendar.pink .services li {
-      border-color: #EA6792; }
+      border-color: #ea6792; }
     /* line 92, ../sass/_vplanr.scss */
     .vplanr.pink .actions .add-event a,
     .calendar.pink .actions .add-event a {
-      background-color: #FFF;
-      color: #000; }
+      background-color: white;
+      color: black; }
     /* line 99, ../sass/_vplanr.scss */
     .vplanr.pink .calendar li,
     .calendar.pink .calendar li {
-      border-color: #EA6792; }
+      border-color: #ea6792; }
     /* line 103, ../sass/_vplanr.scss */
     .vplanr.pink footer,
     .calendar.pink footer {
@@ -2574,28 +2579,28 @@ section.home {
   /* line 107, ../sass/_vplanr.scss */
   .vplanr.blue,
   .calendar.blue {
-    background-color: #96A0CD; }
+    background-color: #96a0cd; }
     /* line 109, ../sass/_vplanr.scss */
     .vplanr.blue header,
     .calendar.blue header {
       background-image: url(../visuals/images/background_calendar_header_blue.gif);
-      color: #5D6EBD; }
+      color: #5d6ebd; }
     /* line 116, ../sass/_vplanr.scss */
     .vplanr.blue .time .clock .analogue .face,
     .calendar.blue .time .clock .analogue .face {
-      border: 2px solid #5D6EBD; }
+      border: 2px solid #5d6ebd; }
       /* line 119, ../sass/_vplanr.scss */
       .vplanr.blue .time .clock .analogue .face .big-hand:before,
       .calendar.blue .time .clock .analogue .face .big-hand:before {
-        background: #5D6EBD; }
+        background: #5d6ebd; }
       /* line 124, ../sass/_vplanr.scss */
       .vplanr.blue .time .clock .analogue .face .medium-hand:before,
       .calendar.blue .time .clock .analogue .face .medium-hand:before {
-        background: #5D6EBD; }
+        background: #5d6ebd; }
     /* line 131, ../sass/_vplanr.scss */
     .vplanr.blue .time .clock .digital p,
     .calendar.blue .time .clock .digital p {
-      color: #5D6EBD; }
+      color: #5d6ebd; }
     /* line 139, ../sass/_vplanr.scss */
     .vplanr.blue .tools li,
     .vplanr.blue .services li,
@@ -2605,8 +2610,8 @@ section.home {
     /* line 145, ../sass/_vplanr.scss */
     .vplanr.blue .actions .add-event a,
     .calendar.blue .actions .add-event a {
-      background-color: #FFF;
-      color: #000; }
+      background-color: white;
+      color: black; }
     /* line 152, ../sass/_vplanr.scss */
     .vplanr.blue .calendar li,
     .calendar.blue .calendar li {
@@ -2993,7 +2998,7 @@ section.home {
     .vplanr .calendar li,
     .calendar .calendar li {
       background: rgba(0, 0, 0, 0.1);
-      color: #FFF;
+      color: white;
       display: inline-block;
       font-size: 0;
       margin: 0 1% 6px 0;
@@ -3108,7 +3113,7 @@ section.home {
     .vplanr .calendar .confirm,
     .calendar .calendar .confirm {
       background-color: rgba(0, 0, 0, 0.8);
-      border: 1px solid #FFF;
+      border: 1px solid white;
       font-size: 0;
       left: 50%;
       margin-left: -300px;
@@ -3165,7 +3170,7 @@ section.home {
 
 /* line 2, ../sass/_product_detail.scss */
 .logged-in .col.full.product {
-  border-left: 1px solid #F6F5F5;
+  border-left: 1px solid #f6f5f5;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transition: all 1s ease-in-out; }
@@ -3203,7 +3208,7 @@ section.home {
           /* line 34, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .details .description p a {
             font-weight: 700;
-            color: #000; }
+            color: black; }
         /* line 39, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .details .description .color {
           font-size: 0;
@@ -3250,7 +3255,7 @@ section.home {
               margin-right: 3rem; }
             /* line 81, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .details .description .utils li.add {
-              background-color: #9D2A9F;
+              background-color: #9d2a9f;
               font-size: 0.8rem;
               padding: 0 .5rem; }
               /* line 85, ../sass/_product_detail.scss */
@@ -3273,7 +3278,7 @@ section.home {
             /* line 106, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .details .description .delivery-options li.unticked:after {
               content: '';
-              border: 2px solid #000;
+              border: 2px solid black;
               display: inline-block;
               height: 12px;
               margin-left: 5px;
@@ -3308,7 +3313,7 @@ section.home {
             text-transform: uppercase; }
           /* line 145, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .details .fact .text .number {
-            color: #9D2A9F;
+            color: #9d2a9f;
             font-size: 3rem;
             font-weight: 700;
             line-height: 1; }
@@ -3319,7 +3324,7 @@ section.home {
             width: 100%; }
           /* line 156, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .details .fact .text .next {
-            color: #000;
+            color: black;
             font-size: .8rem;
             font-weight: 700; }
             /* line 160, ../sass/_product_detail.scss */
@@ -3352,15 +3357,15 @@ section.home {
         z-index: 2; }
         /* line 190, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .reviews .tabs li {
-          background: #FFF;
-          border: solid #DDDADA;
+          background: white;
+          border: solid #dddada;
           border-width: 0 0 1px 0;
           display: inline-block;
           font-weight: bold;
           width: 33.33%; }
           /* line 197, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .tabs li.current {
-            background: #F7F7F7;
+            background: #f7f7f7;
             border-width: 1px 1px 0 1px; }
             /* line 200, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .reviews .tabs li.current:first-child {
@@ -3392,7 +3397,7 @@ section.home {
           display: none; }
       /* line 231, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .reviews .panels {
-        background: #F7F7F7;
+        background: #f7f7f7;
         font-size: 0;
         height: 20rem;
         margin-top: -2px;
@@ -3468,13 +3473,13 @@ section.home {
             -webkit-appearance: none;
             background-image: none;
             border-radius: 0;
-            border: 2px solid #000;
+            border: 2px solid black;
             height: 15px;
             width: 15px; }
             /* line 309, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .reviews .feedback .helpful input:checked {
               border-width: 10px;
-              background: #000; }
+              background: black; }
           /* line 314, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .feedback .helpful .yes {
             display: inline-block;
@@ -3506,8 +3511,8 @@ section.home {
       width: 100%; }
       /* line 349, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .related h2 {
-        background: #FFF;
-        border-bottom: 1px solid #DDDADA;
+        background: white;
+        border-bottom: 1px solid #dddada;
         font-size: 1.4rem;
         font-weight: 700;
         padding-left: 1rem;
@@ -3535,7 +3540,7 @@ section.home {
 .partner {
   background-image: url(../visuals/images/hero_arc_de_triomphe.jpg);
   background-size: 100% 100%;
-  color: #FFF; }
+  color: white; }
   /* line 5, ../sass/_partner.scss */
   .partner .partner-logo {
     left: 5%;
@@ -3581,7 +3586,7 @@ section.home {
 /* line 1, ../sass/_music.scss */
 .music {
   background-color: #454545;
-  color: #FFF; }
+  color: white; }
   /* line 5, ../sass/_music.scss */
   .music .spotify {
     height: 94%;
@@ -3637,7 +3642,7 @@ section.home {
       vertical-align: middle; }
       /* line 56, ../sass/_music.scss */
       .music .playlists li header {
-        background-color: #4E4E4E;
+        background-color: #4e4e4e;
         margin: 0;
         padding: 5px; }
         /* line 60, ../sass/_music.scss */
@@ -3656,7 +3661,7 @@ section.home {
             vertical-align: middle; }
         /* line 76, ../sass/_music.scss */
         .music .playlists li header h4 {
-          color: #DDDCDC;
+          color: #dddcdc;
           display: inline-block;
           font-size: 1rem;
           height: 100%;
@@ -3694,10 +3699,10 @@ section.home {
 
 /* line 1, ../sass/_photos.scss */
 .photos {
-  color: #FFF; }
+  color: white; }
   /* line 3, ../sass/_photos.scss */
   .photos header {
-    background-color: #E30913;
+    background-color: #e30913;
     background-image: url(../visuals/images/icon_instagram_colour.png);
     background-position: top 1.2rem right 1rem;
     background-repeat: no-repeat;
@@ -3725,7 +3730,7 @@ section.home {
     z-index: 1; }
     /* line 30, ../sass/_photos.scss */
     .photos .photo-set .controls {
-      background: #DA0000;
+      background: #da0000;
       padding: 1rem;
       position: absolute;
       top: 6.8rem;
@@ -3736,8 +3741,8 @@ section.home {
         font-weight: bold; }
       /* line 40, ../sass/_photos.scss */
       .photos .photo-set .controls .close {
-        background: #FFF;
-        color: #DA0000;
+        background: white;
+        color: #da0000;
         display: block;
         height: 1rem;
         right: 1rem;
@@ -3751,7 +3756,7 @@ section.home {
 
 /* line 1, ../sass/_channels.scss */
 section.channels {
-  color: #FFF;
+  color: white;
   text-align: center;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
@@ -3768,7 +3773,7 @@ section.channels {
     z-index: 2; }
     /* line 16, ../sass/_channels.scss */
     section.channels .close:after {
-      background-color: #393B3D;
+      background-color: #393b3d;
       border-radius: 100%;
       content: url(../visuals/images/icon_close.png);
       padding: 7px 6px 3px 6px; }
@@ -3804,7 +3809,7 @@ section.channels {
         height: 0; }
     /* line 54, ../sass/_channels.scss */
     section.channels .channel-selector .handle {
-      background-color: #E30913; }
+      background-color: #e30913; }
       /* line 56, ../sass/_channels.scss */
       section.channels .channel-selector .handle .drag {
         display: block;
@@ -3877,11 +3882,11 @@ section.channels {
 
 /* line 1, ../sass/_first.scss */
 .first {
-  background-color: #4A4A4A;
-  color: #FFF; }
+  background-color: #4a4a4a;
+  color: white; }
   /* line 4, ../sass/_first.scss */
   .first header {
-    background-color: #5D5D5D;
+    background-color: #5d5d5d;
     padding: 1rem;
     position: relative;
     text-align: center; }
@@ -3927,10 +3932,21 @@ section.channels {
       text-align: center; }
       /* line 48, ../sass/_first.scss */
       .first .join .add a {
-        color: #FFF;
+        color: white;
         font-size: 1.2rem;
         font-weight: bold; }
         /* line 52, ../sass/_first.scss */
         .first .join .add a:before {
           content: url(../visuals/images/icon_chevron_left_medium.png);
           padding-right: 10px; }
+
+/* line 1, ../sass/_offer.scss */
+.offer {
+  transition: all .5s ease-in-out; }
+  /* line 3, ../sass/_offer.scss */
+  .offer.closed {
+    width: 0; }
+  /* line 6, ../sass/_offer.scss */
+  .offer .close {
+    top: 65px;
+    right: 40px; }

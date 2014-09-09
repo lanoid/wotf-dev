@@ -302,3 +302,36 @@
 		}
 	}
 }
+
+.close-cross {
+	position: absolute;
+	text-align: center;
+	&:before {
+		content: url(#{$imageDir}icon_close.png);
+		background-color: $vodafoneDarkGrey;
+		border-radius: 100%;
+		display: block;
+		height: 14px;
+		margin: 0 auto;
+		padding: 4px 4px 9px;
+		width: 20px;
+	}
+	span {
+		display: none;
+	}
+}
+
+.rhombus {
+	&:before {
+		background-image: url(#{$imageDir}vodafone_trapezium.png);
+		background-repeat: no-repeat;
+		content: '';
+		display: block;
+		height: 244px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 118px;
+		z-index: 15;
+	}
+}

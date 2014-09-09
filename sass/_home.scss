@@ -6,18 +6,6 @@ section.home {
 	transform: translate3d(0,0,0);
 	-webkit-transform: translate3d(0,0,0);
 	transition: background .5s ease-in-out;
-	&:before {
-		background-image: url(#{$imageDir}vodafone_trapezium.png);
-		background-repeat: no-repeat;
-		content: '';
-		display: block;
-		height: 244px;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 118px;
-		z-index: 15;
-	}
 	.copy {
 		color: $black;
 		padding: 2rem;

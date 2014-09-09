@@ -1,0 +1,10 @@
+.offer {
+	transition: all .5s ease-in-out;
+	&.closed {
+		width: 0;
+	}
+	.close {
+		top: 65px;
+		right: 40px;
+	}
+}
