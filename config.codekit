@@ -982,6 +982,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/visuals\/images\/hero_home_poster.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 315648,
+		"inputAbbreviatedPath": "\/visuals\/images\/hero_home_poster.jpg",
+		"outputAbbreviatedPath": "\/visuals\/images\/hero_home_poster.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/visuals\/images\/hero_in_car_dashboard.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

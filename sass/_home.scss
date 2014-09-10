@@ -29,6 +29,17 @@ section.home {
 				color: $white;
 			}
 		}
+		.panel-nav {
+			li:before {
+				text-shadow: 0 0 5px $black;
+			}
+		}
+		.copy {
+			text-shadow: 0 0 5px $black;
+			.expand {
+				text-shadow: none;
+			}
+		}
 	}
 	&.black {
 		color: $black;
