@@ -28,7 +28,7 @@
 		"width": "40vw"
 	},
 	"video" : {
-		"poster" : "visuals/images/hero_home_poster.jpg",
+		"poster" : "visuals/images/hero_home_poster.png",
 		"src" : "visuals/videos/city_flyover.mp4"
 	}
 },

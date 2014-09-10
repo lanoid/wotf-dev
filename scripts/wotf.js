@@ -50,9 +50,9 @@ var wotf = {
 
 			$('.scroller').scrollStopped(function(){
 				if($('.scroller .row').position().left === 0){
-					$('section:first').addClass('current');
-					if($('section:first').find('video').length > 0){
-						$('section:first').find('video')[0].play();
+					$('section#home1').addClass('current');
+					if($('section#home1').find('video').length > 0){
+						$('section#home1').find('video')[0].play();
 					}
 				}
 			});
@@ -416,14 +416,14 @@ var wotf = {
 		$el.append(template(data));
 		$el.find('.expand').on('click', wotf.revealMessage);
 
+		if(data.eventTemplate) {
+			$el.find('.content').html($(data.eventTemplate).html());
+		}
+		
 		if($el.find('video').length === 1 && $el.hasClass('current')){
 			$el.find('video')[0].play();
 		} else if($el.find('video').length === 1 && !$el.hasClass('current')){
 			$el.find('video')[0].pause();
-		}
-
-		if(data.eventTemplate) {
-			$el.find('.content').html($(data.eventTemplate).html());
 		}
 
 		$('.events .point').on('click', function() {
