@@ -49,7 +49,7 @@
 	},
 	"expand" : {
 		"title" : "@friendlyFiat",
-		"message" : "There are great in-car holders for Nokia phones at bit.ly/hd/45",
+		"message" : "Vodafone in-car music to my ears!",
 		"href"	: "#",
 		"link" : "TonyR  @tonZZ",
 		"direction" : "right",
