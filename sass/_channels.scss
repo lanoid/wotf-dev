@@ -23,6 +23,11 @@ section.channels {
 			display: none;
 		}
 	}
+	iframe {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
 	video {
 		bottom: 0;
 		height: 100%;

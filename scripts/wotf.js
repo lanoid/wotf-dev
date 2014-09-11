@@ -207,6 +207,11 @@ var wotf = {
 			$('.offer').addClass('closed');
 		});
 
+		$('.last-month a').off().on('click', function(e) {
+			wotf.handlePanel(e);
+			$('.dash-panel').removeClass('open').filter('.usage').addClass('open');
+		});
+
 		$('.fingerprint').off().on('click', function(e) {
 			e.preventDefault();
 
@@ -578,7 +583,7 @@ var wotf = {
 		}
 	},
 	// open a panel with the associated handle at the same time, allow other handlers to do the same
-	handlePanel : function(e) {
+	handlePanel : function(e) { 
 		var $handle = $(e.currentTarget),
 			$panel = $($handle.data('target')),
 			$close = $($handle.data('close'));

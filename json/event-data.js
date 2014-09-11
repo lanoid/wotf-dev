@@ -15,13 +15,4 @@
 	"type" : "image",
 	"src" : "visuals/images/hero_latitude.jpg",
 	"color" : "black"
-},
-{
-	"id" : "event3",
-	"eventTemplate": "#template-event-3",
-	"panel" : "events",
-	"class"	: "v_and_a",
-	"type" : "image",
-	"src" : "visuals/images/hero_pool.jpg",
-	"color" : "black"
 }]

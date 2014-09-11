@@ -2,6 +2,7 @@
 	"id" : "home1",
 	"panel" : "home",
 	"type" : "image",
+	"src" : "visuals/images/hero_city_flyover.jpg",
 	"color" : "white",
 	"title" : "A better network for you",
 	"byline" : {
@@ -42,7 +43,7 @@
 	"byline" : {
 		"texts" : [
 			{
-				"text" : "Your Deezer playlists synced automatically to your Fiat 500, with Vodafones in-car connected play"
+				"text" : "Your Spotify playlists synced automatically to your Fiat 500, with Vodafones in-car connected play"
 			}
 		]
 	},
@@ -75,13 +76,13 @@
 		{"link" : "#", "text" : "#thetriptoitaly"}
 	],
 	"expand" : {
-		"title" : "@Handel",
-		"message" : "140 characters of pure one hundred carat solid gold wit.",
+		"title" : "@whatsonron",
+		"message" : "‘caught up with #thetriptoitaly in Italy on Vodafone on demand.",
 		"href"	: "#",
-		"link" : "#hash #tags",
+		"link" : "#nevermissout",
 		"direction" : "right",
 		"x" : "37%",
 		"y" : "-15%",
-		"width" : "42vw"
+		"width" : "50vw"
 	}
 }]
