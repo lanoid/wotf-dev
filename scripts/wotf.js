@@ -143,7 +143,7 @@ var wotf = {
 		$('.menu').off().on('click', wotf.handlePanel);
 		$('.movie .point').off().on('click', wotf.handlePanel);
 		$('.logged-in .product-list .point').on('click', wotf.productReveal);
-		$('.product-list .view a').off().on('click', wotf.productReveal);
+		// $('.product-list .view a').off().on('click', wotf.productReveal);
 		$('.connecting .point').off().on('click', wotf.revealOther);
 		$('.nokia-tablet .point').off().on('click', wotf.togglePanels);
 		$('.icon-panel .connectivity').off().on('click', wotf.twoClick);
@@ -541,6 +541,7 @@ var wotf = {
 	},
 	// Slide and reveal a product panel
 	productReveal : function(e) {
+		e.stopPropagation();
 		var $trigger = $(e.currentTarget),
 			url = $trigger.data('url'),
 			section = $trigger.parents('section'),
