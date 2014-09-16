@@ -6,6 +6,12 @@ section.home {
 	transform: translate3d(0,0,0);
 	-webkit-transform: translate3d(0,0,0);
 	transition: background .5s ease-in-out;
+	&#videoHome {
+		.copy {
+			background: rgba(0,0,0,.5s);
+			width: 38vw;
+		}
+	}
 	.copy {
 		color: $black;
 		padding: 2rem;
