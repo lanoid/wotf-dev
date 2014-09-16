@@ -50,9 +50,9 @@ var wotf = {
 
 			$('.scroller').scrollStopped(function(){
 				if($('.scroller .row').position().left === 0){
-					$('section#home1').addClass('current');
-					if($('section#home1').find('video').length > 0){
-						$('section#home1').find('video')[0].play();
+					$('section#videoHome').addClass('current');
+					if($('section#videoHome').find('video').length > 0){
+						$('section#videoHome').find('video')[0].play();
 					}
 				}
 			});
