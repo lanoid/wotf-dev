@@ -584,7 +584,7 @@ var wotf = {
 		}
 	},
 	// open a panel with the associated handle at the same time, allow other handlers to do the same
-	handlePanel : function(e) { 
+	handlePanel : function(e) {
 		var $handle = $(e.currentTarget),
 			$panel = $($handle.data('target')),
 			$close = $($handle.data('close'));
@@ -596,6 +596,9 @@ var wotf = {
 		}
 		$handle.removeClass('inactive').toggleClass('open');
 		$panel.removeClass('inactive').toggleClass('open');
+		if($panel.hasClass('profile') && !$panel.hasClass('open')){
+			$panel.addClass('open');
+		}
 		$close.removeClass('open').toggleClass('inactive');
 	},
 	// switch classes on an alternate panel
