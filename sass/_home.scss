@@ -41,7 +41,6 @@ section.home {
 			}
 		}
 		.copy {
-			text-shadow: 0 0 5px $black;
 			.expand {
 				text-shadow: none;
 			}
@@ -112,6 +111,57 @@ section.home {
 			.product-image {
 				position: absolute;
 				left: 50%;
+			}
+		}
+		.local-carousel {
+			margin-top: 35px;
+			position: absolute;
+			top: 0%;
+			right: 4%;
+			background: rgba(0,0,0,.5);
+			height: 15vw;
+			width: 25vw;
+			overflow-x: scroll;
+			ul {
+				font-size: 0;
+				width: 75vw;
+			}
+			li {
+				display: inline-block;
+				height: 11vw;
+				padding: 2vw;
+				position: relative;
+				width: 25vw;				
+			}
+			p {
+				font-size: 0.8rem;
+				word-break: break-word;
+			}
+			.weather {
+				h1 {
+					position: absolute;
+					font-size: 4rem;
+					font-weight: 200;
+					right: 2vw;
+					top: 4vw;
+				}
+				img {
+					padding-top: 5px;
+				}
+			}
+			.handle {
+				font-weight: 700;
+			}
+		}
+		.countdown {
+			position: absolute;
+			top: 70%;
+			right: 4vw;
+			.action {
+				&:after {
+					content: url(#{$imageDir}icon_chevron_right.png);
+					margin-left: 5px;
+				}
 			}
 		}
 	}
