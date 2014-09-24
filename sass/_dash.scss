@@ -57,7 +57,7 @@
 		overflow: hidden;
 		position: fixed;
 		text-align: center;
-		top: -76%;
+		top: -85%;
 		transform: translate3d(0,0,0);
 		-webkit-transform: translate3d(0,0,0);
 		transition: all 1s ease-in-out;
@@ -65,7 +65,7 @@
 		width: 100vw;
 		z-index: $z-index-low;
 		&.inactive {
-			top: -76%;
+			top: -85%;
 		}
 		&.open {
 			top: 0;

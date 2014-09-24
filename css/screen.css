@@ -836,7 +836,7 @@ section.home {
     overflow: hidden;
     position: fixed;
     text-align: center;
-    top: -76%;
+    top: -85%;
     transform: translate3d(0, 0, 0);
     -webkit-transform: translate3d(0, 0, 0);
     transition: all 1s ease-in-out;
@@ -845,7 +845,7 @@ section.home {
     z-index: 5; }
     /* line 67, ../sass/_dash.scss */
     .dash-frame .dash-holder.inactive {
-      top: -76%; }
+      top: -85%; }
     /* line 70, ../sass/_dash.scss */
     .dash-frame .dash-holder.open {
       top: 0; }
