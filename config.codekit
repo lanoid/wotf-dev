@@ -905,6 +905,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/visuals\/images\/hero_city_flyover.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 211756,
+		"inputAbbreviatedPath": "\/visuals\/images\/hero_city_flyover.jpg",
+		"outputAbbreviatedPath": "\/visuals\/images\/hero_city_flyover.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/visuals\/images\/hero_connected.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -2559,7 +2570,7 @@
 			"flagValue": -1
 			},
 		"prefer_english_operator": {
-			"active": false,
+			"active": 0,
 			"flagValue": -1
 			},
 		"space_operators": {
