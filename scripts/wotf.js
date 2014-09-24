@@ -212,6 +212,10 @@ var wotf = {
 			$('.dash-panel').removeClass('open').filter('.usage').addClass('open');
 		});
 
+		if($('.logged-in .local-carousel').length){
+			wotf.localCarousel($('.logged-in .local-carousel'));
+		}
+
 		$('.fingerprint').off().on('click', function(e) {
 			e.preventDefault();
 
@@ -299,6 +303,8 @@ var wotf = {
 			wotf.panelLoader($('#home1'));
 			wotf.panelLoader($('#event1'));
 		});
+
+
 	},
 	dblClick : function($target) {
 		$target.on('click', function(e) {
@@ -639,6 +645,21 @@ var wotf = {
 			$(wotf.evts).trigger($(this).data('event'), $(this).data('target'));
 		}
 		$(this).toggleClass('ready');
+	},
+	localCarousel : function($car) {
+		setInterval(function(){
+			$current = $car.find('.active');
+			$next = $current.next();
+
+			if($next.length){
+				$current.removeClass('active');
+				$next.addClass('active');
+			} else {
+				$current.removeClass('active');
+				$car.find('li:first').addClass('active');
+			}
+		}, 5000);
+
 	}
 };
 

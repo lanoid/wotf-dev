@@ -121,23 +121,26 @@ section.home {
 			background: rgba(0,0,0,.5);
 			height: 15vw;
 			width: 25vw;
-			overflow-x: scroll;
-			ul {
-				font-size: 0;
-				width: 75vw;
-			}
 			li {
 				display: inline-block;
 				height: 11vw;
 				padding: 2vw;
-				position: relative;
-				width: 25vw;				
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 25vw;
+				opacity: 0;
+				transition: opacity .5s ease-in-out;
+				&.active {
+					opacity: 1;
+				}		
 			}
 			p {
 				font-size: 0.8rem;
 				word-break: break-word;
 			}
 			.weather {
+				
 				h1 {
 					position: absolute;
 					font-size: 4rem;
@@ -148,6 +151,10 @@ section.home {
 				img {
 					padding-top: 5px;
 				}
+			}
+			.yesterday {
+			}
+			.today {
 			}
 			.handle {
 				font-weight: 700;
