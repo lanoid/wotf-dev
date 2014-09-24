@@ -813,7 +813,7 @@ section.home {
     /* line 34, ../sass/_dash.scss */
     .dash-frame .dash-handle.open {
       background-color: #4A4D4E;
-      top: 76%; }
+      top: 80.5%; }
       /* line 37, ../sass/_dash.scss */
       .dash-frame .dash-handle.open.customise {
         top: 85%; }
@@ -832,7 +832,7 @@ section.home {
   /* line 54, ../sass/_dash.scss */
   .dash-frame .dash-holder {
     background: #4A4D4E;
-    height: 80%;
+    height: 85%;
     overflow: hidden;
     position: fixed;
     text-align: center;
