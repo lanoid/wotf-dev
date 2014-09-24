@@ -792,30 +792,33 @@ section.home {
     position: absolute;
     top: 70%;
     right: 4vw; }
-    /* line 161, ../sass/_home.scss */
+    /* line 160, ../sass/_home.scss */
+    .logged-in .home .countdown .count {
+      font-weight: 700; }
+    /* line 164, ../sass/_home.scss */
     .logged-in .home .countdown .action:after {
       content: url(../visuals/images/icon_chevron_right.png);
       margin-left: 5px; }
 
-/* line 171, ../sass/_home.scss */
+/* line 174, ../sass/_home.scss */
 .panel-nav {
   position: absolute;
   z-index: 15; }
-  /* line 174, ../sass/_home.scss */
+  /* line 177, ../sass/_home.scss */
   .panel-nav li {
     display: inline;
     margin-right: 5px;
     font-size: 1.2rem; }
-    /* line 178, ../sass/_home.scss */
+    /* line 181, ../sass/_home.scss */
     .panel-nav li span {
       display: none; }
-    /* line 181, ../sass/_home.scss */
+    /* line 184, ../sass/_home.scss */
     .panel-nav li:before {
       content: '○'; }
-    /* line 185, ../sass/_home.scss */
+    /* line 188, ../sass/_home.scss */
     .panel-nav li.current:before {
       content: '●'; }
-    /* line 189, ../sass/_home.scss */
+    /* line 192, ../sass/_home.scss */
     .panel-nav li:last-child {
       margin-right: 0; }
 

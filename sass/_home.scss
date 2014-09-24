@@ -157,6 +157,9 @@ section.home {
 			position: absolute;
 			top: 70%;
 			right: 4vw;
+			.count {
+				font-weight: 700;
+			}
 			.action {
 				&:after {
 					content: url(#{$imageDir}icon_chevron_right.png);
