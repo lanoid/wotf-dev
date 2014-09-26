@@ -597,15 +597,17 @@ var wotf = {
 		var $handle = $(e.currentTarget),
 			$panel = $($handle.data('target')),
 			$close = $($handle.data('close'));
+
 		if($handle.hasClass('animate')){
 			$($handle.data('animate')).removeClass('inactive').toggleClass('open');
 		}
 		if($handle.hasClass('handler')){
 			$handle = $($handle.data('handle'));
 		}
+
 		$handle.removeClass('inactive').toggleClass('open');
 		$panel.removeClass('inactive').toggleClass('open');
-		if($panel.hasClass('profile') && !$panel.hasClass('open')){
+		if($handle.hasClass('bills')){
 			$panel.addClass('open');
 		}
 		$close.removeClass('open').toggleClass('inactive');
