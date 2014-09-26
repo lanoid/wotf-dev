@@ -281,9 +281,13 @@
 					font-size: 1rem;
 					height: 2rem;
 					width: 2rem;
+					transition: all .2s ease-in-out;
 					&:before {
 						top: 4px;
 						left: 11px;
+					}
+					&.open {
+						transform: rotate(180deg);
 					}
 				}
 			}

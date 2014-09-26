@@ -1873,11 +1873,15 @@ section.home {
       right: 0;
       font-size: 1rem;
       height: 2rem;
-      width: 2rem; }
-      /* line 284, ../sass/_products.scss */
+      width: 2rem;
+      transition: all .2s ease-in-out; }
+      /* line 285, ../sass/_products.scss */
       .logged-in .products .product-list .details .point:before {
         top: 4px;
         left: 11px; }
+      /* line 289, ../sass/_products.scss */
+      .logged-in .products .product-list .details .point.open {
+        transform: rotate(180deg); }
 
 /* line 1, ../sass/_events.scss */
 .logged-out {
@@ -3245,55 +3249,56 @@ section.home {
   border-left: 1px solid #F6F5F5;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
-  transition: all 1s ease-in-out; }
-  /* line 7, ../sass/_product_detail.scss */
+  transition: all 1s ease-in-out;
+  width: 0; }
+  /* line 8, ../sass/_product_detail.scss */
   .logged-in .col.full.product.open {
     width: 100vw; }
-/* line 11, ../sass/_product_detail.scss */
+/* line 12, ../sass/_product_detail.scss */
 .logged-in .product-detail {
   display: block;
   height: 100%; }
-  /* line 14, ../sass/_product_detail.scss */
+  /* line 15, ../sass/_product_detail.scss */
   .logged-in .product-detail .product {
     display: block;
     height: 100%; }
-    /* line 17, ../sass/_product_detail.scss */
+    /* line 18, ../sass/_product_detail.scss */
     .logged-in .product-detail .product .details {
       font-size: 0;
       height: 60%; }
-      /* line 20, ../sass/_product_detail.scss */
+      /* line 21, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .details .image {
         display: inline-block;
         margin-left: 5%;
         padding-top: 10%;
         width: 20%;
         vertical-align: top; }
-      /* line 27, ../sass/_product_detail.scss */
+      /* line 28, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .details .description {
         display: inline-block;
         padding: 15% 5% 0 5%;
         width: 55%;
         vertical-align: top; }
-        /* line 32, ../sass/_product_detail.scss */
+        /* line 33, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .details .description p {
           font-size: 1rem; }
-          /* line 34, ../sass/_product_detail.scss */
+          /* line 35, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .details .description p a {
             font-weight: 700;
             color: #000; }
-        /* line 39, ../sass/_product_detail.scss */
+        /* line 40, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .details .description .color {
           font-size: 0;
           margin-top: 2%; }
-          /* line 42, ../sass/_product_detail.scss */
+          /* line 43, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .details .description .color li {
             display: inline-block;
             margin-right: 15px;
             padding: 5px; }
-            /* line 46, ../sass/_product_detail.scss */
+            /* line 47, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .details .description .color li.selected {
               border: black 1px solid; }
-            /* line 49, ../sass/_product_detail.scss */
+            /* line 50, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .details .description .color li span {
               background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0) 100%);
               display: block;
@@ -3301,53 +3306,53 @@ section.home {
               -webkit-mask-image: url(../visuals/images/mask_circular.png);
               -webkit-mask-size: 100% 100%;
               width: 15px; }
-              /* line 56, ../sass/_product_detail.scss */
+              /* line 57, ../sass/_product_detail.scss */
               .logged-in .product-detail .product .details .description .color li span.black {
                 background-color: #000; }
-              /* line 59, ../sass/_product_detail.scss */
+              /* line 60, ../sass/_product_detail.scss */
               .logged-in .product-detail .product .details .description .color li span.pink {
                 background-color: #E74F8D; }
-              /* line 62, ../sass/_product_detail.scss */
+              /* line 63, ../sass/_product_detail.scss */
               .logged-in .product-detail .product .details .description .color li span.green {
                 background-color: #CCD477; }
-              /* line 65, ../sass/_product_detail.scss */
+              /* line 66, ../sass/_product_detail.scss */
               .logged-in .product-detail .product .details .description .color li span.red {
                 background-color: #E34B32; }
-        /* line 71, ../sass/_product_detail.scss */
+        /* line 72, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .details .description .utils {
           font-size: 0; }
-          /* line 73, ../sass/_product_detail.scss */
+          /* line 74, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .details .description .utils li {
             display: inline-block;
             vertical-align: middle; }
-            /* line 76, ../sass/_product_detail.scss */
+            /* line 77, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .details .description .utils li.price {
               font-size: 2rem;
               font-weight: 700;
               margin-right: 3rem; }
-            /* line 81, ../sass/_product_detail.scss */
+            /* line 82, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .details .description .utils li.add {
               background-color: #9D2A9F;
               font-size: 0.8rem;
               padding: 0 .5rem; }
-              /* line 85, ../sass/_product_detail.scss */
+              /* line 86, ../sass/_product_detail.scss */
               .logged-in .product-detail .product .details .description .utils li.add:after {
                 content: url(../visuals/images/icon_chevron_right.png);
                 padding-left: 5px; }
-        /* line 92, ../sass/_product_detail.scss */
+        /* line 93, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .details .description .delivery-options {
           margin-top: 1rem; }
-          /* line 94, ../sass/_product_detail.scss */
+          /* line 95, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .details .description .delivery-options li {
             display: inline-block;
             font-weight: 700;
             width: 100%; }
-            /* line 99, ../sass/_product_detail.scss */
+            /* line 100, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .details .description .delivery-options li.tick:after {
               content: url(../visuals/images/icon_green_tick.png);
               padding-left: 5px;
               vertical-align: middle; }
-            /* line 106, ../sass/_product_detail.scss */
+            /* line 107, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .details .description .delivery-options li.unticked:after {
               content: '';
               border: 2px solid #000;
@@ -3356,13 +3361,13 @@ section.home {
               margin-left: 5px;
               vertical-align: middle;
               width: 12px; }
-      /* line 119, ../sass/_product_detail.scss */
+      /* line 120, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .details .fact {
         display: inline-block;
         font-size: 0;
         margin-top: 15rem;
         width: 20%; }
-        /* line 124, ../sass/_product_detail.scss */
+        /* line 125, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .details .fact .image {
           display: inline-block;
           line-height: 1;
@@ -3370,41 +3375,41 @@ section.home {
           padding-top: 0;
           width: 30%;
           vertical-align: top; }
-        /* line 132, ../sass/_product_detail.scss */
+        /* line 133, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .details .fact .text {
           display: inline-block;
           line-height: 1;
           padding: 0 10px;
           width: 70%;
           vertical-align: top; }
-          /* line 138, ../sass/_product_detail.scss */
+          /* line 139, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .details .fact .text .title {
             font-size: .8rem;
             font-weight: 700;
             line-height: 1;
             text-transform: uppercase; }
-          /* line 145, ../sass/_product_detail.scss */
+          /* line 146, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .details .fact .text .number {
             color: #9D2A9F;
             font-size: 3rem;
             font-weight: 700;
             line-height: 1; }
-          /* line 151, ../sass/_product_detail.scss */
+          /* line 152, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .details .fact .text .description {
             font-size: .8rem;
             padding: 0;
             width: 100%; }
-          /* line 156, ../sass/_product_detail.scss */
+          /* line 157, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .details .fact .text .next {
             color: #000;
             font-size: .8rem;
             font-weight: 700; }
-            /* line 160, ../sass/_product_detail.scss */
+            /* line 161, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .details .fact .text .next:after {
               content: url(../visuals/images/icon_chevron_grey_right_small.png);
               padding-left: 5px;
               vertical-align: sub; }
-      /* line 168, ../sass/_product_detail.scss */
+      /* line 169, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .details .social {
         position: absolute;
         top: 1rem;
@@ -3413,21 +3418,21 @@ section.home {
         margin-top: 2rem;
         width: 30%;
         vertical-align: top; }
-    /* line 178, ../sass/_product_detail.scss */
+    /* line 179, ../sass/_product_detail.scss */
     .logged-in .product-detail .product .reviews {
       font-size: 0;
       height: 40%;
       position: absolute;
       top: 60%;
       width: 100%; }
-      /* line 184, ../sass/_product_detail.scss */
+      /* line 185, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .reviews .tabs {
         font-size: 0;
         margin: 0 auto;
         position: relative;
         text-align: center;
         z-index: 2; }
-        /* line 190, ../sass/_product_detail.scss */
+        /* line 191, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .reviews .tabs li {
           background: #FFF;
           border: solid #DDDADA;
@@ -3435,39 +3440,39 @@ section.home {
           display: inline-block;
           font-weight: bold;
           width: 33.33%; }
-          /* line 197, ../sass/_product_detail.scss */
+          /* line 198, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .tabs li.current {
             background: #F7F7F7;
             border-width: 1px 1px 0 1px; }
-            /* line 200, ../sass/_product_detail.scss */
+            /* line 201, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .reviews .tabs li.current:first-child {
               border-width: 1px 1px 0 0; }
-            /* line 203, ../sass/_product_detail.scss */
+            /* line 204, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .reviews .tabs li.current:last-child {
               border-width: 1px 0 0 1px; }
-      /* line 209, ../sass/_product_detail.scss */
+      /* line 210, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .reviews .paging {
         border: none;
         background: none;
         position: absolute;
         top: 8rem;
         z-index: 3; }
-        /* line 215, ../sass/_product_detail.scss */
+        /* line 216, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .reviews .paging.right {
           right: 1rem; }
-          /* line 217, ../sass/_product_detail.scss */
+          /* line 218, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .paging.right:after {
             content: url(../visuals/images/icon_grey_chevron_large_right.png); }
-        /* line 221, ../sass/_product_detail.scss */
+        /* line 222, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .reviews .paging.left {
           left: 1rem; }
-          /* line 223, ../sass/_product_detail.scss */
+          /* line 224, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .paging.left:after {
             content: url(../visuals/images/icon_grey_chevron_large_left.png); }
-        /* line 227, ../sass/_product_detail.scss */
+        /* line 228, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .reviews .paging span {
           display: none; }
-      /* line 231, ../sass/_product_detail.scss */
+      /* line 232, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .reviews .panels {
         background: #F7F7F7;
         font-size: 0;
@@ -3476,7 +3481,7 @@ section.home {
         position: relative;
         z-index: 1;
         width: 100%; }
-        /* line 239, ../sass/_product_detail.scss */
+        /* line 240, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .reviews .panels .videos-tab,
         .logged-in .product-detail .product .reviews .panels .reviews-tab {
           opacity: 0;
@@ -3485,39 +3490,39 @@ section.home {
           -webkit-transform: translate3d(0, 0, 0);
           transition: opacity .5s ease-in-out;
           width: 100%; }
-          /* line 247, ../sass/_product_detail.scss */
+          /* line 248, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .panels .videos-tab.current,
           .logged-in .product-detail .product .reviews .panels .reviews-tab.current {
             opacity: 1; }
-      /* line 253, ../sass/_product_detail.scss */
+      /* line 254, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .reviews .review {
         font-size: 0;
         margin: 0 auto;
         padding-bottom: 20rem;
         width: 70%; }
-        /* line 258, ../sass/_product_detail.scss */
+        /* line 259, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .reviews .review .meta {
           font-size: .8rem; }
-          /* line 260, ../sass/_product_detail.scss */
+          /* line 261, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .review .meta .handle {
             font-weight: 700; }
-        /* line 264, ../sass/_product_detail.scss */
+        /* line 265, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .reviews .review h3 {
           font-size: 1rem;
           font-weight: 700; }
-        /* line 268, ../sass/_product_detail.scss */
+        /* line 269, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .reviews .review .user-text {
           font-size: 1rem;
           margin-bottom: 2rem; }
-      /* line 273, ../sass/_product_detail.scss */
+      /* line 274, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .reviews .feedback {
         display: inline-block;
         width: 50%;
         vertical-align: top; }
-        /* line 277, ../sass/_product_detail.scss */
+        /* line 278, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .reviews .feedback fieldset {
           position: relative; }
-        /* line 280, ../sass/_product_detail.scss */
+        /* line 281, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .reviews .feedback .recommend {
           background-image: url(../visuals/images/icon_tick);
           background-repeat: no-repeat;
@@ -3527,20 +3532,20 @@ section.home {
           position: absolute;
           top: 4px;
           width: 15; }
-          /* line 289, ../sass/_product_detail.scss */
+          /* line 290, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .feedback .recommend input {
             visibility: hidden; }
-        /* line 293, ../sass/_product_detail.scss */
+        /* line 294, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .reviews .feedback .helpful {
           font-size: 0; }
-          /* line 295, ../sass/_product_detail.scss */
+          /* line 296, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .feedback .helpful label {
             display: inline-block;
             width: 30%; }
-          /* line 299, ../sass/_product_detail.scss */
+          /* line 300, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .feedback .helpful p {
             font-size: 1rem; }
-          /* line 302, ../sass/_product_detail.scss */
+          /* line 303, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .feedback .helpful input {
             -webkit-appearance: none;
             background-image: none;
@@ -3548,40 +3553,40 @@ section.home {
             border: 2px solid #000;
             height: 15px;
             width: 15px; }
-            /* line 309, ../sass/_product_detail.scss */
+            /* line 310, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .reviews .feedback .helpful input:checked {
               border-width: 10px;
               background: #000; }
-          /* line 314, ../sass/_product_detail.scss */
+          /* line 315, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .feedback .helpful .yes {
             display: inline-block;
             width: 35%; }
-            /* line 317, ../sass/_product_detail.scss */
+            /* line 318, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .reviews .feedback .helpful .yes p, .logged-in .product-detail .product .reviews .feedback .helpful .yes input {
               display: inline-block; }
-          /* line 321, ../sass/_product_detail.scss */
+          /* line 322, ../sass/_product_detail.scss */
           .logged-in .product-detail .product .reviews .feedback .helpful .no {
             display: inline-block;
             width: 35%; }
-            /* line 324, ../sass/_product_detail.scss */
+            /* line 325, ../sass/_product_detail.scss */
             .logged-in .product-detail .product .reviews .feedback .helpful .no p, .logged-in .product-detail .product .reviews .feedback .helpful .no input {
               display: inline-block; }
-      /* line 330, ../sass/_product_detail.scss */
+      /* line 331, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .reviews .public-rating {
         display: inline-block;
         margin-top: 1em;
         width: 50%;
         vertical-align: top; }
-      /* line 338, ../sass/_product_detail.scss */
+      /* line 339, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .reviews .rating li:before {
         padding: 0; }
-    /* line 344, ../sass/_product_detail.scss */
+    /* line 345, ../sass/_product_detail.scss */
     .logged-in .product-detail .product .related {
       height: 40%;
       position: absolute;
       top: 60%;
       width: 100%; }
-      /* line 349, ../sass/_product_detail.scss */
+      /* line 350, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .related h2 {
         background: #FFF;
         border-bottom: 1px solid #DDDADA;
@@ -3592,19 +3597,19 @@ section.home {
         top: 0;
         right: 0;
         width: 50%; }
-    /* line 361, ../sass/_product_detail.scss */
+    /* line 362, ../sass/_product_detail.scss */
     .logged-in .product-detail .product .reviews-tab {
       z-index: 1; }
-    /* line 364, ../sass/_product_detail.scss */
+    /* line 365, ../sass/_product_detail.scss */
     .logged-in .product-detail .product .videos-tab {
       z-index: 2; }
-      /* line 366, ../sass/_product_detail.scss */
+      /* line 367, ../sass/_product_detail.scss */
       .logged-in .product-detail .product .videos-tab ul {
         padding: 3rem 0;
         margin: 0 auto;
         text-align: center;
         width: 80%; }
-        /* line 371, ../sass/_product_detail.scss */
+        /* line 372, ../sass/_product_detail.scss */
         .logged-in .product-detail .product .videos-tab ul li {
           display: inline-block; }
 

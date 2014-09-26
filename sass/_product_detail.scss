@@ -4,6 +4,7 @@
 		transform: translate3d(0,0,0);
 		-webkit-transform: translate3d(0,0,0);
 		transition: all 1s ease-in-out;
+		width: 0;
 		&.open {
 			width: 100vw;
 		}

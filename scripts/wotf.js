@@ -555,8 +555,10 @@ var wotf = {
 
 		if($product.hasClass('open')){
 			$product.removeClass('open');
+			$trigger.removeClass('open');
 		} else if($product.length > 0){
 			$product.addClass('open');
+			$trigger.addClass('open');
 		} else {
 			$.get(url, function(data) {
 				section.after(data);
@@ -566,6 +568,7 @@ var wotf = {
 				wotf.scroll($product.position().left,1000);
 
 				$product.addClass('open');
+				$trigger.addClass('open');
 
 				wotf.tabs($('.product .reviews'));
 			});
