@@ -205,6 +205,9 @@ var wotf = {
 
 		$('.offer .close').off().on('click', function() {
 			$('.offer').addClass('closed');
+			if($('#videoHome').find('video').length) {
+				$('#videoHome').find('video')[0].play();
+			}
 		});
 
 		$('.last-month a').off().on('click', function(e) {
